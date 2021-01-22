@@ -13,12 +13,11 @@ public class ExamsCreatePage {
     private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Экзамены')]"));
 
     // Инпуты
-
-    //label[contains(text(),'Журнал')]/following-sibling::div//input
-    //label[contains(text(),'Вид экзамена')]/following-sibling::div//input
-    (//label[contains(text(),'Дата')]/following-sibling::input)[1]
-    //label[contains(text(),'Время')]/following-sibling::span
-    //label[contains(text(),'Кабинет')]/following-sibling::input
+    private SelenideElement journalInput = $(byXpath("//label[contains(text(),'Журнал')]/following-sibling::div//input"));
+    private SelenideElement examTypeInput = $(byXpath("//label[contains(text(),'Вид экзамена')]/following-sibling::div//input"));
+    private SelenideElement dateInput = $(byXpath("(//label[contains(text(),'Дата')]/following-sibling::input)[1]"));
+    private SelenideElement timeInput = $(byXpath("//label[contains(text(),'Время')]/following-sibling::span"));
+    private SelenideElement cabinetInput = $(byXpath("//label[contains(text(),'Кабинет')]/following-sibling::input"));
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
