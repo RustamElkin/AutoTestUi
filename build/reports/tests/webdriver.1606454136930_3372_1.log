@@ -1,0 +1,176 @@
+[1606454137.058][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 6094
+[1606454137.058][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1606454137.666][INFO]: [7e5819910d20fa88140f118c3bea518d] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\Elka\\IdeaProjects\\AutoTestUiCollege\\build\\downloads\\1606454136314_3372_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\Elka\\IdeaProjects\\AutoTestUiCollege\\build\\downloads\\1606454136314_3372_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1606454137.670][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\Elka\\IdeaProjects\\AutoTestUiCollege\\build\\downloads\\1606454136314_3372_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1606454137.670][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1606454137.671][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\Elka\AppData\Local\Temp\scoped_dir4968_490763675" data:,
+[1606454138.145][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1606454140.149][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1606454142.155][INFO]: [7e5819910d20fa88140f118c3bea518d] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.198",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\Elka\\AppData\\Local\\Temp\\scoped_dir4968_490763675"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:14906"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "7e5819910d20fa88140f118c3bea518d"
+}
+[1606454142.179][INFO]: [7e5819910d20fa88140f118c3bea518d] COMMAND MaximizeWindow {
+
+}
+[1606454142.179][INFO]: Waiting for pending navigations...
+[1606454142.181][INFO]: Done waiting for pending navigations. Status: ok
+[1606454142.287][INFO]: Waiting for pending navigations...
+[1606454142.287][INFO]: Done waiting for pending navigations. Status: ok
+[1606454142.287][INFO]: [7e5819910d20fa88140f118c3bea518d] RESPONSE MaximizeWindow {
+   "height": 1056,
+   "width": 1936,
+   "x": -8,
+   "y": -8
+}
+[1606454142.289][INFO]: [7e5819910d20fa88140f118c3bea518d] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1606454142.289][INFO]: [7e5819910d20fa88140f118c3bea518d] RESPONSE SetTimeouts
+[1606454142.294][INFO]: [7e5819910d20fa88140f118c3bea518d] COMMAND Navigate {
+   "url": "https://college.dev-snation.kz/ru//"
+}
+[1606454142.294][INFO]: Waiting for pending navigations...
+[1606454142.295][INFO]: Done waiting for pending navigations. Status: ok
+[1606454142.989][INFO]: Waiting for pending navigations...
+[1606454172.294][SEVERE]: Timed out receiving message from renderer: 29.306
+[1606454172.294][INFO]: Timed out. Stopping navigation...
+[1606454172.295][SEVERE]: Timed out receiving message from renderer: 29.306
+[1606454172.295][INFO]: Done waiting for pending navigations. Status: timeout: Timed out receiving message from renderer: 29.306
+[1606454172.295][INFO]: [7e5819910d20fa88140f118c3bea518d] RESPONSE Navigate ERROR timeout: Timed out receiving message from renderer: 29.306
+  (Session info: chrome=86.0.4240.198)
+[1606454172.313][INFO]: [7e5819910d20fa88140f118c3bea518d] COMMAND Quit {
+
+}
+[1606454172.333][INFO]: [7e5819910d20fa88140f118c3bea518d] RESPONSE Quit

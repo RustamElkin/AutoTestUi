@@ -1,0 +1,2 @@
+public class OrganizationPostsEditPage {
+}

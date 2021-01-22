@@ -1,0 +1,2 @@
+public class ReviewStatementAdmissionPage {
+}

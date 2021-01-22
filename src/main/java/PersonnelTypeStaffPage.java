@@ -1,0 +1,2 @@
+public class PersonnelTypeStaffPage {
+}
