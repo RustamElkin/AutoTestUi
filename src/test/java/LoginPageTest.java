@@ -1,5 +1,5 @@
 import com.codeborne.selenide.SelenideElement;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import testconfigs.AppConfig;
 

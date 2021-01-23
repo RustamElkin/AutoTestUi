@@ -1,5 +1,5 @@
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import testconfigs.AppConfig;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -8,7 +8,7 @@ public class MainPageTest extends AppConfig {
 
     private MainPage mainPage;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         mainPage = new MainPage();
         open("/");
