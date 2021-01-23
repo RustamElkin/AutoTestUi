@@ -3,19 +3,18 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ControlSummaryGroupPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Итоги группы')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Итоги группы')]");
 
     // Табы на странице
-    private SelenideElement backToTab = $(byXpath("//span[contains(text(),'Назад')]/.."));                              // Таб "Назад"
+    private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                         // Таб "Назад"
 
     // Кнопка "Экспортировать"
-    private SelenideElement exportBtn = $(byXpath("//span[contains(text(),'Экспортировать')]/.."));
+    private SelenideElement exportBtn = $x("//span[contains(text(),'Экспортировать')]/..");
 
 
 }

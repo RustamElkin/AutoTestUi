@@ -5,10 +5,11 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ArchiveGraduatedGroupShowPage {
 
-    private SelenideElement titleToPage = $(By.xpath("//h1[contains(text(),'Контингент')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Контингент')]");
     private SelenideElement archiveTabItem = $(By.cssSelector("a.container-content-head__tab-item.is-active > span"));
     private SelenideElement chairTabItem = $(By.cssSelector("div.container-content-head > div > div > a:nth-child(4)"));
     private SelenideElement SubgroupsTabItem = $(By.cssSelector("div.container-content-head > div > div > a:nth-child(3)"));

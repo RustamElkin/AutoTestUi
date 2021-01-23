@@ -3,21 +3,19 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class DistributionContingentPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Поступившие')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Поступившие')]");
 
     // Кнопка "Экспортировать"
-    private SelenideElement exportBtn = $(byXpath("//a[contains(text(),'Распределить по группам')]"));                  // 'Распределить по группам'
+    private SelenideElement exportBtn = $x("//a[contains(text(),'Распределить по группам')]");             // 'Распределить по группам'
 
     // Таблица (Можно проверить есть ли таблица)
-    private SelenideElement fullNameTable = $(byXpath("//th[contains(text(),'ФИО')]"));                                 // 'ФИО'
-    private SelenideElement languageEducationTable = $(byXpath("//th[contains(text(),'Язык обучения')]"));              // 'Язык обучения'
-    private SelenideElement qualificationTable = $(byXpath("//th[contains(text(),'Квалификация')]"));                   // 'Квалификация'
-
+    private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                            // 'ФИО'
+    private SelenideElement languageEducationTable = $x("//th[contains(text(),'Язык обучения')]");         // 'Язык обучения'
+    private SelenideElement qualificationTable = $x("//th[contains(text(),'Квалификация')]");              // 'Квалификация'
 
 }

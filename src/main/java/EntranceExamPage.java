@@ -3,24 +3,23 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class EntranceExamPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Вступительные экзамены')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Вступительные экзамены')]");
 
     // Табы на странице
-    private SelenideElement backTab = $(byXpath("//span[contains(text(),'Назад')]/.."));                                         // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                                         // 'Назад'
 
     // Ссылка на просмотр приемной комиссии
-    private SelenideElement viewAdmissionsOffice = $(byXpath("//td[contains(text(),'Приемная комиссия')]/..//a"));              // 'Просмотр приемной комиссии'
+    private SelenideElement viewAdmissionsOffice = $x("//td[contains(text(),'Приемная комиссия')]/..//a");              // 'Просмотр приемной комиссии'
 
     // Таблица
-    private SelenideElement fullNameTable = $(byXpath("//th[contains(text(),'ФИО')]"));                                          // 'ФИО'
-    private SelenideElement statusTable = $(byXpath("//th[contains(text(),'Статус')]"));                                         // 'Статус'
-    private SelenideElement creativeExamResultTable = $(byXpath("//th[contains(text(),'Результат творческого экзамена')]"));     // 'Результат творческого экзамена'
+    private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                          // 'ФИО'
+    private SelenideElement statusTable = $x("//th[contains(text(),'Статус')]");                                         // 'Статус'
+    private SelenideElement creativeExamResultTable = $x("//th[contains(text(),'Результат творческого экзамена')]");     // 'Результат творческого экзамена'
 
 
 }

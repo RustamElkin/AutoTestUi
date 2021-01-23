@@ -3,23 +3,22 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class CurriculumShowPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Учебный план')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Учебный план')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $(byXpath("//span[contains(text(),'Назад')]/.."));                            // 'Назад'
+    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Таблица
-    private SelenideElement categoryOnTable = $(byXpath("//th[contains(text(),'Категория')]"));
-    private SelenideElement descriptionOnTable = $(byXpath("//th[contains(text(),'Описание')]"));
+    private SelenideElement categoryOnTable = $x("//th[contains(text(),'Категория')]");
+    private SelenideElement descriptionOnTable = $x("//th[contains(text(),'Описание')]");
 
     // Кнопка "Экспортировать"
-    private SelenideElement exportBtn = $(byXpath("//a[contains(text(),'Экспортировать')]"));                           // 'Экспортировать'
+    private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]");                      // 'Экспортировать'
 
 
 }

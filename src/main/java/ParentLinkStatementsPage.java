@@ -3,23 +3,22 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ParentLinkStatementsPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Заявки на подключение детей')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Заявки на подключение детей')]");
 
     // Таблица
-    private SelenideElement numberOnTable = $(byXpath("//th[contains(text(),'№')]"));                                   //'№'
-    private SelenideElement fullNameTable = $(byXpath("//th[contains(text(),'ФИО')]"));                                 //'ФИО'
-    private SelenideElement parentIINTable = $(byXpath("//th[contains(text(),'ИИН Родителя')]"));                       //'ИИН Родителя'
-    private SelenideElement childIINTable = $(byXpath("//th[contains(text(),'ИИН Ребенка')]"));                         //'ИИН Ребенка'
-    private SelenideElement operationsTable = $(byXpath("//th[contains(text(),'Операции')]"));                          //'Операции'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                   //'№'
+    private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                 //'ФИО'
+    private SelenideElement parentIINTable = $x("//th[contains(text(),'ИИН Родителя')]");                       //'ИИН Родителя'
+    private SelenideElement childIINTable = $x("//th[contains(text(),'ИИН Ребенка')]");                         //'ИИН Ребенка'
+    private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                          //'Операции'
 
     // Кнопки в таблице, колонка "Операции"
-    private SelenideElement viewBtn = $(byXpath("//tr[1]//td//a"));                                                     // Кнопка "Посмотреть"
+    private SelenideElement viewBtn = $x("//tr[1]//td//a");                                                     // Кнопка "Посмотреть"
 
 
 }

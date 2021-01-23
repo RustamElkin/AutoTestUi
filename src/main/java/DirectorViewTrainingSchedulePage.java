@@ -3,30 +3,29 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class DirectorViewTrainingSchedulePage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Расписание')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Расписание')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $(byXpath("//span[contains(text(),'Назад')]/.."));                            // 'Назад'
+    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Таблица (Можно проверить есть ли расписание)
-    private SelenideElement tableSchedule = $(byXpath("//table [@class=\"s-table-schedule\"]"));
+    private SelenideElement tableSchedule = $x("//table [@class=\"s-table-schedule\"]");
 
     // Кнопка "Экспортировать"
-    private SelenideElement exportBtn = $(byXpath("//span[contains(text(),'Экспортировать')]/.."));                     // 'Экспортировать'
+    private SelenideElement exportBtn = $x("//span[contains(text(),'Экспортировать')]/..");                // 'Экспортировать'
 
     // multiselect input group
-    private SelenideElement groupNameInput = $(byXpath("//input[@placeholder='Группа/Название']"));                     // 'Группа/Название'
+    private SelenideElement groupNameInput = $x("//input[@placeholder='Группа/Название']");                // 'Группа/Название'
 
     // multiselect input semester
-    private SelenideElement semesterInput = $(byXpath("//input[@placeholder='Семестр']"));                              // 'Семестр'
+    private SelenideElement semesterInput = $x("//input[@placeholder='Семестр']");                         // 'Семестр'
 
     // multiselect input week
-    private SelenideElement weekInput = $(byXpath("//input[@placeholder='Неделя']"));                                   // 'Неделя'
+    private SelenideElement weekInput = $x("//input[@placeholder='Неделя']");                              // 'Неделя'
 
 }

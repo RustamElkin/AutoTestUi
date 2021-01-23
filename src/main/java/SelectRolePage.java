@@ -1,26 +1,27 @@
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
+
 // Роль
 //  ru/tko/select-role
 public class SelectRolePage {
 
-    private SelenideElement selectRoleDropDownList = $(By.cssSelector("div.multiselect__tags"));
-    private SelenideElement selectRUEmployee = $(By.xpath("//div//span[text()=\"Сотрудник РУ\"]"));
-    private SelenideElement selectMonRKEmployee = $(By.xpath("//div//span[text()=\"МОН РК\"]"));
-    private SelenideElement selectOUEmployee = $(By.xpath("//div//span[text()=\"Сотрудник ОУ\"]"));
-    private SelenideElement selectDirectorEmployee = $(By.xpath("//div//span[text()=\"Директор\"]"));
-    private SelenideElement selectAdminEmployee = $(By.xpath("//div//span[text()=\"Сотрудник колледжа (админ)\"]"));
-    private SelenideElement submitBtn = $(By.cssSelector("button[type='submit']"));
+    private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
+    private SelenideElement selectRUEmployee = $x("//div//span[text()=\"Сотрудник РУ\"]");
+    private SelenideElement selectMonRKEmployee = $x("//div//span[text()=\"МОН РК\"]");
+    private SelenideElement selectOUEmployee = $x("//div//span[text()=\"Сотрудник ОУ\"]");
+    private SelenideElement selectDirectorEmployee = $x("//div//span[text()=\"Директор\"]");
+    private SelenideElement selectAdminEmployee = $x("//div//span[text()=\"Сотрудник колледжа (админ)\"]");
+    private SelenideElement submitBtn = $("button[type='submit']");
     //возвращает на мэйнпэйдж https://college.dev-snation.kz/ru/tko
 
     //Если не выбрать роль
-    public SelenideElement roleErrorMessage = $(By.xpath("//div[contains(text(),'Поле \"Роль\" обязательно для заполнения')]"));
+    public SelenideElement roleErrorMessage = $x("//div[contains(text(),'Поле \"Роль\" обязательно для заполнения')]");
 
     //проверка что мы на этой странице, по title Роль
-    private SelenideElement roleTitle = $(By.xpath("//div[2][contains(text(),'Роль')]"));
+    private SelenideElement roleTitle = $x("//div[2][contains(text(),'Роль')]");
 
 
     public SelectRolePage clickSelectRoleList() {

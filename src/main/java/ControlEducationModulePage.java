@@ -3,49 +3,42 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ControlEducationModulePage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Модули')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Модули')]");
 
     // Табы на странице
-    private SelenideElement backButtonTab = $(byXpath("//span[contains(text(),'Назад')]/.."));                          // 'Назад'
+    private SelenideElement backButtonTab = $x("//span[contains(text(),'Назад')]/..");                                       // 'Назад'
 
     // Кнопка добавить
-    private SelenideElement addBtn = $(byXpath("//div[contains(text(),'Добавить')]/.."));
+    private SelenideElement addBtn = $x("//div[contains(text(),'Добавить')]/..");
 
     // Кнопки для фильтра
-    private SelenideElement filteringListBtn  = $(byXpath("//span[contains(text(),'Фильтрация списка')]/.."));
-    private SelenideElement applyBtn = $(byXpath("//span[contains(text(),'Применить')]/.."));
-    private SelenideElement resetBtn = $(byXpath("//span[contains(text(),'Сбросить')]/.."));
+    private SelenideElement filteringListBtn = $x("//span[contains(text(),'Фильтрация списка')]/..");
+    private SelenideElement applyBtn = $x("//span[contains(text(),'Применить')]/..");
+    private SelenideElement resetBtn = $x("//span[contains(text(),'Сбросить')]/..");
 
     //Фильтр Инпуты
-    private SelenideElement nameInput = $(byXpath("//label[contains(text(),'Название: ')]/following-sibling::input"));  // 'Название'
-    private SelenideElement indexInput = $(byXpath("//label[contains(text(),'Индекс: ')]/following-sibling::input"));   // 'Индекс'
+    private SelenideElement nameInput = $x("//label[contains(text(),'Название: ')]/following-sibling::input");               // 'Название'
+    private SelenideElement indexInput = $x("//label[contains(text(),'Индекс: ')]/following-sibling::input");                // 'Индекс'
 
     //Dropdown фильтры
-    private SelenideElement selectSubjectDropDownList = $(byXpath("//label[contains(text(),'Предмет')]//following-sibling::div"));   //"Предмет"
-    private SelenideElement selectCreatorDropDownList = $(byXpath("//label[contains(text(),'Создатель')]//following-sibling::div")); //"Создатель"
+    private SelenideElement selectSubjectDropDownList = $x("//label[contains(text(),'Предмет')]//following-sibling::div");   // "Предмет"
+    private SelenideElement selectCreatorDropDownList = $x("//label[contains(text(),'Создатель')]//following-sibling::div"); // "Создатель"
 
     // Таблица
-    private SelenideElement numberOnTable = $(byXpath("//th[contains(text(),'№')]"));                                   //'№'
-    private SelenideElement NameTable = $(byXpath("//th[contains(text(),'Название')]"));                                //'Название'
-    private SelenideElement indexTable = $(byXpath("//th[contains(text(),'Индекс')]"));                                 //'Индекс'
-    private SelenideElement creatorTable = $(byXpath("//th[contains(text(),'Создатель')]"));                            //'Создатель'
-    private SelenideElement subjectTable = $(byXpath("//th[contains(text(),'Предметы')]"));                             //'Предметы'
-    private SelenideElement operationsTable = $(byXpath("//th[contains(text(),'Операции')]"));                          //'Операции'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                //'№'
+    private SelenideElement nameTable = $x("//th[contains(text(),'Название')]");                                             //'Название'
+    private SelenideElement indexTable = $x("//th[contains(text(),'Индекс')]");                                              //'Индекс'
+    private SelenideElement creatorTable = $x("//th[contains(text(),'Создатель')]");                                         //'Создатель'
+    private SelenideElement subjectTable = $x("//th[contains(text(),'Предметы')]");                                          //'Предметы'
+    private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                                       //'Операции'
 
     // Кнопки в таблице, колонка "Операции"
-    private SelenideElement editBtn = $(byXpath("//tr[1]/td[6]//a[@title=\"Редактировать\"]"));                         // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $(byXpath("//tr[1]/td[6]//a[@title=\"Удалить\"]"));                             // Кнопка "Удалить"
-
-
-
-
-
-
+    private SelenideElement editBtn = $x("//tr[1]/td[6]//a[@title=\"Редактировать\"]");                                      // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("//tr[1]/td[6]//a[@title=\"Удалить\"]");                                          // Кнопка "Удалить"
 
 }

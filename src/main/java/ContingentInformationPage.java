@@ -3,34 +3,33 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ContingentInformationPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[@class=\"s-title-head\"][contains(text(),'Контингент')]"));
+    private SelenideElement titleToPage = $x("//h1[@class=\"s-title-head\"][contains(text(),'Контингент')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $(byXpath("//span[contains(text(),'Полный список')]/.."));                    // 'Полный список'
-    private SelenideElement groupsTab = $(byXpath("//span[contains(text(),'Группы')]/.."));                             // 'Группы'
-    private SelenideElement subgroupsTab = $(byXpath("//span[contains(text(),'Подгруппы')]/.."));                       // 'Подгруппы'
-    private SelenideElement cathedraTab = $(byXpath("//span[contains(text(),'Кафедры')]/.."));                          // 'Кафедры'
-    private SelenideElement archiveTab = $(byXpath("//div[@class=\"container-content-head__tabs-wrapper\"]//span[contains(text(),'Архив')]/.."));   //'Архив'
+    private SelenideElement fullListTab = $x("//span[contains(text(),'Полный список')]/..");                    // 'Полный список'
+    private SelenideElement groupsTab = $x("//span[contains(text(),'Группы')]/..");                             // 'Группы'
+    private SelenideElement subgroupsTab = $x("//span[contains(text(),'Подгруппы')]/..");                       // 'Подгруппы'
+    private SelenideElement cathedraTab = $x("//span[contains(text(),'Кафедры')]/..");                          // 'Кафедры'
+    private SelenideElement archiveTab = $x("//div[@class=\"container-content-head__tabs-wrapper\"]//span[contains(text(),'Архив')]/..");   //'Архив'
 
 
     // Title on table / Тайтлы в таблице
-    private SelenideElement contingentInformationTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения о контингенте')]"));
-    private SelenideElement educationInformationTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения об обучении')]"));
-    private SelenideElement progressInformationTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения об успеваемости')]"));
-    private SelenideElement InformationAboutTrainingProgramsTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения о программах обучения')]"));
-    private SelenideElement additionalInformationTitleInTheTable = $(byXpath("//span[contains(text(),'Дополнительные сведения')]"));
-    private SelenideElement activityDetailsInformationTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения об активности')]"));
-    private SelenideElement informationAboutSocialStatusTitleInTheTable = $(byXpath("//span[contains(text(),'Сведения о социальном статусе')]"));
+    private SelenideElement contingentInformationTitleInTheTable = $x("//span[contains(text(),'Сведения о контингенте')]");
+    private SelenideElement educationInformationTitleInTheTable = $x("//span[contains(text(),'Сведения об обучении')]");
+    private SelenideElement progressInformationTitleInTheTable = $x("//span[contains(text(),'Сведения об успеваемости')]");
+    private SelenideElement informationAboutTrainingProgramsTitleInTheTable = $x("//span[contains(text(),'Сведения о программах обучения')]");
+    private SelenideElement additionalInformationTitleInTheTable = $x("//span[contains(text(),'Дополнительные сведения')]");
+    private SelenideElement activityDetailsInformationTitleInTheTable = $x("//span[contains(text(),'Сведения об активности')]");
+    private SelenideElement informationAboutSocialStatusTitleInTheTable = $x("//span[contains(text(),'Сведения о социальном статусе')]");
 
     // Btn
-    private SelenideElement additionalInformationBtn = $(byXpath("//span[contains(text(),'Дополнительная информация')]/.."));                       // кнопка "Дополнительная информация"
-    private SelenideElement editBtn = $(byXpath("//span[contains(text(),'Редактировать')]/.."));                                                    // кнопка "Редактировать"
+    private SelenideElement additionalInformationBtn = $x("//span[contains(text(),'Дополнительная информация')]/..");                       // кнопка "Дополнительная информация"
+    private SelenideElement editBtn = $x("//span[contains(text(),'Редактировать')]/..");                                                    // кнопка "Редактировать"
 
 
 }

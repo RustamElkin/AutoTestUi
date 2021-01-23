@@ -1,7 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 // Дипломные работы
 //  /ru/tko/control/diplomas
@@ -9,31 +8,31 @@ import static com.codeborne.selenide.Selenide.$;
 public class ControlDiplomasPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Дипломные работы')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Дипломные работы')]");
 
     // Кнопка "Добавить"
-    private SelenideElement addBtn = $(byXpath("//div[contains(text(),'Добавить')]/.."));
+    private SelenideElement addBtn = $x("//div[contains(text(),'Добавить')]/..");
 
     // Input "Поиск"
-    private SelenideElement searchInput = $(byXpath("//input[@placeholder=\"Поиск\"]"));
+    private SelenideElement searchInput = $x("//input[@placeholder=\"Поиск\"]");
 
     // Кнопка "Полноэкранный режим"
-    private SelenideElement fullscreenBtn = $(byXpath("//i[@class=\"s-ico--thm-fullscreen s-ico\"]/../.."));
+    private SelenideElement fullscreenBtn = $x("//i[@class=\"s-ico--thm-fullscreen s-ico\"]/../..");
 
     // Таблица
-    private SelenideElement numberOnTable = $(byXpath("//th[contains(text(),'№')]"));                                   //'№'
-    private SelenideElement fullNameTable = $(byXpath("//th[contains(text(),'ФИО')]"));                                 //'ФИО'
-    private SelenideElement groupTable = $(byXpath("//th[contains(text(),'Группа')]"));                                 //'Группа'
-    private SelenideElement themeTable = $(byXpath("//th[contains(text(),'Тема')]"));                                   //'Тема'
-    private SelenideElement headOfTheThesisTable = $(byXpath("//th[contains(text(),'Руководитель дипломной работы')]"));//'Руководитель дипломной работы'
-    private SelenideElement protectionDateTable = $(byXpath("//th[contains(text(),'Дата защиты ')]"));                  //'Дата защиты'
-    private SelenideElement assessmentTable = $(byXpath("//th[contains(text(),'Оценка')]"));                            //'Оценка'
-    private SelenideElement operationsTable = $(byXpath("//th[contains(text(),'Операции')]"));                          //'Операции'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                    // '№'
+    private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                  // 'ФИО'
+    private SelenideElement groupTable = $x("//th[contains(text(),'Группа')]");                                  // 'Группа'
+    private SelenideElement themeTable = $x("//th[contains(text(),'Тема')]");                                    // 'Тема'
+    private SelenideElement headOfTheThesisTable = $x("//th[contains(text(),'Руководитель дипломной работы')]"); // 'Руководитель дипломной работы'
+    private SelenideElement protectionDateTable = $x("//th[contains(text(),'Дата защиты ')]");                   // 'Дата защиты'
+    private SelenideElement assessmentTable = $x("//th[contains(text(),'Оценка')]");                             // 'Оценка'
+    private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                           // 'Операции'
 
     // Кнопки в таблице, колонка "Операции"
-    private SelenideElement viewBtn = $(byXpath("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-eye s-ico\"]/../.."));         // Первая кнопка просмотра
-    private SelenideElement editBtn = $(byXpath("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-pencil s-ico\"]/../.."));      // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $(byXpath("//tr[1]/td[8]//button"));                                            // Кнопка "Удалить"
+    private SelenideElement viewBtn = $x("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-eye s-ico\"]/../..");          // Первая кнопка просмотра
+    private SelenideElement editBtn = $x("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-pencil s-ico\"]/../..");       // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("//tr[1]/td[8]//button");                                             // Кнопка "Удалить"
 
 
 

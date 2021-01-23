@@ -1,33 +1,34 @@
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
+
 // Вход
 //  /ru/tko/login
 public class LoginPage {
 
     //IIN
-    private SelenideElement IINFormTab = $(By.xpath("//div[@tabindex=\"-1\" and @role=\"tab\"]"));
-    private SelenideElement IINInput = $(By.xpath("//input[@tabindex=\"0\" and @aria-label=\"ИИН\"]"));
+    private SelenideElement IINFormTab = $x("//div[@tabindex=\"-1\" and @role=\"tab\"]");
+    private SelenideElement IINInput = $x("//input[@tabindex=\"0\" and @aria-label=\"ИИН\"]");
     //Login or tel.number
-    private SelenideElement loginFormTab = $(By.xpath("//div[@tabindex=\"0\" and @role=\"tab\"]"));
-    private SelenideElement loginInput = $(By.xpath("//input[@tabindex=\"0\" and @aria-label=\"Логин или номер телефона\"]"));
-    private SelenideElement passwordInput = $(By.xpath("//input[@aria-label=\"Пароль\" and @type=\"password\"]"));
-    private SelenideElement submitBtn = $(By.cssSelector("button[type='submit']"));
+    private SelenideElement loginFormTab = $x("//div[@tabindex=\"0\" and @role=\"tab\"]");
+    private SelenideElement loginInput = $x("//input[@tabindex=\"0\" and @aria-label=\"Логин или номер телефона\"]");
+    private SelenideElement passwordInput = $x("//input[@aria-label=\"Пароль\" and @type=\"password\"]");
+    private SelenideElement submitBtn = $("button[type='submit']");
     //переходит на  выбор роли https://college.dev-snation.kz/ru/tko/select-role
 
     //проверка что мы на этой странице, по title Вход
-    private SelenideElement entryHeadingText = $(By.xpath("//div[2][contains(text(),'Вход')]"));
+    private SelenideElement entryHeadingText = $x("//div[2][contains(text(),'Вход')]");
 
     //Если не заполнить ИИН
-    private SelenideElement iinErrorMessage = $(By.xpath("//div[contains(text(),'Поле \"ИИН\" обязательно для заполнения.')]"));
+    private SelenideElement iinErrorMessage = $x("//div[contains(text(),'Поле \"ИИН\" обязательно для заполнения.')]");
 
     //Если не заполнить Пароль
-    private SelenideElement passwordErrorMessage = $(By.xpath("//div[contains(text(),'Поле \"Пароль\" обязательно для заполнения.')]"));
+    private SelenideElement passwordErrorMessage = $x("//div[contains(text(),'Поле \"Пароль\" обязательно для заполнения.')]");
 
     //Если не заполнить Логин или номер телефона
-    private SelenideElement loginErrorMessage = $(By.xpath("//div[contains(text(),'Поле \"Логин или номер телефона\" обязательно для заполнения.')]"));
+    private SelenideElement loginErrorMessage = $x("//div[contains(text(),'Поле \"Логин или номер телефона\" обязательно для заполнения.')]");
 
     public LoginPage clickIINFormTab() {
         IINFormTab.click();

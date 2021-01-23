@@ -3,24 +3,23 @@
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class RegistrationPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $(byXpath("//h1[contains(text(),'Регистрация')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Регистрация')]");
 
     // Input
-    private SelenideElement phoneNumberInput = $(byXpath("//div[@class=\"sn-field__label\"][contains(text(),'Номер сотового')]/following-sibling::div//input "));   // "Номер сотового телефона"
+    private SelenideElement phoneNumberInput = $x("//div[@class=\"sn-field__label\"][contains(text(),'Номер сотового')]/following-sibling::div//input ");   // "Номер сотового телефона"
 
     // Checkbox
-    private SelenideElement acceptCheckbox = $(byXpath("//div[contains(text(),'Я ознакомлен')]/preceding-sibling::div//input"));
+    private SelenideElement acceptCheckbox = $x("//div[contains(text(),'Я ознакомлен')]/preceding-sibling::div//input");
 
     // Btn
-    private SelenideElement acceptBtn = $(byXpath("//div[contains(text(),'Отправить')]/../.."));
+    private SelenideElement acceptBtn = $x("//div[contains(text(),'Отправить')]/../..");
 
     // Growl Если номер не валиден
-    private SelenideElement doesNotExistGrowl = $(byXpath("//div[@id='growls']//div[contains(text(),'Такого номера')]"));
+    private SelenideElement doesNotExistGrowl = $x("//div[@id='growls']//div[contains(text(),'Такого номера')]");
 
 }

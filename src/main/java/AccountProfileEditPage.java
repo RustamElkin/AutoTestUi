@@ -2,17 +2,16 @@
 //  /ru/tko/account/profile/edit
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class AccountProfileEditPage {
 
-    private SelenideElement titleToPage = $(By.xpath("//h1[contains(text(),'Профиль')]"));
-    private SelenideElement backBtn = $(By.xpath("//*[@id=\"vue-container\"]/div[1]//div/a"));
-    private SelenideElement submitBtn = $(By.xpath("//span[contains(text(),'Сохранить')]"));
-    private SelenideElement actualizeBtn = $(By.xpath("//button[contains(text(),'Актуализировать')]"));
-    private SelenideElement fotoEditBtn = $(By.xpath("//button[contains(text(),'Изменить фото')]"));
-    private SelenideElement titleInformationAboutYourself = $(By.xpath("//span[contains(text(),'Общие сведения о себе')]"));
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Профиль')]");
+    private SelenideElement backBtn = $x("//*[@id=\"vue-container\"]/div[1]//div/a");
+    private SelenideElement submitBtn = $x("//span[contains(text(),'Сохранить')]/..");
+    private SelenideElement actualizeBtn = $x("//button[contains(text(),'Актуализировать')]");
+    private SelenideElement fotoEditBtn = $x("//button[contains(text(),'Изменить фото')]");
+    private SelenideElement titleInformationAboutYourself = $x("//span[contains(text(),'Общие сведения о себе')]");
 
 }
