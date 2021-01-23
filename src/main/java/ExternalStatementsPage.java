@@ -18,7 +18,7 @@ public class ExternalStatementsPage {
     private SelenideElement numberTable = $x("//th[contains(text(),'№')]");                                // '№'
     private SelenideElement dateAddedTable = $x("//th[contains(text(),'Дата добавления')]");               // 'Дата добавления'
     private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                            // 'ФИО'
-    private SelenideElement statusTable = $x("//th[contains(text(),'Статус')]");                             // 'Статус'
+    private SelenideElement statusTable = $x("//th[contains(text(),'Статус')]");                           // 'Статус'
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                     // 'Операции'
 
     // Кнопка в таблице, колонка "Операции", первая строка
