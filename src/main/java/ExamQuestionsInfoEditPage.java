@@ -1,8 +1,10 @@
 // Редактирование информаций по экзаменационным вопросам
 //  /ru/tko/exam-questions/111/edit
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ExamQuestionsInfoEditPage {
@@ -20,24 +22,22 @@ public class ExamQuestionsInfoEditPage {
     // dropdown list. Кликнув на инпут выпадают списки
 
     // Список предметов в div[3], выбрать предмет можно указав li[] или по тексту в span[contains(text(),'Казахский язык')]
-    // Если предмет повторяется, лучше указывать li[]
+    // Если предмет повторяется, лучше указывать li[] или брать все в скобки и добавив квадратные, в них указывать индекс
 
-    // Список предметов
-    // form/div[3]//li/span/span
+    // Список предметов.    В пропертях li есть innerText: "Русский язык ", textContent: "Русский язык ". Фильтровать используя проперти.
+    private ElementsCollection subjectList = $$x("//form/div[3]//li");
 
     // Выбор определенного предмета
     private SelenideElement selectSubjectsInDropdown = $x("//form/div[3]//li[1]/span/span[contains(text(),'Казахский язык')]");
 
-
     // Список 'Язык обучения'
-    //form/div[4]//li/span/span
+    private ElementsCollection languagesEducationList = $$x("//form/div[4]//li");
 
     // Выбор определенного языка обучения
     private SelenideElement selectLanguageEducationInDropdown = $x("//form/div[4]//li[5]/span/span[contains(text(),'корейский')]");
 
-
     // Список 'Доп. преподаватели'
-    //form/div[5]//li/span/span
+    private ElementsCollection additionalTeachersList = $$x("//form/div[5]//li");
 
     // Выбор определенного преподавателя
     private SelenideElement selectAdditionalTeacherInDropdown = $x("//form/div[5]//li[1]/span/span[contains(text(),'Алтаев Абит Уристемович')]");

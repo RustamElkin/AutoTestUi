@@ -59,11 +59,4 @@ public class ExamTicketGroupsPage {
     private SelenideElement firstEditBtn = $x("(//span[@class=\"s-ico s-ico--thm-pencil\"]/..)[1]");                      // Кнопка "Редактировать"
     private SelenideElement firstDeleteBtn = $x("(//span[@class=\"s-ico s-ico--thm-trash\"]/..)[1]");                     // Кнопка "Удалить"
 
-
-
-
-
-
-
-
 }
