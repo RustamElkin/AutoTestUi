@@ -1,5 +1,4 @@
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
@@ -9,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class AccountAdditionalInfoPage {
 
-    private SelenideElement submitBtn = $(By.cssSelector("button[type='submit']"));
+    private SelenideElement submitBtn = $("button[type='submit']");
     private SelenideElement backBtn = $x("//*[@id=\"vue-container\"]/div[1]//div/a");
 
 }

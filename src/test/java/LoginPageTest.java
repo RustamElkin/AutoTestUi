@@ -5,20 +5,20 @@ import testconfigs.AppConfig;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPageTest extends AppConfig {
 
     private SelenideElement modalRegionSelecting = $(By.xpath("//*[@id=\"modal-region-selecting\"]//a[text()=\"Туркестанская область\"]"));
-    private SelenideElement signInBtn = $(By.cssSelector("div.s-main-header__right-panel >a[href='/ru/tko/login']"));
+    private SelenideElement signInBtn = $("div.s-main-header__right-panel >a[href='/ru/tko/login']");
     private SelenideElement entryTitle = $(By.xpath("//div[2][contains(text(),'Вход')]"));
     private SelenideElement loginFormTab = $(By.xpath("//div[@tabindex=\"0\" and @role=\"tab\"]"));
     private SelenideElement loginInput = $(By.xpath("//input[@tabindex=\"0\" and @aria-label=\"Логин или номер телефона\"]"));
     private SelenideElement passwordInput = $(By.xpath("//input[@aria-label=\"Пароль\" and @type=\"password\"]"));
-    private SelenideElement submitBtn = $(By.cssSelector("button[type='submit']"));
+    private SelenideElement submitBtn = $("button[type='submit']");
     private SelenideElement roleTitle = $(By.xpath("//div[2][contains(text(),'Роль')]"));
-    private SelenideElement selectRoleDropDownList = $(By.cssSelector("div.multiselect__tags"));
+    private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
     private SelenideElement organizationTitle = $(By.xpath("//div[2][contains(text(),'Организация')]"));
     private SelenideElement selectOrganizationDropDownList = $(By.xpath("//*[@id='vue-container']//form//div/div[2]"));
     private SelenideElement selectOrganizationName = $(By.xpath("//*[@id='vue-container']//div[3]/ul/li[1]/span/span"));

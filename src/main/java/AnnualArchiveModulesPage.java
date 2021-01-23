@@ -9,7 +9,7 @@ public class AnnualArchiveModulesPage {
 
     private SelenideElement titleToPage = $x("//h1[contains(text(),'2020 - 2020 учебный год')]");
     private SelenideElement backBtn = $x("//span[contains(text(),'Назад')]");
-    // private SelenideElement backBtn = $(By.cssSelector("//div.container-content-head a")); //Если xpath будет гнать
+    // private SelenideElement backBtn = $("//div.container-content-head a"); //Если xpath будет гнать
 
 
     //для теста, проверяющего есть ли на странице эти поля
