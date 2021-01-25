@@ -19,10 +19,10 @@ public class CompetitionResultPage {
     private SelenideElement firstRowLookBtn = $x("//div[@class=\"s-group s-group--to-center\"]/a");             // Таблица, операции "Просмотр"
 
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                   // Таблица
-    private SelenideElement nameOnTable = $x("//th[contains(text(),'Название организации')]");
-    private SelenideElement journalOnTable = $x("//th[contains(text(),'Мест по гос. заказу')]");
-    private SelenideElement groupSubgroupOnTable = $x("//th[contains(text(),'Всего заявлений')]");
-    private SelenideElement OperationsOnTable = $x("//th[contains(text(),'Операции')]");
+    private SelenideElement nameOfTheOrganizationTable = $x("//th[contains(text(),'Название организации')]");
+    private SelenideElement placesInStateOrderTable = $x("//th[contains(text(),'Мест по гос. заказу')]");
+    private SelenideElement totalApplicationsTable = $x("//th[contains(text(),'Всего заявлений')]");
+    private SelenideElement operationsOnTable = $x("//th[contains(text(),'Операции')]");
 
     private SelenideElement backPaginateBtn = $x("//div[@class=\"sn-table__control\"]/button[1]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span
     private SelenideElement nextPaginateBtn = $x("//div[@class=\"sn-table__control\"]/button[2]");

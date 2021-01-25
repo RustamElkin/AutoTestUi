@@ -34,11 +34,11 @@ public class ClosedAssignedHomeworksPage {
     private SelenideElement nameOnTable = $x("//th[contains(text(),'Название')]");
     private SelenideElement journalOnTable = $x("//th[contains(text(),'Журнал')]");
     private SelenideElement groupSubgroupOnTable = $x("//th[contains(text(),'Группа / Подгруппа')]");
-    private SelenideElement Teacher = $x("//th[contains(text(),'Преподаватель')]");
-    private SelenideElement checkedNotChecked = $x("//th[contains(text(),'Проверено / Не проверено')]");
-    private SelenideElement appointmentTime = $x("//th[contains(text(),'Дата и время назначения')]");
+    private SelenideElement teacherTable = $x("//th[contains(text(),'Преподаватель')]");
+    private SelenideElement checkedNotCheckedTable = $x("//th[contains(text(),'Проверено / Не проверено')]");
+    private SelenideElement appointmentTimeTable = $x("//th[contains(text(),'Дата и время назначения')]");
     private SelenideElement completionTimeTable = $x("//th[contains(text(),'Дата и время завершения приёма')]");
-    private SelenideElement OperationsOnTable = $x("//th[contains(text(),'Операции')]");
+    private SelenideElement operationsOnTable = $x("//th[contains(text(),'Операции')]");
     
     private SelenideElement backPaginateBtn = $x("//a[contains(text(),'‹')]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span
     private SelenideElement firstPaginateBtn = $x("//a[contains(text(),'1')]");

@@ -27,7 +27,7 @@ public class ControlSummaryPage {
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                            // '№'
     private SelenideElement groupOnTable= $x("//th[contains(text(),'Группа')]");                                                         // 'Группа'
     private SelenideElement qualificationTable = $x("//th[contains(text(),'Квалификация')]");                                            // 'Квалификация'
-    private SelenideElement courseTable = $x("//th[contains(text(),'Курс')]");                                                                 // 'Курс'
+    private SelenideElement courseTable = $x("//th[contains(text(),'Курс')]");                                                           // 'Курс'
     private SelenideElement languageEducationTable = $x("//th[contains(text(),'Язык обучения')]");                                       // 'Язык обучения'
     private SelenideElement numberOfStudentsTable = $x("//th[contains(text(),'Количество учащихся')]");                                  // 'Количество учащихся'
     private SelenideElement curatorTable = $x("//th[contains(text(),'Куратор')]");                                                       // 'Куратор'
