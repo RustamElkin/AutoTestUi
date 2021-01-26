@@ -24,5 +24,5 @@ public class EntranceExamCreatePage {
     private SelenideElement languageOfEducationTable = $x("//th[contains(text(),'Язык обучения')]");            // 'Язык обучения'
     private SelenideElement levelOfEducationTable = $x("//th[contains(text(),'Уровень образования')]");         // 'Уровень образования'
     private SelenideElement typeOfTable = $x("//th[contains(text(),'Вид')]");                                   // 'Вид'
-    private SelenideElement OperationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
+    private SelenideElement operationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
 }

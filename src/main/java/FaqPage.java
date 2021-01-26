@@ -23,7 +23,7 @@ public class FaqPage {
     private SelenideElement blogToolkit = $x("//div[@class='faq-answear__title'][contains(text(),'работе с блогом')]");
     private SelenideElement publicServiceTool = $x("//div[@class='faq-answear__title'][contains(text(),'государственным услугам')]");
     private SelenideElement journalTool = $x("//div[@class='faq-answear__title'][contains(text(),'по журналу')]");
-    private SelenideElement ContingentSectionTool = $x("//div[@class='faq-answear__title'][contains(text(),'по разделу контингент')]");
+    private SelenideElement contingentSectionTool = $x("//div[@class='faq-answear__title'][contains(text(),'по разделу контингент')]");
     private SelenideElement personnelTooling = $x("//div[@class='faq-answear__title'][contains(text(),'по персоналу')]");
     private SelenideElement organizationProfileTool = $x("//div[@class='faq-answear__title'][contains(text(),'по профилю организации')]");
     private SelenideElement scheduledInstrumentation = $x("//div[@class='faq-answear__title'][contains(text(),'по расписанию')]");

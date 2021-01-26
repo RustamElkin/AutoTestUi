@@ -57,32 +57,32 @@ public class ControlPersonnelPage {
 
 
     // Фильтры со списком
-    private SelenideElement genderFilter= $x("//label[contains(text(),'Пол:: ')]/following-sibling::div");                          // "Пол"
-    private SelenideElement citizenshipFilter= $x("//label[contains(text(),'Гражданство: ')]/following-sibling::div");              // "Гражданство"
-    private SelenideElement nationalityFilter= $x("//label[contains(text(),'Национальность:: ')]/following-sibling::div");          // "Национальность"
+    private SelenideElement genderFilter= $x("//label[contains(text(),'Пол')]/following-sibling::div");                          // "Пол"
+    private SelenideElement citizenshipFilter= $x("//label[contains(text(),'Гражданство')]/following-sibling::div");              // "Гражданство"
+    private SelenideElement nationalityFilter= $x("//label[contains(text(),'Национальность')]/following-sibling::div");          // "Национальность"
 
-    private SelenideElement healthStatusFilter= $x("//label[contains(text(),'Состояние здоровья: ')]/following-sibling::div");       // "Состояние здоровья"
-    private SelenideElement familyStatusFilter= $x("//label[contains(text(),'Семейное положение:: ')]/following-sibling::div");      // "Семейное положение"
+    private SelenideElement healthStatusFilter= $x("//label[contains(text(),'Состояние здоровья')]/following-sibling::div");       // "Состояние здоровья"
+    private SelenideElement familyStatusFilter= $x("//label[contains(text(),'Семейное положение')]/following-sibling::div");      // "Семейное положение"
 
-    private SelenideElement academicDegreeFilter= $x("//label[contains(text(),'Ученая степень: ')]/following-sibling::div");         // "Ученая степень"
-    private SelenideElement academicRankFilter= $x("//label[contains(text(),'Ученое звание: ')]/following-sibling::div");            // "Ученое звание"
+    private SelenideElement academicDegreeFilter= $x("//label[contains(text(),'Ученая степень')]/following-sibling::div");         // "Ученая степень"
+    private SelenideElement academicRankFilter= $x("//label[contains(text(),'Ученое звание')]/following-sibling::div");            // "Ученое звание"
 
     private SelenideElement achievementsFilter= $x("//label[contains(text(),'Группа воинского учета')]/following-sibling::div");     // "Группа воинского учета"
-    private SelenideElement academicYearFilter= $x("//label[contains(text(),'Состав: ')]/following-sibling::div");                   // "Состав"
-    private SelenideElement cathedraFilter= $x("//label[contains(text(),'Воинское звание: ')]/following-sibling::div");              // "Воинское звание"
-    private SelenideElement specialtyFilter= $x("//label[contains(text(),'Военная пригодность: ')]/following-sibling::div");         // "Военная пригодность"
+    private SelenideElement academicYearFilter= $x("//label[contains(text(),'Состав')]/following-sibling::div");                   // "Состав"
+    private SelenideElement cathedraFilter= $x("//label[contains(text(),'Воинское звание')]/following-sibling::div");              // "Воинское звание"
+    private SelenideElement specialtyFilter= $x("//label[contains(text(),'Военная пригодность')]/following-sibling::div");         // "Военная пригодность"
 
-    private SelenideElement numberOfEmployeesFilter= $x("//label[contains(text(),'Численность в штате сотрудников: ')]/following-sibling::div");                  // 'Численность в штате сотрудников'
-    private SelenideElement environmentalImpactCoefficientFilter= $x("//label[contains(text(),'Коэффициент экологического влияния: ')]/following-sibling::input");// 'Коэффициент экологического влияния
-    private SelenideElement jobTypeFilter= $x("//label[contains(text(),'Тип должности: ')]/following-sibling::div");                                              // 'Тип должности'
-    private SelenideElement sourceOfFinancingFilter= $x("//label[contains(text(),'Источник финансирования: ')]/following-sibling::div");                          // 'Источник финансирования'
-    private SelenideElement categoryFilter= $x("//label[contains(text(),'Категория: ')]/following-sibling::div");                                                 // 'Категория'
-    private SelenideElement raisingQualificationFilter= $x("//label[contains(text(),'Повышение квалификации: ')]/following-sibling::div");                        // 'Повышение квалификации'
+    private SelenideElement numberOfEmployeesFilter= $x("//label[contains(text(),'Численность в штате сотрудников')]/following-sibling::div");                  // 'Численность в штате сотрудников'
+    private SelenideElement environmentalImpactCoefficientFilter= $x("//label[contains(text(),'Коэффициент экологического влияния')]/following-sibling::input");// 'Коэффициент экологического влияния
+    private SelenideElement jobTypeFilter= $x("//label[contains(text(),'Тип должности')]/following-sibling::div");                                              // 'Тип должности'
+    private SelenideElement sourceOfFinancingFilter= $x("//label[contains(text(),'Источник финансирования')]/following-sibling::div");                          // 'Источник финансирования'
+    private SelenideElement categoryFilter= $x("//label[contains(text(),'Категория')]/following-sibling::div");                                                 // 'Категория'
+    private SelenideElement raisingQualificationFilter= $x("//label[contains(text(),'Повышение квалификации')]/following-sibling::div");                        // 'Повышение квалификации'
 
-    private SelenideElement countryFilter= $x("//label[contains(text(),'Страна: ')]/following-sibling::div");                        // "Страна"
-    private SelenideElement regionFilter= $x("//label[contains(text(),'Область: ')]/following-sibling::div");                        // "Область"
-    private SelenideElement districtFilter= $x("//label[contains(text(),'Район: ')]/following-sibling::div");                        // "Район"
-    private SelenideElement cityLocalityFilter= $x("//label[contains(text(),'Город/населенный пункт: ')]/following-sibling::div");   // "Город/населенный пункт"
+    private SelenideElement countryFilter= $x("//label[contains(text(),'Страна')]/following-sibling::div");                        // "Страна"
+    private SelenideElement regionFilter= $x("//label[contains(text(),'Область')]/following-sibling::div");                        // "Область"
+    private SelenideElement districtFilter= $x("//label[contains(text(),'Район')]/following-sibling::div");                        // "Район"
+    private SelenideElement cityLocalityFilter= $x("//label[contains(text(),'Город/населенный пункт')]/following-sibling::div");   // "Город/населенный пункт"
 
     // Таблица
     private SelenideElement numberTable = $x("//th[contains(text(),'№')]");                                                          //'№'

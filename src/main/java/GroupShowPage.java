@@ -28,10 +28,10 @@ public class GroupShowPage {
     private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                         //'ФИО'
     private SelenideElement iinTable = $x("//th[contains(text(),'ИИН')]");                                              //'ИИН'
     private SelenideElement submissionStatusToNODBTable = $x("//th[contains(text(),'Статус отправки в НОБД')]");        //'Статус отправки в НОБД'
-    private SelenideElement OperationsTable = $x("//th[contains(text(),'Операции')]");                                  //'Операции'
+    private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                                  //'Операции'
 
     // Таблица, список студентов группе
-    private ElementsCollection StudentList = $$x("(//tbody)[2]/tr");                                                    // Список студентов в группе
+    private ElementsCollection studentList = $$x("(//tbody)[2]/tr");                                                    // Список студентов в группе
 
     // Кнопки просмотра в таблице. Можно выбрать по индексу. По умолчанию стоит первая [1]
     private SelenideElement viewBtn = $x("((//tbody)[2]/tr//span[@class='s-ico s-ico--thm-eye'])[1]");                  // Кнопка 'Посмотреть'

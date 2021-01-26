@@ -11,8 +11,8 @@ public class ArchiveGraduatedGroupShowPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Контингент')]");
     private SelenideElement archiveTabItem = $("a.container-content-head__tab-item.is-active > span");
     private SelenideElement chairTabItem = $("div.container-content-head > div > div > a:nth-child(4)");
-    private SelenideElement SubgroupsTabItem = $("div.container-content-head > div > div > a:nth-child(3)");
-    private SelenideElement GroupsMeTabItem = $("div.container-content-head > div > div > a:nth-child(2)");
+    private SelenideElement subgroupsTabItem = $("div.container-content-head > div > div > a:nth-child(3)");
+    private SelenideElement groupsMeTabItem = $("div.container-content-head > div > div > a:nth-child(2)");
     private SelenideElement groupListTabItem = $("div.container-content-head > div > div > a:nth-child(1)");
     private SelenideElement firstRowBtn = $("td:nth-child(5) > div > a");
 }

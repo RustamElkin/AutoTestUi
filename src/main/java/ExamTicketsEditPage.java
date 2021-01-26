@@ -19,18 +19,18 @@ public class ExamTicketsEditPage {
     // можно просто по button в properties textContent: " Добавить билет"
 
     // Кнопки при создании нового билета
-    private SelenideElement  cancelTicketChangeBtn = $x("//button[@type=\"button\"]//i[@class=\"s-ico--thm-close s-ico\"]/../..");    // 'Отменить изменение билета'
-    private SelenideElement  saveNewTicketBtn = $x("//button[@type=\"submit\"]//i[@class=\"s-ico--thm-check s-ico\"]/../..");         // 'Сохранить билет'
+    private SelenideElement cancelTicketChangeBtn = $x("//button[@type=\"button\"]//i[@class=\"s-ico--thm-close s-ico\"]/../..");    // 'Отменить изменение билета'
+    private SelenideElement saveNewTicketBtn = $x("//button[@type=\"submit\"]//i[@class=\"s-ico--thm-check s-ico\"]/../..");         // 'Сохранить билет'
 
-    private SelenideElement  deleteTicketBtn = $x("(//button[@type=\"button\"]//i[@class=\"s-ico--thm-trash s-ico\"]/../..)[1]");     // 'Удалить билет' Удаляю по индексу
+    private SelenideElement deleteTicketBtn = $x("(//button[@type=\"button\"]//i[@class=\"s-ico--thm-trash s-ico\"]/../..)[1]");     // 'Удалить билет' Удаляю по индексу
 
     // Кнопка редактирования билета
     private SelenideElement editTicketBtn = $x("(//button[@type=\"button\"]//i[@class=\"s-ico--thm-pencil s-ico\"]/../..)[1]");       // 'Редактировать билет'  Редактирую по индексу
 
     // Нажав редактировать появляется дополнительно две кнопки: Отменить, Сохранить билет.
 
-    private SelenideElement  undoChangeTicketBtn = $x("//button[@type=\"button\"]//i[@class=\"s-ico--thm-close s-ico\"]/../..");      // 'Отменить изменение билета'
-    private SelenideElement  saveTicketBtn = $x("//button[@type=\"submit\"]//i[@class=\"s-ico--thm-check s-ico\"]/../..");            // 'Сохранить билет'
+    private SelenideElement undoChangeTicketBtn = $x("//button[@type=\"button\"]//i[@class=\"s-ico--thm-close s-ico\"]/../..");      // 'Отменить изменение билета'
+    private SelenideElement saveTicketBtn = $x("//button[@type=\"submit\"]//i[@class=\"s-ico--thm-check s-ico\"]/../..");            // 'Сохранить билет'
 
     // Инпуты
 

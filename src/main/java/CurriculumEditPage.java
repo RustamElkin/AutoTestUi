@@ -42,7 +42,7 @@ public class CurriculumEditPage {
     private SelenideElement selectFromTheListOrEnterNameDropdown = $x("//label[contains(text(),'Выберите из списка или введите название')]//following-sibling::div/div[@class='multiselect__tags']");
 
     // В модалке "Дисциплина" два инпута
-    private SelenideElement nameRuInput = $x("//div[@class=\"s-modal__body\"]//label[contains(text(),' Название RU')]/following-sibling:: input");           // 'Название RU'
+    private SelenideElement nameRuInput = $x("//div[@class=\"s-modal__body\"]//label[contains(text(),' Название RU')]/following-sibling::input");           // 'Название RU'
     private SelenideElement nameKzInput = $x("//div[@class='s-modal__body']//label[contains(text(),'Название KZ')]/following-sibling::input[@type='text']");  // 'Название KZ'
 
     // Кнопка "Добавить" -  условные обозначения"

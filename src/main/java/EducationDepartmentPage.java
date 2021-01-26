@@ -25,7 +25,7 @@ public class EducationDepartmentPage {
     private SelenideElement specializationTable = $x("//th[contains(text(),'Специализация')]");                 // 'Специализация'
     private SelenideElement groupsTable = $x("//th[contains(text(),'Группы')]");                                // 'Группы'
     private SelenideElement headDepartmentTable = $x("//th[contains(text(),'Зав. кафедрой')]");                 // 'Зав. кафедрой'
-    private SelenideElement OperationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
+    private SelenideElement operationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
 
     // Кнопки в таблице, колонка "Операции"
     private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Просмотреть\"]");                            // Кнопка просмотра

@@ -13,7 +13,7 @@ public class CollegesPage {
     private SelenideElement resetFilterBtn = $x("//span[contains(text(),'Сбросить')]/..");
 
     private SelenideElement collegesSearchBtn = $x("//*[@id=\"v-catalog-list-view-app\"]//div[2]/button");
-    private SelenideElement SearchByOrganizationNameInput = $x("//input[@placeholder=\"Поиск по названию организации\"]");
+    private SelenideElement searchByOrganizationNameInput = $x("//input[@placeholder=\"Поиск по названию организации\"]");
 
     private SelenideElement selectCollegeAfterFilter = $x("//*[@id=\"v-catalog-list-view-app\"]//div[2]/a[1]");
 
@@ -28,8 +28,8 @@ public class CollegesPage {
     private SelenideElement languageOfEducationUzbekCheckBox = $x("//div[contains(text(),'Узбекский')]/preceding-sibling::div");
 
     private SelenideElement organizationTypeCollegeCheckBox = $x("//div[contains(text(),'колледж')]/preceding-sibling::div/input[1]");
-    private SelenideElement SpecializedSchoolCheckBox = $x("//div[contains(text(),'училище')]/preceding-sibling::div/input");
-    private SelenideElement VocationalTrainingCenterCheckBox = $x("//div[contains(text(),'учебный центр профессиональной подготовки')]/preceding-sibling::div/input[1]");
+    private SelenideElement specializedSchoolCheckBox = $x("//div[contains(text(),'училище')]/preceding-sibling::div/input");
+    private SelenideElement vocationalTrainingCenterCheckBox = $x("//div[contains(text(),'учебный центр профессиональной подготовки')]/preceding-sibling::div/input[1]");
     private SelenideElement collegeForSpecialEducationalNeedsCheckBox = $x("//div[contains(text(),'колледж для детей с особыми образовательными потребностями')]/preceding-sibling::div/input");
     private SelenideElement correctionalVocationalTrainingCenterCheckBox = $x("//div[contains(text(),'учебный центр профессиональной подготовки при исправительном учреждении')]/preceding-sibling::div/input");
     private SelenideElement correctionalCollegeCheckBox = $x("//div[contains(text(),'колледж при исправительном учреждении')]/preceding-sibling::div/input");

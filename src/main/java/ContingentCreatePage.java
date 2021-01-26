@@ -19,7 +19,7 @@ public class ContingentCreatePage {
     private SelenideElement cathedraTab = $x("//span[contains(text(),'Кафедры')]/..");                                                      // 'Кафедры'
     private SelenideElement archiveTab = $x("//div[@class=\"container-content-head__tabs-wrapper\"]//span[contains(text(),'Архив')]/..");   // 'Архив'
 
-    private SelenideElement IINInput = $x("//label[contains(text(),'ИИН: ')]/following-sibling::input");                                    // 'Инпут ИИН'
+    private SelenideElement iinInput = $x("//label[contains(text(),'ИИН: ')]/following-sibling::input");                                    // 'Инпут ИИН'
 
 
     // Кнопка Проверить

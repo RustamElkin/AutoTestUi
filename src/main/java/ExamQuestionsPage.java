@@ -30,7 +30,7 @@ public class ExamQuestionsPage {
 
     // дропдауны со списками элементов
     private SelenideElement subjectsList = $x("//label[contains(text(),'Предмет')]/following-sibling::div");                    // 'Предмет'
-    private SelenideElement CreatorsList = $x("//label[contains(text(),'Создатель')]//following-sibling::div");                  // 'Создатель'
+    private SelenideElement creatorsList = $x("//label[contains(text(),'Создатель')]//following-sibling::div");                  // 'Создатель'
     private SelenideElement languageEducationsList = $x("//label[contains(text(),'Язык обучения')]//following-sibling::div");    // 'Язык обучения'
     // в тесте искать selectSubject = $(byText())
 
@@ -42,7 +42,7 @@ public class ExamQuestionsPage {
     private SelenideElement creatorTable = $x("//th[contains(text(),'Создатель')]");                            // 'Создатель'
     private SelenideElement languageEducationTable = $x("//th[contains(text(),'Язык обучения')]");              // 'Язык обучения'
     private SelenideElement numberOfQuestionsTable = $x("//th[contains(text(),'Количетво вопросов')]");         // 'Количетво вопросов'
-    private SelenideElement OperationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
+    private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
 
 
     // Кнопки в таблице, колонка "Операции"

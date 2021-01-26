@@ -13,7 +13,7 @@ public class AssignedHomeworkDisciplinesListPage {
     private SelenideElement completedTasksFromTableOnPage = $x("//th[contains(text(),'Выполнено заданий')]");
     private SelenideElement failedOpenFromTableOnPage = $x("//th[contains(text(),'Не выполнено (открытые)')]");
     private SelenideElement failedClosedFromTableOnPage = $x("//th[contains(text(),'Не выполнено (закрытые)')]");
-    private SelenideElement OperationsFromTableOnPage = $x("//th[contains(text(),'Операции')]");
+    private SelenideElement operationsFromTableOnPage = $x("//th[contains(text(),'Операции')]");
     private SelenideElement viewFirstRowBtn = $x("//table//tr[1]/td[6]/div");
 
 }
