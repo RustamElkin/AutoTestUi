@@ -22,8 +22,8 @@ public class ControlEducationModulePage {
     private SelenideElement resetBtn = $x("//span[contains(text(),'Сбросить')]/..");
 
     //Фильтр Инпуты
-    private SelenideElement nameInput = $x("//label[contains(text(),'Название: ')]/following-sibling::input");               // 'Название'
-    private SelenideElement indexInput = $x("//label[contains(text(),'Индекс: ')]/following-sibling::input");                // 'Индекс'
+    private SelenideElement nameInput = $x("//label[contains(text(),'Название')]/following-sibling::input");               // 'Название'
+    private SelenideElement indexInput = $x("//label[contains(text(),'Индекс')]/following-sibling::input");                // 'Индекс'
 
     //Dropdown фильтры
     private SelenideElement selectSubjectDropDownList = $x("//label[contains(text(),'Предмет')]//following-sibling::div");   // "Предмет"

@@ -27,7 +27,7 @@ public class ControlGroupPage {
 
 
     //Фильтр Инпуты
-    private SelenideElement nameInput = $x("//label[contains(text(),'Название: ')]/following-sibling::input");  // 'Название'
+    private SelenideElement nameInput = $x("//label[contains(text(),'Название')]/following-sibling::input");  // 'Название'
 
     //Dropdown фильтры
     private SelenideElement selectQualificationDropDownList = $x("//label[contains(text(),'Квалификация')]/following-sibling::div");   //"Квалификация"

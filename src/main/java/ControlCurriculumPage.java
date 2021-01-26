@@ -22,7 +22,7 @@ public class ControlCurriculumPage {
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                   // '№'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Специальность')]");                      // 'Специальность'
     private SelenideElement qualificationTable = $x("//th[contains(text(),'Квалификация')]");                   // 'Квалификация'
-    private SelenideElement CreatorTable = $x("//th[contains(text(),'Создатель')]");                            // 'Создатель'
+    private SelenideElement creatorTable = $x("//th[contains(text(),'Создатель')]");                            // 'Создатель'
     private SelenideElement dateOfCreationTable = $x("//th[contains(text(),'Дата создания')]");                 // 'Дата создания'
     private SelenideElement startYearOfTable = $x("//th[contains(text(),'Год начала обучения')]");              // 'Год начала обучения'
     private SelenideElement statusTable = $x("//th[contains(text(),'Статус')]");                                // 'Статус'

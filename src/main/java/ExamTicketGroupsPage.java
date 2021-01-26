@@ -22,7 +22,7 @@ public class ExamTicketGroupsPage {
     private SelenideElement addBtn = $x("//div[contains(text(),'Добавить')]/..");
 
     // Input
-    private SelenideElement nameInput = $x("//label[contains(text(),'Название:')]/following-sibling::input");
+    private SelenideElement nameInput = $x("//label[contains(text(),'Название')]/following-sibling::input");
 
     // Multiselect input, мультиселект инпуты, фильтр
     private SelenideElement subjectsInput = $x("//label[contains(text(),'Предмет')]/following-sibling::div//input");                                // 'Предмет'
@@ -38,7 +38,7 @@ public class ExamTicketGroupsPage {
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                   // '№'
     private SelenideElement nameOnTable = $x("//th[contains(text(),'Название')]");                              // 'Название'
     private SelenideElement disciplineTable = $x("//th[contains(text(),'Дисциплина')]");                        // 'Дисциплина'
-    private SelenideElement CreatorTable = $x("//th[contains(text(),'Создатель')]");                            // 'Создатель'
+    private SelenideElement creatorTable = $x("//th[contains(text(),'Создатель')]");                            // 'Создатель'
     private SelenideElement languageEducationTable = $x("//th[contains(text(),'Язык обучения')]");              // 'Язык обучения'
     private SelenideElement numberOfTicketsTable = $x("//th[contains(text(),'Количество билетов')]");           // 'Количество билетов'
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                          // 'Операции'

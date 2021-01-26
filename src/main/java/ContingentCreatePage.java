@@ -27,46 +27,46 @@ public class ContingentCreatePage {
 
 
     // Dropdown's elements
-    private SelenideElement citizenshipDropdown = $x("//label[contains(text(),'Гражданство: ')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
-    private SelenideElement nationalityDropdown = $x("//label[contains(text(),'Национальность: ')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
-    private SelenideElement informationOnMigrationStatusDropdown = $x("//label[contains(text(),'Сведения о миграционном статусе: ')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
+    private SelenideElement citizenshipDropdown = $x("//label[contains(text(),'Гражданство')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
+    private SelenideElement nationalityDropdown = $x("//label[contains(text(),'Национальность')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
+    private SelenideElement informationOnMigrationStatusDropdown = $x("//label[contains(text(),'Сведения о миграционном статусе')]/following-sibling::div/div[@class=\"multiselect__tags\"]");
     private SelenideElement regionDropdown = $x("//label[contains(text(),'Область: ')]/following-sibling::div[1]");
-    private SelenideElement typeOfResidenceDropdown = $x("//label[contains(text(),'Тип местности проживания: ')]/following-sibling::div[1]");
-    private SelenideElement acceptedGraduatedFromDropdown = $x("//label[contains(text(),'Из числа принятых, окончил: ')]/following-sibling::div[1]");
+    private SelenideElement typeOfResidenceDropdown = $x("//label[contains(text(),'Тип местности проживания')]/following-sibling::div[1]");
+    private SelenideElement acceptedGraduatedFromDropdown = $x("//label[contains(text(),'Из числа принятых, окончил')]/following-sibling::div[1]");
     private SelenideElement cathedraDropdown = $x("//label[contains(text(),'Кафедры: ')]/following-sibling::div[1]");
-    private SelenideElement specialtyAndClassifierMainDropdown = $x("//label[contains(text(),'Специальность и классификатор (основной): ')]/following-sibling::div[1]");
+    private SelenideElement specialtyAndClassifierMainDropdown = $x("//label[contains(text(),'Специальность и классификатор (основной)')]/following-sibling::div[1]");
     private SelenideElement placementDropdown = $x("//label[contains(text(),'Трудоустройство: ')]/following-sibling::div[1]");
-    private SelenideElement educationAtTheExpenseOfDropdown = $x("//label[contains(text(),'Обучение за счет средств: ')]/following-sibling::div[1]");
+    private SelenideElement educationAtTheExpenseOfDropdown = $x("//label[contains(text(),'Обучение за счет средств')]/following-sibling::div[1]");
     private SelenideElement arrivedDropdown = $x("//label[contains(text(),'Прибыл(-а): ')]/following-sibling::div[1]");
-    private SelenideElement educationPeriodDropdown = $x("//label[contains(text(),'Срок обучения: ')]/following-sibling::div[1]");
-    private SelenideElement leftForASecondCourseDropdown = $x("//label[contains(text(),'Оставлен на повторный курс: ')]/following-sibling::div[1]");
-    private SelenideElement onAcademicLeaveDropdown = $x("//label[contains(text(),'Находится в академическом отпуске: ')]/following-sibling::div[1]");
+    private SelenideElement educationPeriodDropdown = $x("//label[contains(text(),'Срок обучения')]/following-sibling::div[1]");
+    private SelenideElement leftForASecondCourseDropdown = $x("//label[contains(text(),'Оставлен на повторный курс')]/following-sibling::div[1]");
+    private SelenideElement onAcademicLeaveDropdown = $x("//label[contains(text(),'Находится в академическом отпуске')]/following-sibling::div[1]");
 
 
     // error-message
-    private SelenideElement citizenshipErrorMessage  = $x("//div[contains(text(),'Поле \"Гражданство\" обязательно для заполнения.')]");
-    private SelenideElement nationalityErrorMessage = $x("//div[contains(text(),'Поле \"Национальность\" обязательно для заполнения.')]");
+    private SelenideElement citizenshipErrorMessage  = $x("//div[contains(text(),'Поле \"Гражданство\" обязательно для заполнения')]");
+    private SelenideElement nationalityErrorMessage = $x("//div[contains(text(),'Поле \"Национальность\" обязательно для заполнения')]");
     private SelenideElement informationOnMigrationStatusErrorMessage = $x("//div[contains(text(),'Поле \"Сведения о миграционном статусе\" обязательно')]");
     private SelenideElement contactNumberErrorMessage = $x("//div[contains(text(),'Поле \"Контактный телефон\" обязательно для заполнен')]");
-    private SelenideElement regionErrorMessage = $x("//div[contains(text(),'Поле \"Область\" обязательно для заполнения.')]");
+    private SelenideElement regionErrorMessage = $x("//div[contains(text(),'Поле \"Область\" обязательно для заполнения')]");
     private SelenideElement typeOfResidenceErrorMessage = $x("//div[contains(text(),'Поле \"Тип местности проживания\" обязательно для за')]");
-    private SelenideElement acceptedGraduatedErrorMessage = $x("//div[contains(text(),'Поле \"Из числа принятых, окончил\" обязательно для ')]");
-    private SelenideElement cathedraErrorMessage = $x("//div[contains(text(),'Поле \"Кафедра\" обязательно для заполнения.')]");
+    private SelenideElement acceptedGraduatedErrorMessage = $x("//div[contains(text(),'Поле \"Из числа принятых, окончил\" обязательно для')]");
+    private SelenideElement cathedraErrorMessage = $x("//div[contains(text(),'Поле \"Кафедра\" обязательно для заполнения')]");
     private SelenideElement specialtyAndClassifierMainErrorMessage = $x("//div[contains(text(),'Поле \"Специальность и классификатор (основной)\" об')]");
-    private SelenideElement placementErrorMessage = $x("//div[contains(text(),'Поле \"Трудоустройство\" обязательно для заполнения.')]");
+    private SelenideElement placementErrorMessage = $x("//div[contains(text(),'Поле \"Трудоустройство\" обязательно для заполнения')]");
     private SelenideElement educationAtTheExpenseOfErrorMessage = $x("//div[contains(text(),'Поле \"Обучение за счет средств\" обязательно для за')]");
     private SelenideElement arrivalAndEnrollmentDateErrorMessage = $x("//div[contains(text(),'Поле \"Дата прибытия/зачисления\" обязательно для за')]");
     private SelenideElement arrivalOrderNumberErrorMessage = $x("//div[contains(text(),'Поле \"Номер приказа прибытия\" обязательно для запо')]");
-    private SelenideElement arrivedErrorMessage = $x("//div[contains(text(),'Поле \"Прибыл(-а)\" обязательно для заполнения.')]");
-    private SelenideElement educationPeriodErrorMessage = $x("//div[contains(text(),'Поле \"Срок обучения\" обязательно для заполнения.')]");
-    private SelenideElement leftForASecondCourseErrorMessage = $x("//div[contains(text(),'Поле \"Оставлен на повторный курс\" обязательно для ')]");
+    private SelenideElement arrivedErrorMessage = $x("//div[contains(text(),'Поле \"Прибыл(-а)\" обязательно для заполнения')]");
+    private SelenideElement educationPeriodErrorMessage = $x("//div[contains(text(),'Поле \"Срок обучения\" обязательно для заполнения')]");
+    private SelenideElement leftForASecondCourseErrorMessage = $x("//div[contains(text(),'Поле \"Оставлен на повторный курс\" обязательно для')]");
     private SelenideElement onAcademicLeaveErrorMessage = $x("//div[contains(text(),'Поле \"Находится в академическом отпуске\" обязатель')]");
 
 
     // Input's elements
-    private SelenideElement contactNumberInput = $x("//label[contains(text(),'Контактный телефон: ')]/following-sibling::input");
-    private SelenideElement arrivalAndEnrollmentDateInput = $x("//label[contains(text(),'Дата прибытия/зачисления: ')]/following-sibling::input");
-    private SelenideElement arrivalOrderNumberInput = $x("//label[contains(text(),'Номер приказа прибытия: ')]/following-sibling::input");
+    private SelenideElement contactNumberInput = $x("//label[contains(text(),'Контактный телефон')]/following-sibling::input");
+    private SelenideElement arrivalAndEnrollmentDateInput = $x("//label[contains(text(),'Дата прибытия/зачисления')]/following-sibling::input");
+    private SelenideElement arrivalOrderNumberInput = $x("//label[contains(text(),'Номер приказа прибытия')]/following-sibling::input");
 
 
     // Btn
