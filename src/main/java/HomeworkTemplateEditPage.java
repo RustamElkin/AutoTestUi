@@ -46,4 +46,6 @@ public class HomeworkTemplateEditPage {
     private SelenideElement emptyTypeInput = $x("//div[contains(text(),'Поле \"Тип\" обязательно для заполнения')]");
     private SelenideElement emptyDescriptionInput = $x("//div[contains(text(),'Поле \"Описание\" обязательно для заполнения')]");
 
+
+
 }
