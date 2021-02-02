@@ -49,7 +49,7 @@ public class MonitoringCommissionsDepartmentSchoolVocationalEducationPage {
     // Кнопки просмотра в таблице.
     private ElementsCollection viewBtn = $$x("//tbody/tr//span[@class='s-ico s-ico--thm-eye']");                                     // Кнопки 'Посмотреть'
 
-    // Пагинации на деве небыло, надо поставить задачку
+    // Пагинации на деве небыло
 
 
 }
