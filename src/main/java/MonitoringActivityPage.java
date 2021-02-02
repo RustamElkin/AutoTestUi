@@ -14,7 +14,7 @@ public class MonitoringActivityPage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                                                   // Таб "Назад"
 
     // Кнопки
-    private SelenideElement applyBtn = $x("//button[contains(text(),'Применить')]");                                                 // 'Экспортировать'
+    private SelenideElement applyBtn = $x("//button[contains(text(),'Применить')]");                                                 // 'Применить'
     private SelenideElement resetBtn = $x("//a[contains(text(),'Сбросить')]");                                                       // 'Сбросить'
     private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]");                                                // 'Экспортировать'
 

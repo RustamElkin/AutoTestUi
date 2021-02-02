@@ -16,7 +16,7 @@ public class MonitoringAcademicPerformancePage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                         // Таб "Назад"
 
     // Фильтр Инпуты
-    private SelenideElement nameInput = $x("//input[@type='search']");                                   // 'Группа'
+    private SelenideElement nameInput = $x("//input[@type='search']");                                     // 'Группа'
     // групп много, чтобы ускорить тесты сразу выбераем нужную группу $(byText("")); или xpath-сом $x("//div[contains(text(),'КП19-30р')]");
 
     // Дропдауны в фильтрах
