@@ -17,7 +17,7 @@ public class MonitoringExternalStatementPage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                         // Таб "Назад"
 
     // Таблицы у которых одинаковые поля.
-    private SelenideElement numberOn = $x("//div[contains(text(),'№')]");                                  // '№'
+    private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                             // '№'
     private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                            // 'ФИО'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Специальность')]");                 // 'Специальность'
     private SelenideElement typeOfEducationTable = $x("//th[contains(text(),'Тип образования')]");         // 'Тип образования'

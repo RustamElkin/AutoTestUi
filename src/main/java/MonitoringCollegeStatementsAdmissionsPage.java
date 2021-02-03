@@ -34,7 +34,7 @@ public class MonitoringCollegeStatementsAdmissionsPage {
     private SelenideElement DateToFilter= $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name='filters[created_at][to]']");     // "До"
 
     // Таблица
-    private SelenideElement numberOn = $x("//th[contains(text(),'№')]");                                                             // '№'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                             // '№'
     private SelenideElement areaTable = $x("//th[contains(text(),'Дата подачи')]");                                                  // 'Дата подачи'
     private SelenideElement districtTable = $x("//th[contains(text(),'ФИО')]");                                                      // 'ФИО'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Специальность')]");                                           // 'Специальность'

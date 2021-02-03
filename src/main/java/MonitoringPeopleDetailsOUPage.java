@@ -21,7 +21,7 @@ public class MonitoringPeopleDetailsOUPage {
     private SelenideElement  nameTitle= $x("//h3[@class='s-light mt-15 mb-20']");
 
     // Таблицы у которых одинаковые поля.
-    private SelenideElement numberOn = $x("//div[contains(text(),'№')]");                                  // '№'
+    private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                             // '№'
     private SelenideElement areaTable = $x("//div[contains(text(),'Тип лога')]");                          // 'Тип лога'
     private SelenideElement districtTable = $x("//div[contains(text(),'Время лога')]");                    // 'Время лога'
 

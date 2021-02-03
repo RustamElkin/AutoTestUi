@@ -19,7 +19,7 @@ public class MonitoringActivityPage {
     private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]");                                                // 'Экспортировать'
 
     // Таблица
-    private SelenideElement numberOn = $x("//th[contains(text(),'№')]");                                                                                                               // '№'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                                                                               // '№'
     private SelenideElement areaTable = $x("//th[contains(text(),'Область')]");                                                                                                             // 'Область'
     private SelenideElement districtTable = $x("//th[contains(text(),'Район')]");                                                                                                           // 'Район'
     private SelenideElement localityTable = $x("//th[contains(text(),'Населенный пункт')]");                                                                                                // 'Населенный пункт'

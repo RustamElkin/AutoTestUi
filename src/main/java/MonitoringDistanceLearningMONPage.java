@@ -17,7 +17,7 @@ public class MonitoringDistanceLearningMONPage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                                         // Таб "Назад"
 
     // Таблицы у которых одинаковые поля.
-    private SelenideElement numberOn = $x("//div[contains(text(),'№')]");                                                  // '№'
+    private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                                             // '№'
     private SelenideElement areaTable = $x("//div[contains(text(),'Название организации')]");                              // 'Название организации'
     private SelenideElement districtTable = $x("//div[contains(text(),'Количество студентов')]");                          // 'Количество студентов'
     private SelenideElement specialtyTable = $x("//div[contains(text(),'Количество персонала')]");                         // 'Количество персонала'

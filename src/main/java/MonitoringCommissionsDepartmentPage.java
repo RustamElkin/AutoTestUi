@@ -17,7 +17,7 @@ public class MonitoringCommissionsDepartmentPage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");                         // Таб "Назад"
 
     // Таблица
-    private SelenideElement numberOn = $x("//th[contains(text(),'Название организации')]");                // 'Название организации	'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'Название организации')]");                // 'Название организации	'
     private SelenideElement areaTable = $x("//th[contains(text(),'Все')]");                                // 'Все'
     private SelenideElement districtTable = $x("//th[contains(text(),'Девятые')]");                        // 'Девятые'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Одиннадцатые')]");                  // 'Одиннадцатые'

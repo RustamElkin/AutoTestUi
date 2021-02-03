@@ -36,7 +36,7 @@ public class MonitoringCommissionsDepartmentSchoolVocationalEducationPage {
 
     // нет данных на деве, надеюсь таблица такая же.
     // Таблица
-    private SelenideElement numberOn = $x("//th[contains(text(),'№')]");                                                             // '№'
+    private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                        // '№'
     private SelenideElement areaTable = $x("//th[contains(text(),'Дата подачи')]");                                                  // 'Дата подачи'
     private SelenideElement districtTable = $x("//th[contains(text(),'ФИО')]");                                                      // 'ФИО'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Специальность')]");                                           // 'Специальность'

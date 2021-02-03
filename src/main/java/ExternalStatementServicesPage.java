@@ -10,7 +10,6 @@ public class ExternalStatementServicesPage {
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Заявки на гос.услуги')]");
 
-
     // Табы на странице
     private SelenideElement unprocessedTab = $x("//span[contains(text(),'Необработанные')]/..");           // 'Необработанные'
     private SelenideElement processedTab = $x("//span[contains(text(),'Обработанные')]/..");               // 'Обработанные'

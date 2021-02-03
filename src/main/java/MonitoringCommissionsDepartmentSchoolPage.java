@@ -20,11 +20,11 @@ public class MonitoringCommissionsDepartmentSchoolPage {
     private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]");                      // 'Экспортировать'
 
     // Таблица
-    private SelenideElement numberOn = $x("//th[contains(text(),'Тип образования')]");                     // 'Тип образования'
-    private SelenideElement areaTable = $x("//th[contains(text(),'Количество специальностей')]");          // 'Количество специальностей'
-    private SelenideElement districtTable = $x("//th[contains(text(),'Количество квалификаций')]");        // 'Количество квалификаций'
-    private SelenideElement specialtyTable = $x("//th[contains(text(),'Количество заявок')]");             // 'Количество заявок'
-    private SelenideElement qualificationTable = $x("//th[contains(text(),'Подробнее')]");                 // 'Подробнее'
+    private SelenideElement typeEducationTable = $x("//th[contains(text(),'Тип образования')]");                          // 'Тип образования'
+    private SelenideElement numberOfSpecialtiesTable = $x("//th[contains(text(),'Количество специальностей')]");          // 'Количество специальностей'
+    private SelenideElement numberOfQualificationsTable = $x("//th[contains(text(),'Количество квалификаций')]");         // 'Количество квалификаций'
+    private SelenideElement numberOfApplicationsTable = $x("//th[contains(text(),'Количество заявок')]");                 // 'Количество заявок'
+    private SelenideElement moreDetailsTable = $x("//th[contains(text(),'Подробнее')]");                                  // 'Подробнее'
 
     // Кнопки просмотра в таблице.
     private ElementsCollection viewBtn = $$x("//tbody/tr//span[@class='s-ico s-ico--thm-eye']");           // Кнопки 'Посмотреть'

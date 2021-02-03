@@ -21,7 +21,7 @@ public class MonitoringCommissionsPage {
     private SelenideElement exportBtn = $x("//span[contains(text(),'Экспортировать')]/..");                // 'Экспортировать'
 
     // Таблица
-    private SelenideElement numberOn = $x("//div[contains(text(),'№')]");                                  // '№'
+    private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                             // '№'
     private SelenideElement areaTable = $x("//div[contains(text(),'Название организации')]");              // 'Название организации'
     private SelenideElement districtTable = $x("//div[contains(text(),'Всего заявок')]");                  // 'Всего заявок'
     private SelenideElement specialtyTable = $x("//div[contains(text(),'На базе 9 классов')]");            // 'На базе 9 классов'
