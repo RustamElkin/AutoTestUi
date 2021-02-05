@@ -22,7 +22,7 @@ public class MonitoringGovServiceStatementArchivePage {
     private SelenideElement filteringListBtn = $x("//span[contains(text(),'Фильтрация списка')]/..");                                             // 'Фильтрация списка'
     private SelenideElement applyBtn = $x("//span[contains(text(),'Применить')]/..");                                                             // 'Применить'
 
-    // Инпут
+    // Фильтр инпуты
     private SelenideElement surnameFilter= $x("//label[contains(text(),'Фамилия')]/following-sibling::input");                                    // 'Фамилия'
     private SelenideElement nameFilter= $x("//label[contains(text(),'Имя')]/following-sibling::input[@name=\"filters[firstname]\"]");             // 'Имя'
     private SelenideElement patronymicFilter= $x("//label[contains(text(),'Отчество')]/following-sibling::input[@name=\"filters[lastname]\"]");   // 'Отчество'
@@ -32,8 +32,8 @@ public class MonitoringGovServiceStatementArchivePage {
     private SelenideElement organizationFilter= $x("//label[contains(text(),'Организация')]/following-sibling::div//input");                      // 'Организация'
 
     // Фильтры с диапазоном
-    private SelenideElement DateFromInput = $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name=\"filters[created_at][from]\"]");       // 'Дата от'
-    private SelenideElement DateToInput = $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name=\"filters[created_at][to]\"]");           // 'Дата до'
+    private SelenideElement dateFromInput = $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name=\"filters[created_at][from]\"]");       // 'Дата от'
+    private SelenideElement dateToInput = $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name=\"filters[created_at][to]\"]");           // 'Дата до'
 
     // Таблица
     private SelenideElement numberOnTable = $x("//th[@class='s-to-center s-table__col-1']");                        // '№ в таблице'
@@ -46,7 +46,7 @@ public class MonitoringGovServiceStatementArchivePage {
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                             // 'Операции'
 
     // Кнопки просмотра в таблицах
-    private ElementsCollection viewBtn = $$x("//tbody/tr//span[@class='s-ico s-ico--thm-eye']");                    // Кнопки 'Посмотреть'
+    private ElementsCollection viewBtns = $$x("//tbody/tr//span[@class='s-ico s-ico--thm-eye']");                    // Кнопки 'Посмотреть'
 
     // Кнопки пагинации на странице
     private SelenideElement backPaginateBtn = $x("//a[contains(text(),'‹')]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span

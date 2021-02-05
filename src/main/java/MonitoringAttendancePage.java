@@ -29,8 +29,8 @@ public class MonitoringAttendancePage {
 
     // Фильтры с диапазоном
     // "Дата"
-    private SelenideElement DateFromInput = $x("//div[contains(text(),'Дата от')]//following-sibling::div//input[@aria-label=\"Дата от\"]");          // 'Дата от'
-    private SelenideElement DateToInput = $x("//div[contains(text(),'Дата до')]//following-sibling::div//input[@aria-label=\"Дата до\"] ");           // 'Дата до'
+    private SelenideElement dateFromInput = $x("//div[contains(text(),'Дата от')]//following-sibling::div//input[@aria-label=\"Дата от\"]");          // 'Дата от'
+    private SelenideElement dateToInput = $x("//div[contains(text(),'Дата до')]//following-sibling::div//input[@aria-label=\"Дата до\"] ");           // 'Дата до'
 
     // Dropdown
     private SelenideElement groupDropdown = $x("//div[contains(@class,'sn-item--clickable')]//div[@class=\"sn-item__label\"]");                                              // 'Группа'
