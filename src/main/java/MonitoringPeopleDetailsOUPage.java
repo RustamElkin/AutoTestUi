@@ -16,10 +16,10 @@ public class MonitoringPeopleDetailsOUPage {
     private SelenideElement eventLogTab = $x("//span[contains(text(),'Журнал событий')]/..");              // Таб "Журнал событий"
 
     // Название организации
-    private SelenideElement  organizationNameTitle= $x("//h3[contains(@class,'s-title s-upper')]");
+    private SelenideElement organizationNameTitle = $x("//h3[contains(@class,'s-title s-upper')]");
 
     // ФИО сотрудника
-    private SelenideElement  fullNameTitle= $x("//h3[@class='s-light mt-15 mb-20']");
+    private SelenideElement fullNameTitle = $x("//h3[@class='s-light mt-15 mb-20']");
 
     // Таблицы у которых одинаковые поля.
     private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                             // '№'

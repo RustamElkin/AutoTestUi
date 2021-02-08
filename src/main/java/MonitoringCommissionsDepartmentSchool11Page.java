@@ -38,7 +38,7 @@ public class MonitoringCommissionsDepartmentSchool11Page {
     // Таблица
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                        // '№'
     private SelenideElement areaTable = $x("//th[contains(text(),'Дата подачи')]");                                                  // 'Дата подачи'
-    private SelenideElement districtTable = $x("//th[contains(text(),'ФИО')]");                                                      // 'ФИО'
+    private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                                      // 'ФИО'
     private SelenideElement specialtyTable = $x("//th[contains(text(),'Специальность')]");                                           // 'Специальность'
     private SelenideElement qualificationTable = $x("//th[contains(text(),'Квалификация')]");                                        // 'Квалификация'
     private SelenideElement statusTable = $x("//th[contains(text(),'Статус')]");                                                     // 'Статус'

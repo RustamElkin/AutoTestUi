@@ -1,12 +1,12 @@
 // Мониторинг_Онлайн занятия_Журнал событий педагога
-// Админ
+// МОН РК
 //  /ru/tko/control/monitoring/people/details/28615531
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class MonitoringStaffDetailsAdminPage {
+public class MonitoringStaffDetailsOUPage {
 
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Журнал событий')]");
