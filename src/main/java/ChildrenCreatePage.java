@@ -10,7 +10,7 @@ public class ChildrenCreatePage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Добавить ребенка')]");
     private SelenideElement searchByIinBtn = $x("//label[contains(text(),'Поиск по базе')]");
     private SelenideElement applyForBtn = $x("//label[contains(text(),'Подать заявку')]");
-    private SelenideElement confirmBtn = $x("//div[@class=\"col-12 col-sm-auto\"]/button[contains(text(),'Подтвердить')]");
+    private SelenideElement confirmBtn = $x("//div[@class='col-12 col-sm-auto']/button[contains(text(),'Подтвердить')]");
 
     // пока не вобьешь ИИН, кнопка "Подать заявку" не активна.
     private SelenideElement childIinInput = $x("//input[@name='child_iin']");

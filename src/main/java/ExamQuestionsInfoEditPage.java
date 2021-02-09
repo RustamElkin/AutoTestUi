@@ -49,7 +49,7 @@ public class ExamQuestionsInfoEditPage {
     private SelenideElement emptyLanguageEducationInput = $x("//div[contains(text(),'Язык обучения\" должно быть целым числом')]");
 
 
-    // Кнопка "Отмена"
+    // Кнопки
     private SelenideElement cancelBtn= $x("//div[@class='col-12 col-sm-auto mb-20']/a[contains(text(),'Отмена')]");
     private SelenideElement saveBtn= $x("//span[contains(text(),'Сохранить')]/..");
 

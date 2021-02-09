@@ -1,5 +1,5 @@
 // Блог_Добавить вопрос
-// Студент
+// Админ
 //  /ru/shy/organization-issues/create
 
 import com.codeborne.selenide.SelenideElement;
