@@ -14,7 +14,7 @@ public class DiplomaCreatePage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Дипломные работы')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                                                              // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                                                                   // 'Назад'
 
     //Dropdown multiselect
     private SelenideElement valuationType = $x("//div[contains(text(),'Вид оценки')]/following-sibling::div/div[@class='sn-field__inner']");      // мультиселект 'Вид оценки'

@@ -14,10 +14,10 @@ public class DiplomaContingentEditPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Дипломные работы')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                                                                              // 'Назад'
 
     // checkbox, нажав на чекбокс появится  два инпута: Руководитель, Примечание
-    private SelenideElement enterManagerManuallyCheckBox = $x("//div[contains(text(),'Ввести руководителя вручную')]/preceding-sibling::div/input");          //чекбокс
+    private SelenideElement enterManagerManuallyCheckBox = $x("//div[contains(text(),'Ввести руководителя вручную')]/preceding-sibling::div/input");          // 'чекбокс'
 
     // Инпуты
     private SelenideElement fullNameManagerInput = $x("//div[contains(text(),'Руководитель')]/following-sibling::div//input");       // 'Руководитель'

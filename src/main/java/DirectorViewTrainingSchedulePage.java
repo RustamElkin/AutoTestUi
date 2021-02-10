@@ -11,7 +11,7 @@ public class DirectorViewTrainingSchedulePage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Расписание')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Таблица (Можно проверить есть ли расписание)
     private SelenideElement tableSchedule = $x("//table [@class=\"s-table-schedule\"]");

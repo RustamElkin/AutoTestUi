@@ -13,7 +13,7 @@ public class ViewOnlineLectureTemplatePage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Шаблоны заданий')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Таблица
     private SelenideElement nameTable = $x("//td[@class=\"s-table__col--to-right\"][contains(text(),'Название')]/following-sibling::td");                                // 'Название'

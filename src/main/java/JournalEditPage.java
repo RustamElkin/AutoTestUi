@@ -13,7 +13,7 @@ public class JournalEditPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Журнал')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Checkbox
     private SelenideElement modularEducationCheckBox = $x("//input[@type=\"checkbox\"]");                  // чекбокс 'Модульное обучение'

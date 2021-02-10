@@ -13,7 +13,7 @@ public class HomeworksTemplatesPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Шаблоны заданий')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//a[contains(text(),'Шаблоны заданий')][@class='container-content-head__tab-item is-active']");  // 'Шаблоны заданий'
+    private SelenideElement jobTemplatesTab = $x("//a[contains(text(),'Шаблоны заданий')][@class='container-content-head__tab-item is-active']");  // 'Шаблоны заданий'
     private SelenideElement groupsTab = $x("//a[contains(text(),'Лекции')]");                                                 // 'Лекции'
 
     // Кнопка добавить

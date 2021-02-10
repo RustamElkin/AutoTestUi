@@ -12,7 +12,7 @@ public class OrganizationIssuesCreateAdminPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Вопрос-ответ')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                                // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                                // 'Назад'
 
     // Input textarea
     private SelenideElement textAreaInput = $x("// label[contains(text(),'Вопрос')]//following-sibling::textarea"); // 'Вопрос'

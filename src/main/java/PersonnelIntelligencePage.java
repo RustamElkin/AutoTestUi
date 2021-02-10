@@ -1,12 +1,11 @@
 // Сведения о сотруднике
-//  /ru/tko/control/personnel/2812
+//  /ru/tko/control/personnel/2181
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PersonnelIntelligencePage {
-
 
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Сведения о сотруднике')]");

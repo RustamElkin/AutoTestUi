@@ -11,7 +11,7 @@ public class CurriculumShowPage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Учебный план')]");
 
     // Табы на странице
-    private SelenideElement fullListTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
+    private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                       // 'Назад'
 
     // Таблица
     private SelenideElement categoryOnTable = $x("//th[contains(text(),'Категория')]");

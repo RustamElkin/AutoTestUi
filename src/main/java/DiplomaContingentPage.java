@@ -14,7 +14,7 @@ public class DiplomaContingentPage {
     private SelenideElement titleToPage =$x("//h1[contains(text(),'Дипломные работы')]");
 
     // Табы на странице
-    private SelenideElement fullListTab =$x("//span[contains(text(),'Назад')]/..");                        // 'Назад'
+    private SelenideElement backTab =$x("//span[contains(text(),'Назад')]/..");                        // 'Назад'
 
     // Получение списока строк в таблице
     private ElementsCollection selectAllTd = $$x("//table/tbody//tr/td[1]");

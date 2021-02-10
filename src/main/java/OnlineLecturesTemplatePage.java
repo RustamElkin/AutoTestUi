@@ -12,8 +12,8 @@ public class OnlineLecturesTemplatePage {
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Онлайн лекции')]");
     // Табы на странице
-    private SelenideElement fullListTab = $x("//a[contains(text(),'Шаблоны заданий')][@class='container-content-head__tab-item is-active']");  // 'Шаблоны заданий'
-    private SelenideElement groupsTab = $x("//a[contains(text(),'Лекции')]");                                                 // 'Лекции'
+    private SelenideElement jobTemplatesTab = $x("//a[contains(text(),'Шаблоны заданий')][@class='container-content-head__tab-item is-active']");  // 'Шаблоны заданий'
+    private SelenideElement lecturesTab = $x("//a[contains(text(),'Лекции')]");                                                 // 'Лекции'
 
     // Кнопка добавить
     private SelenideElement addBtn = $x("//div[contains(text(),'Добавить')]/..");
