@@ -1,8 +1,10 @@
 // Журналы
 //  /ru/tko/control/journals
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ControlJournalsPage {
@@ -64,6 +66,7 @@ public class ControlJournalsPage {
     private SelenideElement sixthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'6')]");
     private SelenideElement seventhPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'7')]");
     private SelenideElement eighthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'8')]");
+    private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'›')]");
 
 

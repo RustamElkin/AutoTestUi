@@ -65,7 +65,7 @@ public class PersonnelTypeStaffPage {
     private SelenideElement educationFilter                     = $x("//label[contains(text(),'Образование')]/following-sibling::div");                          // 'Образование'+
     private SelenideElement academicDegreeFilter                = $x("//label[contains(text(),'Ученая степень')]/following-sibling::div");                       // 'Ученая степень'+
     private SelenideElement academicRankFilter                  = $x("//label[contains(text(),'Ученое звание')]/following-sibling::div");                        // 'Ученое звание'+
-    private SelenideElement achievementsFilter                  = $x("//label[contains(text(),'Группа воинского учета')]/following-sibling::div");               // 'Группа воинского учета'+
+    private SelenideElement militaryRegistrationGroupFilter     = $x("//label[contains(text(),'Группа воинского учета')]/following-sibling::div");               // 'Группа воинского учета'+
     private SelenideElement academicYearFilter                  = $x("//label[contains(text(),'Состав')]/following-sibling::div");                               // 'Состав'+
     private SelenideElement cathedraFilter                      = $x("//label[contains(text(),'Воинское звание')]/following-sibling::div");                      // 'Воинское звание'+
     private SelenideElement specialtyFilter                     = $x("//label[contains(text(),'Военная пригодность')]/following-sibling::div");                  // 'Военная пригодность'+
