@@ -1,10 +1,10 @@
 // Архив_Выпускные группы
 //  /ru/tko/control/contingent/archive/graduated-groups
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ArchiveGraduatedGroupsPage {
 
@@ -26,6 +26,7 @@ public class ArchiveGraduatedGroupsPage {
     private SelenideElement secondPaginateBtn = $x("//a[contains(text(),'2')]");
     private SelenideElement thirdPaginateBtn = $x("//a[contains(text(),'3')]");
     private SelenideElement fourthPaginateBtn = $x("//a[contains(text(),'4')]");
+    private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 
 

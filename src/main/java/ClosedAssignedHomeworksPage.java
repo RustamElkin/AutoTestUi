@@ -1,8 +1,10 @@
 // Дистанционное обучение_Закрытые назначенные задания
 //  /ru/tko/control/assigned-homeworks?closed=1
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ClosedAssignedHomeworksPage {
@@ -45,6 +47,7 @@ public class ClosedAssignedHomeworksPage {
     private SelenideElement secondPaginateBtn = $x("//a[contains(text(),'2')]");
     private SelenideElement thirdPaginateBtn = $x("//a[contains(text(),'3')]");
     private SelenideElement fourthPaginateBtn = $x("//a[contains(text(),'4')]");
+    private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 
 }

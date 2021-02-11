@@ -1,10 +1,10 @@
 // Архив_Журналы
 //  /ru/tko/control/annual-archive/modules/4/journals
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class AnnualArchiveModulesJournalsPage {
 
@@ -19,6 +19,7 @@ public class AnnualArchiveModulesJournalsPage {
     //private SelenideElement resetBtn = $("form div:nth-child(2) > button");
     private SelenideElement firstLookAtBtn = $("table tr:nth-child(1) a");
     private SelenideElement backPaginateBtn = $x("//a[contains(text(),'‹')]");
+    private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 
 }
