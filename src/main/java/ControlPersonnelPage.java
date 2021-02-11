@@ -100,16 +100,16 @@ public class ControlPersonnelPage {
 
 
     // Кнопки пагинации
-    private SelenideElement backPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'‹')]");       //не работает на текущей странице, кнопка не активна
-    private SelenideElement firstPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'1')]");
-    private SelenideElement secondPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'2')]");
-    private SelenideElement thirdPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'3')]");
-    private SelenideElement fourthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'4')]");
-    private SelenideElement fifthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'5')]");
-    private SelenideElement sixthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'6')]");
-    private SelenideElement seventhPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'7')]");
-    private SelenideElement eighthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'8')]");
-    private SelenideElement nextPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'›')]");
+    private SelenideElement backPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'‹')]");       //не работает на текущей странице, кнопка не активна
+    private SelenideElement firstPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'1')]");
+    private SelenideElement secondPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'2')]");
+    private SelenideElement thirdPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'3')]");
+    private SelenideElement fourthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'4')]");
+    private SelenideElement fifthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'5')]");
+    private SelenideElement sixthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'6')]");
+    private SelenideElement seventhPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'7')]");
+    private SelenideElement eighthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'8')]");
+    private SelenideElement nextPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'›')]");
 
 
 }

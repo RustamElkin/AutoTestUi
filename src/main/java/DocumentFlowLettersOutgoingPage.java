@@ -27,9 +27,9 @@ public class DocumentFlowLettersOutgoingPage {
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                          // 'Операции'
 
     // Кнопки в таблице, колонка "Операции", первая строка
-    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Посмотреть\"]");        // Кнопка "Посмотреть"
-    private SelenideElement editBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Редактировать\"]");     // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Удалить\"]");         // Кнопка "Удалить"
+    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Посмотреть']");        // Кнопка "Посмотреть"
+    private SelenideElement editBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Редактировать']");     // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Удалить']");         // Кнопка "Удалить"
 
 
 }

@@ -22,7 +22,7 @@ public class ExternalStatementsPage {
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                     // 'Операции'
 
     // Кнопка в таблице, колонка "Операции", первая строка
-    private SelenideElement viewBtn = $x("(//a[@class=\"s-btn-table\"])[1]");                              // Кнопка "Посмотреть"
+    private SelenideElement viewBtn = $x("(//a[@class='s-btn-table'])[1]");                              // Кнопка "Посмотреть"
 
 
 }

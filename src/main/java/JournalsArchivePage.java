@@ -14,7 +14,7 @@ public class JournalsArchivePage {
 
     // Табы на странице
     private SelenideElement openTab = $x("//a[contains(text(),'Открытые')]");                                             // 'Открытые'
-    private SelenideElement archiveTab = $x("//a[contains(text(),'Архив')][@href=\"/ru/tko/control/journals/archive\"]"); // 'Архив'
+    private SelenideElement archiveTab = $x("//a[contains(text(),'Архив')][@href='/ru/tko/control/journals/archive']"); // 'Архив'
 
     // Кнопки для фильтра
     private SelenideElement filteringListBtn = $x("//span[contains(text(),'Фильтрация списка')]/..");
@@ -57,6 +57,8 @@ public class JournalsArchivePage {
     // Кнопки в таблице, колонка "Операции" | фильтровать по индексу, изменив его
     private SelenideElement viewBtn = $x("(//a[@title='Посмотреть'])[1]");                                      // Кнопка "Посмотреть"
     private SelenideElement restoreBtn = $x("(//a[@title='Восстановить'])[1]");                                 // Кнопка "Восстановить"
+    private ElementsCollection viewBtns = $$x("//a[@title='Посмотреть']");
+    private ElementsCollection restoreBtns = $$x("//a[@title='Восстановить']");
 
 
 }

@@ -47,9 +47,9 @@ public class ExamQuestionsPage {
 
     // Кнопки в таблице, колонка "Операции"
     // Заменив номер в ("//....")[1], меняется строка
-    private SelenideElement viewBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Посмотреть\"])[1]");               // Кнопка "Посмотреть"
-    private SelenideElement editBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Редактировать\"])[1]");            // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Удалить\"])[1]");                // Кнопка "Удалить"
+    private SelenideElement viewBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Посмотреть'])[1]");               // Кнопка "Посмотреть"
+    private SelenideElement editBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Редактировать'])[1]");            // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Удалить'])[1]");                // Кнопка "Удалить"
 
 
 

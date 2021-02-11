@@ -43,14 +43,14 @@ public class OnlineLecturesTemplatePage {
     private ElementsCollection listOfLectures = $$x("//tbody/tr");                                                            // 'Список лекций'
 
     // Кнопки в таблице, колонка "Операции", первая строка
-    private SelenideElement viewBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Посмотреть\"])[1]");            // Кнопка "Посмотреть"
-    private SelenideElement editBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Редактировать\"])[1]");         // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $x("(//tr/td[@data-table-head=\"Операции\"]//a[@title=\"Удалить\"])[1]");             // Кнопка "Удалить"
+    private SelenideElement viewBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Посмотреть'])[1]");            // Кнопка "Посмотреть"
+    private SelenideElement editBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Редактировать'])[1]");         // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Удалить'])[1]");             // Кнопка "Удалить"
 
     // Кнопки пагинации на странице
     private SelenideElement backPaginateBtn = $x("//a[contains(text(),'‹')]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span
-    private SelenideElement firstPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'1')]");
-    private SelenideElement secondPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'2')]");
+    private SelenideElement firstPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'1')]");
+    private SelenideElement secondPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'2')]");
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 

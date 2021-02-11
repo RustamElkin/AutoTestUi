@@ -102,16 +102,16 @@ public class ContingentPage {
     private SelenideElement districtFilter= $x("//label[contains(text(),'Район')]/following-sibling::div");
     private SelenideElement cityLocalityFilter= $x("//label[contains(text(),'Город/населенный пункт')]/following-sibling::div");
 
-    private SelenideElement positiveCharacterTraitsActiveFilter= $x("//label[contains(text(),'Активный, отличные организаторские способности, инициативный (инициативный), честный, трудолюбивый')]/following-sibling::div");
-    private SelenideElement positiveCharacterTraitsLowActivityFilter= $x("//label[contains(text(),'Активность невысокая, стабильный самоконтроль, уверенность в себе - нормальная, критично относится к себе')]/following-sibling::div");
-    private SelenideElement registeredWithALawEnforcementAgencyFilter= $x("//label[contains(text(),'Состоит на учете в правоохранительном органе')]/following-sibling::div");
-    private SelenideElement isOnTheIntracollegiateAccountInConnectionWithOffensesFilter= $x("//label[contains(text(),'Состоит на внутриколледжном учете в связи с правонарушениями')]/following-sibling::div");
+    private SelenideElement positiveCharacterTraitsActiveFilter= $x("//label[contains(text(),'Активный, отличные организаторские способности')]/following-sibling::div");
+    private SelenideElement positiveCharacterTraitsLowActivityFilter= $x("//label[contains(text(),'Активность невысокая')]/following-sibling::div");
+    private SelenideElement registeredWithALawEnforcementAgencyFilter= $x("//label[contains(text(),'Состоит на учете')]/following-sibling::div");
+    private SelenideElement isOnTheIntracollegiateAccountInConnectionWithOffensesFilter= $x("//label[contains(text(),'Состоит на внутриколледжном')]/following-sibling::div");
     private SelenideElement kleptomaniaFilter= $x("//label[contains(text(),'Склонность к краже (клептомания)')]/following-sibling::div");
     private SelenideElement stubbornnessArroganceFilter= $x("//label[contains(text(),'Упрямство, высокомерие')]/following-sibling::div");
-    private SelenideElement propensityToLiePrideHypocrisyFilter= $x("//label[contains(text(),'Склонность к лжи, гордыня, лицемерие')]/following-sibling::div");
+    private SelenideElement propensityToLiePrideHypocrisyFilter= $x("//label[contains(text(),'Склонность к лжи')]/following-sibling::div");
     private SelenideElement closednessFilter= $x("//label[contains(text(),'Замкнутость')]/following-sibling::div");
     private SelenideElement evasionFilter= $x("//label[contains(text(),'Уклончивость')]/following-sibling::div");
-    private SelenideElement studentsUnderTheSupervisionOfACollegeInspectorFilter= $x("//label[contains(text(),'Студенты под контролем инспектора колледжа')]/following-sibling::div");
+    private SelenideElement studentsUnderTheSupervisionOfACollegeInspectorFilter= $x("//label[contains(text(),'Студенты под контролем')]/following-sibling::div");
 
 
     // Таблица
@@ -125,22 +125,22 @@ public class ContingentPage {
 
 
     // Кнопки в таблице, колонка "Операции"
-    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Посмотреть\"]");               // Кнопка просмотра
-    private SelenideElement editBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Редактировать\"]");            // Кнопка "Редактировать"
-    private SelenideElement deleteBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Удалить\"]");                // Кнопка "Удалить"
-    private SelenideElement changePasswordBtn = $x("//tr[1]/td[@data-table-head=\"Операции\"]//a[@title=\"Сменить пароль\"]"); // Кнопка "Сменить пароль"
+    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Посмотреть']");               // Кнопка просмотра
+    private SelenideElement editBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Редактировать']");            // Кнопка "Редактировать"
+    private SelenideElement deleteBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Удалить']");                // Кнопка "Удалить"
+    private SelenideElement changePasswordBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Сменить пароль']"); // Кнопка "Сменить пароль"
 
 
     // Кнопки пагинации на странице
     private SelenideElement backPaginateBtn = $x("//a[contains(text(),'‹')]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span
-    private SelenideElement firstPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'1')]");
-    private SelenideElement secondPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'2')]");
-    private SelenideElement thirdPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'3')]");
-    private SelenideElement fourthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'4')]");
-    private SelenideElement fifthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'5')]");
-    private SelenideElement sixthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'6')]");
-    private SelenideElement seventhPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'7')]");
-    private SelenideElement eighthPaginateBtn = $x("//ul[@role=\"navigation\"]//a[contains(text(),'8')]");
+    private SelenideElement firstPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'1')]");
+    private SelenideElement secondPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'2')]");
+    private SelenideElement thirdPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'3')]");
+    private SelenideElement fourthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'4')]");
+    private SelenideElement fifthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'5')]");
+    private SelenideElement sixthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'6')]");
+    private SelenideElement seventhPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'7')]");
+    private SelenideElement eighthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'8')]");
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 

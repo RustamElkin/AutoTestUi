@@ -55,6 +55,12 @@ public class JournalShowPage {
     private SelenideElement submitBtn = $x("//div[@class=\"row-sort-between-btn\"]/button[contains(text(),'Подтвердить')]");                                      // 'Подтвердить'
     private SelenideElement cancelBtn = $x("//div[@class='row-sort-between-btn']/button[contains(text(),'Отмена')][@data-target='#modal-journal-add-day']");      // 'Отмена'
 
+    // При добавлении дня, открывается модалка, в ней добавили чекбокс
+    private SelenideElement CalendarThematicPlanCheckbox = $x("//input[@type='checkbox' and @name='byCalendarThematicPlan']");
+
+    // Инпут в модалке - Тема из КТП
+    private SelenideElement topicFromCTP = $x("//input[@class='multiselect__input' and @name='calendar_thematic_plan_theme_id']");                                 // 'Тема из КТП'
+
 
     // Список кнопок "редактирования дня", откроется модалка
     private SelenideElement editDateList = $x("//tbody/tr/td/div[contains(text(),'Кочетков Роман Дмитриевич')]/../following-sibling::td//div[@class=\"s-ico s-ico--thm-pencil\"]");
