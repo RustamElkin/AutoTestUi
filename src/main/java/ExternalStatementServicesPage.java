@@ -16,7 +16,7 @@ public class ExternalStatementServicesPage {
 
     // Таблица (Можно проверить есть ли таблица)
     private SelenideElement dateAddedTable = $x("//th[contains(text(),'Дата добавления')]");               // 'Дата добавления'
-    private SelenideElement senderTable = $x("//th[contains(text(),'Организация')]");                      // 'Организация'
+    private SelenideElement organizationTable = $x("//th[contains(text(),'Организация')]");                      // 'Организация'
     private SelenideElement applicationTypeTable = $x("//th[contains(text(),'Тип заявки')]");              // 'Тип заявки'
     private SelenideElement dateTable = $x("//th[contains(text(),'Статус')]");                             // 'Статус'
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                     // 'Операции'
