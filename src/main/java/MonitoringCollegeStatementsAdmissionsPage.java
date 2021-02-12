@@ -30,8 +30,8 @@ public class MonitoringCollegeStatementsAdmissionsPage {
 
     // Фильтры с диапазоном
     // "Дата"
-    private SelenideElement DateFromFilter= $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name='filters[created_at][from]']"); // "От"
-    private SelenideElement DateToFilter= $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name='filters[created_at][to]']");     // "До"
+    private SelenideElement dateFromFilter= $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name='filters[created_at][from]']"); // "От"
+    private SelenideElement dateToFilter= $x("//label[contains(text(),'Дата')]/following-sibling::div//input[@name='filters[created_at][to]']");     // "До"
 
     // Таблица
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                             // '№'

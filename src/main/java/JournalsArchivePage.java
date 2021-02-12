@@ -45,7 +45,7 @@ public class JournalsArchivePage {
     // Таблица
     private SelenideElement numberTable = $x("//th[contains(text(),'№')]");                                     // '№'
     private SelenideElement nameTable = $x("//th[contains(text(),'Название')]");                                // 'Название'
-    private SelenideElement TypeTable = $x("//th[contains(text(),'Тип')][1]");                                  // 'Тип'
+    private SelenideElement typeTable = $x("//th[contains(text(),'Тип')][1]");                                  // 'Тип'
     private SelenideElement journalTypeTable = $x("//th[contains(text(),'Тип журнала')][1]");                   // 'Тип журнала'
     private SelenideElement trainingProgramTable = $x("//th[contains(text(),'Программа')]");                    // 'Программа'
     private SelenideElement modulesTable= $x("//th[contains(text(),'Модули')]");                                // 'Модули'

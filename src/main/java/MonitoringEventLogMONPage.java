@@ -16,8 +16,8 @@ public class MonitoringEventLogMONPage {
     private SelenideElement eventLogTab = $x("//span[contains(text(),'Журнал событий')]/..");              // Таб "Журнал событий"
 
     // Название организации
-    private SelenideElement  organizationNameTitle= $x("//h3[contains(@class,'s-title s-upper')]");
-    private SelenideElement  nameTitle= $x("//h3[@class='s-light mt-15 mb-20']");
+    private SelenideElement organizationNameTitle= $x("//h3[contains(@class,'s-title s-upper')]");
+    private SelenideElement nameTitle= $x("//h3[@class='s-light mt-15 mb-20']");
 
     // Таблицы у которых одинаковые поля.
     private SelenideElement numberOnTable = $x("//div[contains(text(),'№')]");                             // '№'

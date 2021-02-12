@@ -55,7 +55,7 @@ public class DocumentFlowStatementsCreatePage {
     private SelenideElement deleteFileBtn = $x("//div[@class='button button_type_file remove_uploaded_file']");                              // кнопка 'Удалить файл'
 
     // Кнопка "Отправить"
-    private SelenideElement submitBtn = $x("//button[@type='submit']");                                                                      // кнопка 'Отправить'
+    private SelenideElement sendBtn = $x("//button[@type='submit']");                                                                      // кнопка 'Отправить'
 
 
 }

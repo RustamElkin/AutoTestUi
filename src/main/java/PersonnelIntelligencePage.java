@@ -17,7 +17,7 @@ public class PersonnelIntelligencePage {
     private SelenideElement editBtn = $x("//span[contains(text(),'Редактировать')]/.. ");                               // 'Редактировать'
 
     // Можно чекнуть наличие title-ов "Описание и Адрес"
-    private SelenideElement PersonalInformationTitle = $x("//span[contains(text(),'Личная информация')]");              // 'Личная информация'
+    private SelenideElement personalInformationTitle = $x("//span[contains(text(),'Личная информация')]");              // 'Личная информация'
     private SelenideElement commonInformationTitle = $x("//span[contains(text(),'Общая информация')]");                 // 'Общая информация'
     private SelenideElement additionalInformationTitle = $x("//span[contains(text(),'Дополнительная информация')]");    // 'Дополнительная информация'
 

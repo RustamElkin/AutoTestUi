@@ -20,7 +20,7 @@ public class OrganizationPostsPage {
     private SelenideElement addQuestionBtn = $x("//span[contains(text(),'Добавить пост')]/..");
 
     // Секции с комментариями
-    private ElementsCollection selectQuestionSectionByName = $$x("//section/div[@class=\"s-panel mb-30\"]/h4");
+    private ElementsCollection selectQuestionSectionByName = $$x("//section/div[@class='s-panel mb-30']/h4");
 
     // Кнопки
     private  ElementsCollection editBtn = $$x("//span[contains(@class,'s-ico--thm-pencil')]/..");                                               // 'Редактировать'

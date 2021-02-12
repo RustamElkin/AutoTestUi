@@ -13,8 +13,8 @@ public class StatementsAdmissionsListClosedPage {
     private SelenideElement titleToPage            = $x("//h1[contains(text(),'Приемная комиссия')]");
 
     // Табы на странице
-    private SelenideElement unprocessedTab         = $x("//span[text()='Список комиссий']/..");                                     // 'Список комиссий'
-    private SelenideElement processedTab           = $x("//span[text()='Обработанные']/..");                                        // 'Закрытые'
+    private SelenideElement unprocessedTab         = $x("//span[text() = 'Список комиссий']/..");                                   // 'Список комиссий'
+    private SelenideElement processedTab           = $x("//span[text() = 'Обработанные']/..");                                      // 'Закрытые'
 
     // Таблица
     private SelenideElement idRow                  = $x("//th[text() = '№']");                                                      //'№'

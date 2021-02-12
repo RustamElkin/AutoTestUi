@@ -25,7 +25,7 @@ public class GovOrderStatementsArchivePage {
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                                  // 'Операции'
 
     // Кнопки в таблице, колонка "Операции", первая строка
-    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Посмотреть']");        // Кнопка "Посмотреть"
+    private SelenideElement viewBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Посмотреть']");            // Кнопка "Посмотреть"
 
     // List of applications | список заявок
     private ElementsCollection listOfApplications = $$x("//tbody/tr");

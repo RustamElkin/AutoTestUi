@@ -18,7 +18,7 @@ public class OrganizationProfileEditPage {
 
     // Кнопка добавить фото организации
     private SelenideElement organizationPhotoAdd = $x("//div[@id='avatar_criteries']");
-    private ElementsCollection organizationPhotoEditList = $$x("//div[contains(@class,\"college-block__image college-block__image-edit\")]");
+    private ElementsCollection organizationPhotoEditList = $$x("//div[contains(@class,'college-block__image college-block__image-edit')]");
 
     // Инпуты
     private SelenideElement fullNameDirector = $x("//input[@name='director']");                                                     // 'ФИО первого руководителя'

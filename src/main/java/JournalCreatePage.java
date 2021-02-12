@@ -26,7 +26,7 @@ public class JournalCreatePage {
     private SelenideElement modulesInput = $x("//div[contains(text(),'Модули')]/following-sibling::div//input");                        // 'Модули'
     private SelenideElement teacherInput = $x("//div[contains(text(),'Преподаватель')]/following-sibling::div//input");                 // 'Преподаватель'
     private SelenideElement additionalTeachersInput = $x("//div[contains(text(),'Доп. Преподаватели')]/following-sibling::div//input"); // 'Доп. Преподаватели'
-    private SelenideElement KTPInput = $x("//div[contains(text(),'КТП')]/.. //input[contains(@class,'sn-select__input')]");             // 'КТП'
+    private SelenideElement inputKTP = $x("//div[contains(text(),'КТП')]/.. //input[contains(@class,'sn-select__input')]");             // 'КТП'
 
 
     // Checkbox | Тип группы

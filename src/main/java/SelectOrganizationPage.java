@@ -7,12 +7,12 @@ import static com.codeborne.selenide.Selenide.$x;
 //  /ru/tko/select-organization/college
 public class SelectOrganizationPage {
 
-    private SelenideElement shouldBeOrganizationList = $x("//input[@class='multiselect__input' and @name='organization_id']/ancestor::div[@class='multiselect mb-10']");
-    private SelenideElement selectIndustrialCollege = $x("//span[text()='ГККП «Индустриально-Технический Колледж»']");
-    private SelenideElement saveBtn = $x("//div[@class='row-sort-end']/button[@type = 'submit']");
+    private SelenideElement shouldBeOrganizationList = $x("//input[@class = 'multiselect__input' and @name = 'organization_id']/ancestor::div[@class = 'multiselect mb-10']");
+    private SelenideElement selectIndustrialCollege  = $x("//span[text() = 'ГККП «Индустриально-Технический Колледж»']");
+    private SelenideElement saveBtn                  = $x("//div[@class = 'row-sort-end']/button[@type = 'submit']");
 
     //проверка что мы на этой странице, по title Организация
-    private SelenideElement organizationTitle = $x("//div[@class = 's-title-head' and text() = 'Организация']");
+    private SelenideElement organizationTitle        = $x("//div[@class = 's-title-head' and text() = 'Организация']");
 
     private SelenideElement organizationErrorMessage = $x("//div[@class = 's-form__error-message' and contains(text(),'Поле \"Организация')]");
 

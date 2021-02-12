@@ -40,7 +40,7 @@ public class PersonnelTypeAdministrationPage {
     private SelenideElement ageToFilter       = $x("//label[contains(text(),'Возраст: ')]/following-sibling::div/div/input[@name='filters[age][to]']");                                    // "Возраст до"
 
     // Кнопки "Показать и свернуть" чтоб развернуть фильтры
-    private SelenideElement informationOnSocialStatusViewBtn    = $x("/span[contains(text(),'Сведения по социальному статусу')]/.. //button");                                             // "Сведения по социальному статусу"
+    private SelenideElement informationOnSocialStatusViewBtn    = $x("//span[contains(text(),'Сведения по социальному статусу')]/.. //button");                                             // "Сведения по социальному статусу"
     private SelenideElement informationAboutConscriptionViewBtn = $x("//span[contains(text(),'Сведения о воинской обязанности')]/.. /span[@class='s-combine-title__line']/button");        // "Сведения о воинской обязанности"
     private SelenideElement positionInformationViewBtn          = $x("//span[contains(text(),'Сведения по должности')]/.. /span[@class='s-combine-title__line']/button");                  // "Сведения по должности"
     private SelenideElement arrivalInformationViewBtn           = $x("//span[contains(text(),'Сведения по месту прибытия')]/.. /span[@class='s-combine-title__line']/button");             // "Сведения по месту прибытия"

@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selenide.$x;
 public class LoginPage {
 
     //IIN
-    private SelenideElement IINFormTab = $x("//div[@id='v-login-form-app']//div[text()='ИИН']/ancestor::div[@role='tab']");
-    private SelenideElement IINInput = $x("//input[@placeholder='ИИН' and @aria-label='ИИН']");
+    private SelenideElement iinFormTab = $x("//div[@id='v-login-form-app']//div[text()='ИИН']/ancestor::div[@role='tab']");
+    private SelenideElement iinInput = $x("//input[@placeholder='ИИН' and @aria-label='ИИН']");
     //Login or tel.number
     private SelenideElement loginFormTab = $x("//div[@id='v-login-form-app']//div[text()='Логин или номер телефона']/ancestor::div[@role='tab']");
     private SelenideElement loginInput = $x("//input[@placeholder='Логин или номер телефона' and @aria-label='Логин или номер телефона']");
@@ -30,12 +30,12 @@ public class LoginPage {
     private SelenideElement loginErrorMessage = $x("//div[@class='sn-field__messages']/div[contains(text(),'Поле \"Логин или номер телефона')]");
 
     public LoginPage clickIINFormTab() {
-        IINFormTab.click();
+        iinFormTab.click();
         return this;
     }
 
     public LoginPage typeIINInput(String userIin) {
-        IINInput.setValue(userIin); //"123456789123"
+        iinInput.setValue(userIin); //"123456789123"
         return this;
     }
 

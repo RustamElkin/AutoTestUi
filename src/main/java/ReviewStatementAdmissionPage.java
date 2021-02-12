@@ -28,7 +28,7 @@ public class ReviewStatementAdmissionPage {
     private  SelenideElement basedOnElevenClasses = $x("//div[@class='profile-content__block']/div[contains(text(), 'На базе 11')]");                               // 'На базе 9 классов'
 
     // Кнопки просмотра
-    private ElementsCollection viewBtn            = $$x("//div[@class='profile-content__block']//a[@title='Просмотреть']");                                         // 'Просмотреть'
-    private ElementsCollection PointsBtn          = $$x("//div[@class='profile-content__block']//span[text()='Баллы']");                                            // 'Баллы'
+    private ElementsCollection viewBtn            = $$x("//div[@class='profile-content__block']//a[@title = 'Просмотреть']");                                       // 'Просмотреть'
+    private ElementsCollection PointsBtn          = $$x("//div[@class='profile-content__block']//span[text() = 'Баллы']");                                          // 'Баллы'
 
 }

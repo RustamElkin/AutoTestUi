@@ -8,12 +8,12 @@ import static com.codeborne.selenide.Selenide.$x;
 public class OrganizationRegInfoPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[contains(text(),'Регистрационные сведения колледжа')]");
+    private SelenideElement titleToPage                    = $x("//h1[contains(text(),'Регистрационные сведения колледжа')]");
 
     // Табы на странице
-    private SelenideElement organizationTab = $x("//span[contains(text(),'Организация')]/..");                                          // 'Организация'
-    private SelenideElement registrationInformationTab = $x("//span[contains(text(),'Регистрационные сведения')]/..");                  // 'Регистрационные сведения'
-    private SelenideElement materialAndTechnicalBaseTab = $x("//span[contains(text(),'МТБ')]/..");                                      // 'МТБ'
+    private SelenideElement organizationTab                = $x("//span[contains(text(),'Организация')]/..");                                          // 'Организация'
+    private SelenideElement registrationInformationTab     = $x("//span[contains(text(),'Регистрационные сведения')]/..");             // 'Регистрационные сведения'
+    private SelenideElement materialAndTechnicalBaseTab    = $x("//span[contains(text(),'МТБ')]/..");                                  // 'МТБ'
 
     // Таблица
     private SelenideElement orgType                        = $x("//td[contains(text(),'Вид организации образования')]");               // 'Вид организации образования'
@@ -36,7 +36,7 @@ public class OrganizationRegInfoPage {
     private SelenideElement passCertification              = $x("//td[contains(text(),'Прошли аттестацию')]");                         // 'Прошли аттестацию'
 
     // Кнопка "Редактировать"
-    private SelenideElement editBtn = $x("//div[contains(text(),'Редактировать')]/..");
+    private SelenideElement editBtn                        = $x("//div[contains(text(),'Редактировать')]/..");
 
 
 }

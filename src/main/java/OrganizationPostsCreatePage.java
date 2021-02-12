@@ -16,15 +16,15 @@ public class OrganizationPostsCreatePage {
     private SelenideElement backToTab = $x("//span[contains(text(),'Назад')]/..");
 
     // Инпуты
-    private SelenideElement fieldNameInput = $x("//label[contains(text(),'Название')]/following-sibling::input[@name=\"name\"]");                             // 'Название'
-    private SelenideElement fieldDescriptionInput = $x("//label[contains(text(),'Описание')]/following-sibling::div//div[@aria-label=\"Редактор, main\"]");   // 'Описание'
+    private SelenideElement fieldNameInput = $x("//label[contains(text(),'Название')]/following-sibling::input[@name='name']");                             // 'Название'
+    private SelenideElement fieldDescriptionInput = $x("//label[contains(text(),'Описание')]/following-sibling::div//div[@aria-label='Редактор, main']");   // 'Описание'
 
     // Radio Buttons
     private ElementsCollection allowCommenting = $$x(" //label[contains(text(),'Разрешить комментирование')]/following-sibling::div/label");
 
     // ErrorMessage
-    private SelenideElement NameInputErrorMessage  = $x("//div[@class='s-form__error-message'][contains(text(),'Поле \"Название\"')]");                        // 'Название'
-    private SelenideElement DescriptionInputErrorMessage = $x("//div[@class=\"s-form__error-message\"][contains(text(),'Поле \"Описание\"')]");                // 'Описание'
+    private SelenideElement nameInputErrorMessage  = $x("//div[@class='s-form__error-message'][contains(text(),'Поле \"Название\"')]");                     // 'Название'
+    private SelenideElement descriptionInputErrorMessage = $x("//div[@class='s-form__error-message'][contains(text(),'Поле \"Описание\"')]");               // 'Описание'
 
     // Кнопки
     private SelenideElement buttonSave  = $x("button[contains(@class,'s-btn--thm-aqua')]");

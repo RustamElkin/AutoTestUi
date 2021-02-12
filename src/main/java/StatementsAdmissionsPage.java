@@ -13,8 +13,8 @@ public class StatementsAdmissionsPage {
     private SelenideElement titleToPage            = $x("//h1[contains(text(),'Приемная комиссия')]");
 
     // Табы на странице
-    private SelenideElement unprocessedTab         = $x("//span[text()='Список комиссий']/..");                                     // 'Список комиссий'
-    private SelenideElement processedTab           = $x("//span[text()='Обработанные']/..");                                        // 'Закрытые'
+    private SelenideElement unprocessedTab         = $x("//span[text() = 'Список комиссий']/..");                                   // 'Список комиссий'
+    private SelenideElement processedTab           = $x("//span[text() = 'Обработанные']/..");                                      // 'Закрытые'
 
     // Таблица
     private SelenideElement idRow                  = $x("//th[text() = '№']");                                                      //'№'
@@ -23,8 +23,8 @@ public class StatementsAdmissionsPage {
     private SelenideElement formOfStudyRow         = $x("//th[text() = 'Форма обучения']");                                         //'Форма обучения'
     private SelenideElement languageEducationRow   = $x("//th[text() = 'Язык обучения']");                                          //'Язык обучения'
     private SelenideElement dateOneStarAndEndRow   = $x("//th[text() = 'Дата начала и завершения']");                               //'Дата начала и завершения'
-    private SelenideElement numberOfSubmittedApplications = $x("//th[text() = 'Количество поданных / непроверенных заявлений']");   //'Количество поданных / непроверенных заявлений'
-    private SelenideElement PPZRow                 = $x("//th[text() = 'ППЗ']");                                                    //'ППЗ'
+    private SelenideElement numberSubmittedApplications = $x("//th[text() = 'Количество поданных / непроверенных заявлений']");     //'Количество поданных / непроверенных заявлений'
+    private SelenideElement ppzRow                 = $x("//th[text() = 'ППЗ']");                                                    //'ППЗ'
     private SelenideElement operationsRow          = $x("//th[text() = 'Операции']");                                               //'Операции'
 
     // Таблица операции

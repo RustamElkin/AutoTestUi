@@ -7,6 +7,8 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class ExamQuestionsExamEditPage {
 
+    //Добить\\
+
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Редактирование экзаменационных вопросов')]");
 
@@ -41,7 +43,7 @@ public class ExamQuestionsExamEditPage {
     private SelenideElement  visibilitySettingsBtn = $x("//div[contains(text(),'Настройки')]/../..");
 
     // Открывается модалка с кинотеатром где указаны кнопки с количеством вопросов. Чтобы включить или выключить конкретный вопрос, меняем индекс в //div[@class="col-auto mb-10"][3]
-    private SelenideElement  selectVisibileQuestionsBtn = $x("//div[@class='col-auto mb-10'][3]");
+    private SelenideElement  selectVisibileQuestionsBtn = $x("(//div[@class='col-auto mb-10'])[3]");
 
     // Кнопка "Скрыть все" //////// нажав модалка закрывается
     private SelenideElement  selectAllAnswerHideBtn = $x("//div[contains(text(),'Скрыть все')]/../..");
