@@ -1,27 +1,27 @@
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Роль
 //  ru/tko/select-role
 public class SelectRolePage {
 
-    private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
-    private SelenideElement selectRUEmployee = $x("//div//span[text()=\"Сотрудник РУ\"]");
-    private SelenideElement selectMonRKEmployee = $x("//div//span[text()=\"МОН РК\"]");
-    private SelenideElement selectOUEmployee = $x("//div//span[text()=\"Сотрудник ОУ\"]");
-    private SelenideElement selectDirectorEmployee = $x("//div//span[text()=\"Директор\"]");
-    private SelenideElement selectAdminEmployee = $x("//div//span[text()=\"Сотрудник колледжа (админ)\"]");
-    private SelenideElement submitBtn = $("button[type='submit']");
+    //private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
+    private SelenideElement selectRoleDropDownList = $x("//input[@name='role_key' and @class='multiselect__input']/ancestor::div[@class='multiselect mb-10']");
+    private SelenideElement selectRUEmployee = $x("//div//span[text()='Сотрудник РУ']");
+    private SelenideElement selectMonRKEmployee = $x("//div//span[text()='МОН РК']");
+    private SelenideElement selectOUEmployee = $x("//div//span[text()='Сотрудник ОУ']");
+    private SelenideElement selectDirectorEmployee = $x("//div//span[text()='Директор']");
+    private SelenideElement selectAdminEmployee = $x("//div//span[text()='Сотрудник колледжа (админ)']");
+    private SelenideElement saveBtn = $x("//div[@class='row-sort-end']/button[@type='submit']");
     //возвращает на мэйнпэйдж https://college.dev-snation.kz/ru/tko
 
     //Если не выбрать роль
-    public SelenideElement roleErrorMessage = $x("//div[contains(text(),'Поле \"Роль\" обязательно для заполнения')]");
+    public SelenideElement roleErrorMessage = $x("//div[@class='s-form__error-message' and contains(text(),'Поле \"Роль')]");
 
     //проверка что мы на этой странице, по title Роль
-    private SelenideElement roleTitle = $x("//div[2][contains(text(),'Роль')]");
+    private SelenideElement roleTitle = $x("//div[@class='s-title-head' and text() ='Роль']");
 
 
     public SelectRolePage clickSelectRoleList() {
@@ -55,7 +55,7 @@ public class SelectRolePage {
     }
 
     public MainPage clickSubmitBtn() {
-        submitBtn.click();
+        saveBtn.click();
         return new MainPage();
     }
 
@@ -66,7 +66,7 @@ public class SelectRolePage {
 
     public SelectRolePage notSelectRole() {
         // сразу нажал, не выбрав роль
-        this.submitBtn.click();
+        this.saveBtn.click();
         //в самом тесте сделать проверку на пустое поле. Поле "Роль" обязательно для заполнения.
         return new SelectRolePage();
     }

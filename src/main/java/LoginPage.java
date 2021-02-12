@@ -1,7 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Вход
@@ -9,26 +8,26 @@ import static com.codeborne.selenide.Selenide.$x;
 public class LoginPage {
 
     //IIN
-    private SelenideElement IINFormTab = $x("//div[@tabindex=\"-1\" and @role=\"tab\"]");
-    private SelenideElement IINInput = $x("//input[@tabindex=\"0\" and @aria-label=\"ИИН\"]");
+    private SelenideElement IINFormTab = $x("//div[@id='v-login-form-app']//div[text()='ИИН']/ancestor::div[@role='tab']");
+    private SelenideElement IINInput = $x("//input[@placeholder='ИИН' and @aria-label='ИИН']");
     //Login or tel.number
-    private SelenideElement loginFormTab = $x("//div[@tabindex=\"0\" and @role=\"tab\"]");
-    private SelenideElement loginInput = $x("//input[@tabindex=\"0\" and @aria-label=\"Логин или номер телефона\"]");
-    private SelenideElement passwordInput = $x("//input[@aria-label=\"Пароль\" and @type=\"password\"]");
-    private SelenideElement submitBtn = $("button[type='submit']");
+    private SelenideElement loginFormTab = $x("//div[@id='v-login-form-app']//div[text()='Логин или номер телефона']/ancestor::div[@role='tab']");
+    private SelenideElement loginInput = $x("//input[@placeholder='Логин или номер телефона' and @aria-label='Логин или номер телефона']");
+    private SelenideElement passwordInput = $x("//input[@aria-label='Пароль' and @type='password']");
+    private SelenideElement submitBtn = $x("//div[text() ='Войти в систему']/ancestor::button[@type='submit']");
     //переходит на  выбор роли https://college.dev-snation.kz/ru/tko/select-role
 
     //проверка что мы на этой странице, по title Вход
-    private SelenideElement entryHeadingText = $x("//div[2][contains(text(),'Вход')]");
+    private SelenideElement entryHeadingText = $x("//div[contains(@class,'s-title-head') and text()='Вход']");
 
     //Если не заполнить ИИН
-    private SelenideElement iinErrorMessage = $x("//div[contains(text(),'Поле \"ИИН\" обязательно для заполнения.')]");
+    private SelenideElement iinErrorMessage = $x("//div[@class='sn-field__messages']/div[contains(text(),'Поле \"ИИН')]");
 
     //Если не заполнить Пароль
-    private SelenideElement passwordErrorMessage = $x("//div[contains(text(),'Поле \"Пароль\" обязательно для заполнения.')]");
+    private SelenideElement passwordErrorMessage = $x("//div[@class='sn-field__messages']/div[contains(text(),'Поле \"Пароль')]");
 
     //Если не заполнить Логин или номер телефона
-    private SelenideElement loginErrorMessage = $x("//div[contains(text(),'Поле \"Логин или номер телефона\" обязательно для заполнения.')]");
+    private SelenideElement loginErrorMessage = $x("//div[@class='sn-field__messages']/div[contains(text(),'Поле \"Логин или номер телефона')]");
 
     public LoginPage clickIINFormTab() {
         IINFormTab.click();

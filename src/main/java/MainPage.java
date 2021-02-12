@@ -2,19 +2,18 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 //Главная страница
 //     /ru/tko
 public class MainPage {
 
-    private SelenideElement titleToPage = $x("//section[1]/div/div[1]");
+    private SelenideElement titleToPage = $x("//div[@class='s-jumbotron__title mb-30']");
     private SelenideElement menuBtn = $x("//div[contains(text(),'Меню')]");
-    private SelenideElement menuDropdownGetOutLink = $x("//a/span[text() ='Выйти']");
-    private SelenideElement regionSelectBtn = $x("//div[1][@data-target=\"#modal-region-selecting\"]");
-    private SelenideElement modalRegionSelecting = $x("//*[@id=\"modal-region-selecting\"]//a[text()=\"Туркестанская область\"]");
-    private SelenideElement signInBtn = $("div.s-main-header__right-panel >a[href='/ru/tko/login']");
+    private SelenideElement menuDropdownGetOutLink = $x("//span[text() ='Выйти']/..");
+    private SelenideElement regionSelectBtn = $x("//div[@data-target='#modal-region-selecting']/div[contains(@class,'s-btn--thm-white')]");
+    private SelenideElement modalRegionSelecting = $x("//div[@class='s-modal__container']//a[text()='Туркестанская область']");
+    private SelenideElement signInBtn = $x("//a[contains(@class,'s-btn--thm-green') and text() = 'Вход']");
     //переходит на  https://college.dev-snation.kz/ru/tko/login
 
 
