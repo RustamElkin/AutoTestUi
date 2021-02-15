@@ -1,5 +1,5 @@
-// Просмотр дипломной работы
-//  /ru/tko/control/diploma-contingent/4
+// Архив_Дипломная работа
+//  /ru/tko/control/annual-archive/modules/4/diplomas/4
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -7,16 +7,16 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class DiplomaContingentPage {
+public class ViewAnnualArchiveDiplomaPage {
 
     // Тайтл
-    private SelenideElement titleToPage           =$x("//h1[contains(text(),'Дипломные работы')]");
+    private SelenideElement titleToPage =$x("//h1[contains(text(),'Дипломные работы - архив')]"); // На деве фио, но его исправят, поставил задачку
 
     // Табы на странице
-    private SelenideElement backTab               =$x("//span[contains(text(),'Назад')]/..");                        // 'Назад'
+    private SelenideElement backTab =$x("//span[contains(text(),'Назад')]/..");                   // 'Назад'
 
     // Получение списока строк в таблице
-    private ElementsCollection selectAllTd        =$$x("//table/tbody//tr/td[1]");
+    private ElementsCollection selectAllTd = $$x("//table/tbody//tr/td[1]");
 
     // Можно проверить ФИО и группу студента
     private SelenideElement fullNameAndGroupCheck =$x("//h3[contains(@class,'s-title--double-line s-upper s-light')]/span");

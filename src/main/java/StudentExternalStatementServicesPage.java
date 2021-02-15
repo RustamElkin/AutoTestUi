@@ -29,8 +29,7 @@ public class StudentExternalStatementServicesPage {
     private SelenideElement cancelBtn        = $x("//div[@class='s-group']/div[contains(@class,'s-btn--thm-grey') and text() = 'Отмена']");
 
     // Инпут
-    private SelenideElement cabinetNumInput  = $x("//input[@name='cabinet_num']");
-
+    private SelenideElement cabinetNumInput  = $x("//input[@name='cabinet_num']");                         // 'Кабинет услугодателя'
 
     // Модалка - Отклонить
     private SelenideElement  rejectionReason = $x("//select[@id='code']");                                 // 'Причина отказа'
