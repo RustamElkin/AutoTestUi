@@ -16,8 +16,6 @@ public class MainPage {
     private SelenideElement signInBtn = $x("//a[contains(@class,'s-btn--thm-green') and text() = 'Вход']");
     //переходит на  https://college.dev-snation.kz/ru/tko/login
 
-
-
     public MainPage clickRegionSelectBtn() {
         regionSelectBtn.shouldBe(visible).click();
         return this;
