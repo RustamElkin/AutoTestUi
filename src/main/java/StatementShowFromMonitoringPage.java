@@ -23,4 +23,5 @@ public class StatementShowFromMonitoringPage {
     private SelenideElement applicantInformation            = $x("//h3[contains(text(),'Сведения об абитуриенте')]");            // 'Сведения об абитуриенте'
     private SelenideElement educationInformation            = $x("//h3[contains(text(),'Сведения об образовании')]");            // 'Сведения об образовании'
     private SelenideElement documents                       = $x("//h3[contains(text(),'Документы')]");                          // 'Документы'
+
 }
