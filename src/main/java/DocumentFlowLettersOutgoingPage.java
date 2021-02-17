@@ -1,4 +1,4 @@
-// Документооборот_Просмотр исходящего письма
+// Документооборот_Исходящие письма
 //  /ru/tko/document-flow/letters-outgoing
 
 import com.codeborne.selenide.SelenideElement;
