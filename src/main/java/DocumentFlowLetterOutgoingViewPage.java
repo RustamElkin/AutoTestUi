@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class DocumentFlowLetterOutgoingViewPage {
 
-
     // Тайтл
     private SelenideElement titleToPage             = $x("//h1[contains(text(),'Письма')]");
 
