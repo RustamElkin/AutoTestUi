@@ -16,8 +16,8 @@ public class ViewHomeworkTemplatePage {
     private SelenideElement backButtonTab                      = $x("//span[contains(text(),'Назад')]/..");             // 'Назад'
 
     // Тайтлы на странице
-    private SelenideElement legalRepresentativeInformation     = $x("//span[contains(text(),'Лекция')]");               // 'Сведения о законном представителе'
-    private SelenideElement applicantInformation               = $x("//span[contains(text(),'Задание')]");              // 'Сведения об абитуриенте'
+    private SelenideElement lectureTitle                       = $x("//span[contains(text(),'Лекция')]");               // 'Лекция'
+    private SelenideElement taskTitle                          = $x("//span[contains(text(),'Задание')]");              // 'Задание'
 
     // Лекция - Вложенные файлы
     private ElementsCollection lectureAttachmentsFilesView     = $$x("//span[contains(text(),'Лекция')]/ancestor::div[@class='profile-content__block']//button");

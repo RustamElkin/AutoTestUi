@@ -1,11 +1,11 @@
 // view_training_schedule
-//  /ru/tko/control/training-schedule/135
+//  ru/tko/control/training-schedule/7423
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class DirectorViewTrainingSchedulePage {
+public class StudentViewTrainingSchedulePage {
 
     // Тайтл
     private SelenideElement titleToPage       = $x("//h1[contains(text(),'Расписание')]");
@@ -34,6 +34,7 @@ public class DirectorViewTrainingSchedulePage {
 
     // Таблица (Можно проверить есть ли расписание)
     private SelenideElement tableSchedule     = $x("//table [@class='s-table-schedule']");
+
 
 
 }
