@@ -32,5 +32,4 @@ public class ViewAnnualArchiveStudentAnswerToHomeworkPage {
     private SelenideElement viewerFlipVertical           = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-flip-vertical']");
     private SelenideElement viewerClose                  = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//div[contains(@class,'viewer-close') and @role='button']");
 
-
 }
