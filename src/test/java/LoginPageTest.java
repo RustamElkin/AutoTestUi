@@ -10,12 +10,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPageTest extends AppConfig {
 
-    private SelenideElement modalRegionSelecting = $(By.xpath("//*[@id=\"modal-region-selecting\"]//a[text()=\"Туркестанская область\"]"));
+    private SelenideElement modalRegionSelecting = $(By.xpath("//*[@id='modal-region-selecting']//a[text()='Туркестанская область']"));
     private SelenideElement signInBtn = $("div.s-main-header__right-panel >a[href='/ru/tko/login']");
     private SelenideElement entryTitle = $(By.xpath("//div[2][contains(text(),'Вход')]"));
-    private SelenideElement loginFormTab = $(By.xpath("//div[@tabindex=\"0\" and @role=\"tab\"]"));
-    private SelenideElement loginInput = $(By.xpath("//input[@tabindex=\"0\" and @aria-label=\"Логин или номер телефона\"]"));
-    private SelenideElement passwordInput = $(By.xpath("//input[@aria-label=\"Пароль\" and @type=\"password\"]"));
+    private SelenideElement loginFormTab = $(By.xpath("//div[@tabindex='0' and @role='tab']"));
+    private SelenideElement loginInput = $(By.xpath("//input[@tabindex='0' and @aria-label='Логин или номер телефона']"));
+    private SelenideElement passwordInput = $(By.xpath("//input[@aria-label='Пароль' and @type='password']"));
     private SelenideElement submitBtn = $("button[type='submit']");
     private SelenideElement roleTitle = $(By.xpath("//div[2][contains(text(),'Роль')]"));
     private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
@@ -25,11 +25,11 @@ public class LoginPageTest extends AppConfig {
     private SelenideElement titleToPage = $(By.xpath("//section[1]/div/div[1]"));
     private SelenideElement menuBtn = $(By.xpath("//div[contains(text(),'Меню')]"));
     private SelenideElement menuDropdownGetOutLink = $(By.xpath("//a/span[text() ='Выйти']"));
-    private SelenideElement selectRUEmployee = $(By.xpath("//div//span[text()=\"Сотрудник РУ\"]"));
-    private SelenideElement selectMonRKEmployee = $(By.xpath("//div//span[text()=\"МОН РК\"]"));
-    private SelenideElement selectOUEmployee = $(By.xpath("//div//span[text()=\"Сотрудник ОУ\"]"));
-    private SelenideElement selectDirectorEmployee = $(By.xpath("//div//span[text()=\"Директор\"]"));
-    private SelenideElement selectAdminEmployee = $(By.xpath("//div//span[text()=\"Сотрудник колледжа (админ)\"]"));
+    private SelenideElement selectRUEmployee = $(By.xpath("//div//span[text()='Сотрудник РУ']"));
+    private SelenideElement selectMonRKEmployee = $(By.xpath("//div//span[text()='МОН РК']"));
+    private SelenideElement selectOUEmployee = $(By.xpath("//div//span[text()='Сотрудник ОУ']"));
+    private SelenideElement selectDirectorEmployee = $(By.xpath("//div//span[text()='Директор']"));
+    private SelenideElement selectAdminEmployee = $(By.xpath("//div//span[text()='Сотрудник колледжа (админ)']"));
 
 
 
