@@ -53,7 +53,6 @@ public class AdminViewAllPages extends AppConfig {
     // Профиль
     // https://college.dev-snation.kz/ru/tko/account/profile
     public void accountProfilePageView() {
-//        mainPage.clickRegionSelectBtn().clickSelectRegion();
         AccountProfilePage accountProfilePage = mainPage
                 .clickMenuBtn()
                 .clickProfileMenu()
@@ -62,6 +61,17 @@ public class AdminViewAllPages extends AppConfig {
 
     }
 
+    @Test
+    //
+    // https:
+    public void View() {
+        AccountProfilePage accountProfilePage = mainPage
+                .clickMenuBtn()
+                .clickProfileMenu()
+                .checkTitleToPage();
+        mainPage = accountProfilePage.mainPageLink();
+
+    }
 
 
 }
