@@ -1,8 +1,10 @@
 package pages;// Инструкции
 //  /ru/tko/faq
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class FaqPage {
@@ -10,7 +12,7 @@ public class FaqPage {
     // добить скачивание инструкций и переход на ютуб с последующим закрытием отдельной вкладки.
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//div[@class=\"s-title-head\"][contains(text(),'ИНСТРУКЦИИ')]");
+    private SelenideElement titleToPage = $x("//div[@class='s-title-head'][contains(text(),'ИНСТРУКЦИИ')]");
 
 
     //faqCont
@@ -38,5 +40,16 @@ public class FaqPage {
     private SelenideElement exerciseInstructions = $x("//div[@class='faq-answear__title'][contains(text(),'по заданиям')]");
     private SelenideElement InstructionsForApplyingForEnrollment = $x("//div[@class='faq-answear__title'][contains(text(),'по подаче заявления на зачисление')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+    public FaqPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("ИНСТРУКЦИИ"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

@@ -1,7 +1,9 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Редактирование регистрационных сведений колледжа
@@ -54,6 +56,19 @@ public class OrganizationRegInfoEdit {
     private SelenideElement emptyLegalEntitiesRegistrationsInfo = $x("//div[contains(text(),'Поле \"Сведения о регистрации юридического') and @class='s-form__error-message']");
     private SelenideElement emptyOpenDate                       = $x("//div[contains(text(),'Поле \"Дата открытия организации') and @class='s-form__error-message']");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public OrganizationRegInfoEdit checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование регистрационных сведений колледжа"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 

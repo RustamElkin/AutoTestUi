@@ -1,9 +1,11 @@
 package pages;// Администрация
 //  /ru/tko/control/personnel?type=administration
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -100,4 +102,15 @@ public class PersonnelTypeAdministrationPage {
     private ElementsCollection selectPaginateBtn                = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn                     = $x("//a[contains(text(),'›')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public PersonnelTypeAdministrationPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Персонал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

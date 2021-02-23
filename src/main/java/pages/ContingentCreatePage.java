@@ -1,15 +1,17 @@
 package pages;// Добавление в контингент
 //  /ru/tko/control/contingent/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ContingentCreatePage {
 
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[@class=\"s-title-head\"][contains(text(),'Контингент')]");
+    private SelenideElement titleToPage = $x("//h1[@class='s-title-head'][contains(text(),'Контингент')]");
 
 
     // Табы на странице
@@ -73,4 +75,17 @@ public class ContingentCreatePage {
     private SelenideElement cancelBtn = $x("//span[contains(text(),'Отмена')]/..");
     private SelenideElement submitBtn = $x("//span[contains(text(),'Сохранить')]/..");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public ContingentCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

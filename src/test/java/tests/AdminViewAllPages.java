@@ -19,8 +19,8 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(1)
-    // Заявки на подключение детей
-    // https://college.dev-snation.kz/ru/tko/control/parent-link-statements
+    // mainPage
+    // https://college.dev-snation.kz/ru/tko
 
     public void mainPageView() {
         mainPage.viewModal().clickSelectRegion();
@@ -86,7 +86,7 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(6)
-    //  Контингент
+    //  Контингент - полный список
     //  /ru/tko/control/contingent
     public void contingentPageView() {
         open("https://college.dev-snation.kz/ru/tko/control/contingent");
@@ -216,7 +216,7 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(19)
-    //   Приемная комиссия - Комиссия
+    //   Приемная комиссия - Список приемных комиссий -  Комиссия
     //  /ru/tko/control/statements-admissions
     public void statementsAdmissionsPageView() {
         open("https://college.dev-snation.kz/ru/tko/control/statements-admissions");
@@ -226,7 +226,7 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(20)
-    //   Приемная комиссия - Заявки с внешних сервисов
+    //   Приемная комиссия - Гос. услуги_Заявки с внешних сервисов_Необработанные
     //  /ru/tko/control/external-statements
     public void externalStatementsPageView() {
         open("https://college.dev-snation.kz/ru/tko/control/external-statements");
@@ -236,7 +236,7 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(21)
-    //   Приемная комиссия - Вступительные экзамены
+    //   Приемная комиссия - Вступительные экзамены - Активные
     //  /ru/tko/control/entrance-exam
     public void activeEntranceExamPageView() {
         open("https://college.dev-snation.kz/ru/tko/control/entrance-exam");
@@ -413,5 +413,256 @@ public class AdminViewAllPages extends AppConfig {
         SelectRolePage  selectRolePage  = new SelectRolePage ();
         selectRolePage.checkTitleToPage().mainPageLink();
     }
+
+    @Test
+    @Order(39)
+    //  Результаты работы конкурсной комиссии
+    //  /ru/tko/statement-admissions
+    public void competitionResultPageView() {
+        open("https://college.dev-snation.kz/ru/tko/statement-admissions");
+        CompetitionResultPage  competitionResultPage  = new CompetitionResultPage ();
+        competitionResultPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(40)
+    //  Колледжи
+    //  /ru/tko/colleges
+    public void collegesPageView() {
+        open("https://college.dev-snation.kz/ru/tko/colleges");
+        CollegesPage  collegesPage  = new CollegesPage();
+        collegesPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(41)
+    //  Информация о колледже
+    //  /ru/tko/college/19181/about
+    public void collegesInformationPageView() {
+        open("https://college.dev-snation.kz/ru/tko/college/19181/about");
+        CollegesInformationPage  collegesInformationPage  = new CollegesInformationPage();
+        collegesInformationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(42)
+    //  Онлайн курсы для студентов
+    //  /ru/tko/course/lists
+    public void courseListPageView() {
+        open("https://college.dev-snation.kz/ru/tko/course/lists");
+        CourseListPage  courseListPage  = new CourseListPage();
+        courseListPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(43)
+    //  Статистика
+    //  /ru/tko/statistics
+    public void statisticsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/statistics");
+        StatisticsPage  statisticsPage  = new StatisticsPage();
+        statisticsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(44)
+    //  Инструкции
+    //  /ru/tko/faq
+    public void faqPageView() {
+        open("https://college.dev-snation.kz/ru/tko/faq");
+        FaqPage  faqPage  = new FaqPage();
+        faqPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(45)
+    //  Прием документов в организации
+    //  /ru/tko/colleges/faq/info?type=6
+    public void faqInfoTypePageView() {
+        open("https://college.dev-snation.kz/ru/tko/colleges/faq/info?type=6");
+        FaqInfoTypePage  faqInfoTypePage  = new FaqInfoTypePage();
+        faqInfoTypePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(46)
+    //  Регистрация
+    //  /ru/tko/registrations
+    public void registrationPageView() {
+        open("https://college.dev-snation.kz/ru/tko/registrations");
+        RegistrationPage  registrationPage  = new RegistrationPage();
+        registrationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(47)
+    //  Вход
+    //  /ru/tko/login
+    public void loginPageView() {
+        open("https://college.dev-snation.kz/ru/tko/login");
+        LoginPage  loginPage  = new LoginPage();
+        loginPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(48)
+    //  Мои файлы
+    //  /ru/tko/account/files
+    public void accountFilesPageView() {
+        open("https://college.dev-snation.kz/ru/tko/account/files");
+        AccountFilesPage  accountFilesPage  = new AccountFilesPage();
+        accountFilesPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(49)
+    //  Сменить пароль
+    //  /ru/tko/profile/settings/password
+    public void settingsPasswordPageView() {
+        open("https://college.dev-snation.kz/ru/tko/profile/settings/password");
+        SettingsPasswordPage  settingsPasswordPage  = new SettingsPasswordPage();
+        settingsPasswordPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(50)
+    //  Редактировать профиль
+    //  /ru/tko/account/profile/edit
+    public void accountProfileEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/account/profile/edit");
+        AccountProfileEditPage  accountProfileEditPage  = new AccountProfileEditPage();
+        accountProfileEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(51)
+    //  Просмотр заявки
+    //  /ru/tko/control/parent-link-statements/86
+    public void controlParentLinkStatementsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/parent-link-statements/86");
+        ControlParentLinkStatementsPage  controlParentLinkStatementsPage  = new ControlParentLinkStatementsPage();
+        controlParentLinkStatementsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(52)
+    //  Профиль колледжа
+    //  /ru/tko/organization-profile
+    public void organizationProfilePageView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-profile");
+        OrganizationProfilePage  organizationProfilePage  = new OrganizationProfilePage();
+        organizationProfilePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(53)
+    //  Редактирование профиля колледжа
+    //  /ru/tko/organization-profile/edit
+    public void organizationProfileEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-profile/edit");
+        OrganizationProfileEditPage  organizationProfileEditPage  = new OrganizationProfileEditPage();
+        organizationProfileEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(54)
+    //  Регистрационные сведения колледжа
+    //  /ru/tko/organization-reg-info
+    public void organizationRegInfoPageView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-reg-info");
+        OrganizationRegInfoPage  organizationRegInfoPage  = new OrganizationRegInfoPage();
+        organizationRegInfoPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(55)
+    //  Редактирование регистрационных сведений колледжа
+    //  /ru/tko/organization-reg-info/edit
+    public void organizationRegInfoEditView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-reg-info/edit");
+        OrganizationRegInfoEdit  organizationRegInfoEdit  = new OrganizationRegInfoEdit();
+        organizationRegInfoEdit.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(56)
+    // МТБ колледжа
+    //  /ru/tko/organization-mtb
+    public void organizationMtbPageView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-mtb");
+        OrganizationMtbPage  organizationMtbPage  = new OrganizationMtbPage();
+        organizationMtbPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(57)
+    // Редактирование МТБ колледжа
+    //  /ru/tko/organization-mtb/edit
+    public void organizationMtbEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/organization-mtb/edit");
+        OrganizationMtbEditPage  organizationMtbEditPage  = new OrganizationMtbEditPage();
+        organizationMtbEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(58)
+    // Добавить сотрудника
+    //  /ru/tko/control/personnel/create
+    public void personnelCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel/create");
+        PersonnelCreatePage  personnelCreatePage  = new PersonnelCreatePage();
+        personnelCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(59)
+    // Сведения о сотруднике
+    //  /ru/tko/control/personnel/2812
+    public void personnelIntelligencePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel/2812");
+        PersonnelIntelligencePage  personnelIntelligencePage  = new PersonnelIntelligencePage();
+        personnelIntelligencePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(60)
+    // Администрация
+    //  /ru/tko/control/personnel?type=administration
+    public void personnelTypeAdministrationPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel?type=administration");
+        PersonnelTypeAdministrationPage  personnelTypeAdministrationPage  = new PersonnelTypeAdministrationPage();
+        personnelTypeAdministrationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(61)
+    // ППС (Преподаватели)
+    //  /ru/tko/control/personnel?type=educator
+    public void personnelTypeEducatorPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel?type=educator");
+        PersonnelTypeEducatorPage  personnelTypeEducatorPage  = new PersonnelTypeEducatorPage();
+        personnelTypeEducatorPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(62)
+    // Сотрудники
+    //  /ru/tko/control/personnel?type=staff
+    public void personnelTypeStaffPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel?type=staff");
+        PersonnelTypeStaffPage  personnelTypeStaffPage  = new PersonnelTypeStaffPage();
+        personnelTypeStaffPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(63)
+    // Добавление в контингент
+    //  /ru/tko/control/contingent/create
+    public void contingentCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/create");
+        ContingentCreatePage  contingentCreatePage = new ContingentCreatePage();
+        contingentCreatePage.checkTitleToPage().mainPageLink();
+    }
+
 
 }

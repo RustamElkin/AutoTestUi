@@ -1,7 +1,6 @@
 package tests;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.SelectOrganizationPage;
@@ -10,6 +9,7 @@ import testconfigs.AppConfig;
 
 import static com.codeborne.selenide.Selenide.open;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MainPageTest extends AppConfig {
 
     private MainPage mainPage;
@@ -50,6 +50,7 @@ public class MainPageTest extends AppConfig {
     }
 
     @Test
+    @Order(1)
     public void signInOUEmployee() {
         mainPage.clickSelectRegion();
         LoginPage loginPage = mainPage.clickSignInBtn().headingText().clickLoginFormTab()

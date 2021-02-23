@@ -1,8 +1,10 @@
 package pages;// Добавить сотрудника
 //  /ru/tko/control/personnel/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PersonnelCreatePage {
@@ -23,4 +25,17 @@ public class PersonnelCreatePage {
     //Если не заполнить поля сработает валидация, можно это проверить в тесте.
     private SelenideElement emptyIINInput     = $x("//div[@class='growl-message']");
 
+    private SelenideElement mainPageLink      = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public PersonnelCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Персонал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

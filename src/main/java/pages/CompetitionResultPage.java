@@ -1,13 +1,15 @@
 package pages;// Результаты работы конкурсной комиссии
 //      /ru/tko/statement-admissions
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CompetitionResultPage {
 
-    private SelenideElement titleToPage = $x("//h1[@class=\"s-title-head\"][contains(text(),'Результаты работы конкурсной комиссии')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Результаты работы конкурсной комиссии')]");
 
     private SelenideElement selectYearBtn = $x("//span[contains(text(),'2020')]/../../../.."); // Фильтр, выбор года
     private SelenideElement applyFilterBtn = $x("//div[contains(text(),'Применить')]/../.."); // Кнопка "Применить"
@@ -27,6 +29,18 @@ public class CompetitionResultPage {
     private SelenideElement backPaginateBtn = $x("//div[@class=\"sn-table__control\"]/button[1]");  // Не работает на текущей странице, кнопка не активна, тег "a" отображается как span
     private SelenideElement nextPaginateBtn = $x("//div[@class=\"sn-table__control\"]/button[2]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+
+    public CompetitionResultPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Результаты работы конкурсной комиссии"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

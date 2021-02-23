@@ -1,9 +1,11 @@
 package pages;// Редактирование профиля колледжа
 //  /ru/tko/organization-profile/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -57,4 +59,17 @@ public class OrganizationProfileEditPage {
     private SelenideElement editFotoRotateRight = $x("//button[@id='rotateRight' and @title='Поворот +90']");                       // "Поворот +90"
     private SelenideElement editFotoDeleteBtn = $x("//button[@id='deleteAva' and @title='Удалить']");                               // 'Удалить'
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public OrganizationProfileEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование профиля колледжа"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

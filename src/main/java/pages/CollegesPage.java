@@ -1,9 +1,11 @@
 package pages;// Колледжи
 //  /ru/tko/colleges
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -50,4 +52,19 @@ public class CollegesPage {
     private SelenideElement fourthPaginateBtn = $x("//div[contains(text(),'4')]/ancestor::button");
     private ElementsCollection selectPaginateBtn = $$x("//div[@class = 'sn--row sn--justify-center']/button");
     private SelenideElement nextPaginateBtn = $x("//i[contains(@class,'s-ico--thm-angle-double-right')]/ancestor::button");
+
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public CollegesPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Колледжи"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
+
 }

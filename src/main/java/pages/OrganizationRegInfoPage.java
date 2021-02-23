@@ -1,8 +1,10 @@
 package pages;// Регистрационные сведения колледжа
 //  /ru/tko/organization-reg-info
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class OrganizationRegInfoPage {
@@ -38,5 +40,18 @@ public class OrganizationRegInfoPage {
     // Кнопка "Редактировать"
     private SelenideElement editBtn                        = $x("//div[contains(text(),'Редактировать')]/..");
 
+    private SelenideElement mainPageLink                   = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public OrganizationRegInfoPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Регистрационные сведения колледжа"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }
