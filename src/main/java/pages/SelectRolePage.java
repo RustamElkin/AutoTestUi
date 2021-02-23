@@ -1,13 +1,18 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Роль
 //  ru/tko/select-role
 public class SelectRolePage {
+
+    // Тайтл
+    private SelenideElement titleToPage              = $x("//div[@class='s-title-head' and text() = 'Роль']");
 
     //private SelenideElement selectRoleDropDownList = $("div.multiselect__tags");
     private SelenideElement selectRoleDropDownList = $x("//input[@name = 'role_key' and @class='multiselect__input']/ancestor::div[@class = 'multiselect mb-10']");
@@ -25,6 +30,17 @@ public class SelectRolePage {
     //проверка что мы на этой странице, по title Роль
     private SelenideElement roleTitle              = $x("//div[@class='s-title-head' and text() = 'Роль']");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public SelectRolePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Роль"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
     public SelectRolePage clickSelectRoleList() {
         selectRoleDropDownList.click();

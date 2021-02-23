@@ -1,8 +1,10 @@
 package pages;// Документооборот_Входящие письма
 //  /ru/tko/document-flow/letters
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class DocumentsFlowLettersPage {
@@ -41,4 +43,17 @@ public class DocumentsFlowLettersPage {
     private SelenideElement viewerFlipVertical   = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-flip-vertical']");
     private SelenideElement viewerClose          = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//div[contains(@class,'viewer-close') and @role='button']");
 
+    private SelenideElement mainPageLink         = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public DocumentsFlowLettersPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Письма"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

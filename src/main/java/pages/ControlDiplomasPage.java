@@ -1,7 +1,9 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Дипломные работы
@@ -35,7 +37,19 @@ public class ControlDiplomasPage {
     private SelenideElement viewBtn = $x("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-eye s-ico\"]/../..");          // Первая кнопка просмотра
     private SelenideElement editBtn = $x("//tr[1]/td[8]//a//i[@class=\"s-ico--thm-pencil s-ico\"]/../..");       // Кнопка "Редактировать"
     private SelenideElement deleteBtn = $x("//tr[1]/td[8]//button");                                             // Кнопка "Удалить"
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+
+    public ControlDiplomasPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Дипломные работы"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 }

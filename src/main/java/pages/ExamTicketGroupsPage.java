@@ -1,9 +1,11 @@
 package pages;// Экзаменационные билеты
 //  /ru/tko/control/exam-ticket-groups
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -59,4 +61,15 @@ public class ExamTicketGroupsPage {
     private SelenideElement firstEditBtn = $x("(//span[@class=\"s-ico s-ico--thm-pencil\"]/..)[1]");                      // Кнопка "Редактировать"
     private SelenideElement firstDeleteBtn = $x("(//span[@class=\"s-ico s-ico--thm-trash\"]/..)[1]");                     // Кнопка "Удалить"
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public ExamTicketGroupsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Экзаменационные билеты"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

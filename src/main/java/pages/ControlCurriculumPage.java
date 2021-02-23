@@ -1,14 +1,17 @@
-package pages;// Учебный план
+package pages;
+// Учебный план
 //  /ru/tko/control/curriculum
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ControlCurriculumPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[@class=\"s-title-head\"][contains(text(),'Учебный план')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Учебный план')]");
 
 
     // Табы на странице
@@ -33,7 +36,18 @@ public class ControlCurriculumPage {
     private SelenideElement editBtn = $x("//span[@class=\"s-ico s-ico--thm-pencil\"]/..");                      // Кнопка "Редактировать"
     private SelenideElement deleteBtn = $x("//span[@class=\"s-ico s-ico--thm-trash\"]/..");                     // Кнопка "Удалить"
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+    public ControlCurriculumPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Учебный план"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 }

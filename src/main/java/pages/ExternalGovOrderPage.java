@@ -1,5 +1,6 @@
-package pages;// Необработанные заявки на гос.услуги с внешних сервисов
-//  /ru/tko/control/external-statement-services
+package pages;
+// Госзаказ - Необработанные заявки на гос.услуги с внешних сервисов
+//  /ru/tko/control/external-gov-order
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -7,7 +8,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class ExternalStatementServicesPage {
+public class ExternalGovOrderPage {
 
     // Тайтл
     private SelenideElement titleToPage          = $x("//h1[contains(text(),'Заявки на гос.услуги')]");
@@ -30,7 +31,7 @@ public class ExternalStatementServicesPage {
 
 
 
-    public ExternalStatementServicesPage checkTitleToPage() {
+    public ExternalGovOrderPage checkTitleToPage() {
         titleToPage.shouldBe(Condition.visible).shouldHave(text("Заявки на гос.услуги с внешних сервисов"));
         return this;
     }

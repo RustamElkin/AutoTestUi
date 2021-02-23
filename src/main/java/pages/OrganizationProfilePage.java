@@ -1,8 +1,10 @@
 package pages;// Профиль колледжа
 //  /ru/tko/organization-profile
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class OrganizationProfilePage {
@@ -22,4 +24,15 @@ public class OrganizationProfilePage {
      private SelenideElement descriptionTitle           = $x("//span[contains(text(),'Описание')]");
      private SelenideElement addressTitle               = $x("//span[contains(text(),'Адрес')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+    public OrganizationProfilePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Профиль колледжа"));
+        return this;
+    }
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

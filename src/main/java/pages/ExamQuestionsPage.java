@@ -1,8 +1,10 @@
 package pages;// Экзаменационные вопросы
 //  /ru/tko/exam-questions
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ExamQuestionsPage {
@@ -51,7 +53,19 @@ public class ExamQuestionsPage {
     private SelenideElement editBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Редактировать'])[1]");            // Кнопка "Редактировать"
     private SelenideElement deleteBtn = $x("(//tr/td[@data-table-head='Операции']//a[@title='Удалить'])[1]");                // Кнопка "Удалить"
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+
+    public ExamQuestionsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Экзаменационные вопросы"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 

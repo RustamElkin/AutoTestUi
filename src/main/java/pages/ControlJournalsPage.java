@@ -1,9 +1,11 @@
 package pages;// Журналы
 //  /ru/tko/control/journals
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -69,6 +71,18 @@ public class ControlJournalsPage {
     private SelenideElement eighthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'8')]");
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'›')]");
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+
+    public ControlJournalsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

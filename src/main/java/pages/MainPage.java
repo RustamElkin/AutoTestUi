@@ -8,15 +8,16 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.actions;
 
-//Главная страница
+// Главная страница
 //     /ru/tko
 public class MainPage {
 
-    private SelenideElement titleToPage                  = $x("//div[@class='s-jumbotron__title mb-30']");
-    private SelenideElement regionSelectBtn              = $x("//div[@class='s-main-header__right-panel']/div[@data-toggle='modal']");
-    private SelenideElement modalRegionSelecting         = $x("//div[@class='s-modal__container']//a[text() = 'Туркестанская область' or href='/ru/tko?region=15']");
-    private SelenideElement signInBtn                    = $x("//div[@class='s-main-header__right-panel']//a[text() = 'Вход' and @href='/ru/tko/login']");
-    private SelenideElement viewModal                    = $x("//div[@class='s-modal__container']//div[@class = 's-modal__title' and text() = 'Выберите ваш регион']");
+    private SelenideElement titleToPage                  = $x("//div[@class = 's-jumbotron__title mb-30']");
+    private SelenideElement regionSelectBtn              = $x("//div[@class = 's-main-header__right-panel']/div[@data-toggle = 'modal']");
+    private SelenideElement modalRegionSelecting         = $x("//div[@class = 's-modal__container']//a[text() = 'Туркестанская область' or href='/ru/tko?region=15']");
+    private SelenideElement signInBtn                    = $x("//div[@class = 's-main-header__right-panel']//a[text() = 'Вход' and @href='/ru/tko/login']");
+    private SelenideElement viewModal                    = $x("//div[@class = 's-modal__container']//div[@class = 's-modal__title' and text() = 'Выберите ваш регион']");
+    private SelenideElement mainPageLink                 = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
     // Меню
     private SelenideElement menuBtn                      = $x("//div[contains(text(),'Меню')]");                                                                             // 'Меню'
@@ -61,14 +62,25 @@ public class MainPage {
     //
     private SelenideElement documentFlowMenu             = $x("//span[text() = 'Документооборот']/parent::div");                                                             // 'Документооборот'
     // вложенные селекты в 'Документооборот'
-    private SelenideElement documentFlowOrdersMenu       = $x("//a[@href = '/ru/tko/document-flow/orders' and @class='s-dropdown__link ']");                                 // 'Приказы'
-    private SelenideElement documentFlowLettersMenu      = $x("//a[@href = '/ru/tko/document-flow/letters' and @class='s-dropdown__link ']");                                // 'Письма'
-    private SelenideElement documentFlowStatementsMenu   = $x("//a[@href = '/ru/tko/document-flow/statements' and @class='s-dropdown__link ']");                             // 'Заявки'
-    private SelenideElement archiveStatementsMenu        = $x("//a[@href = '/ru/tko/document-flow/archive/statements' and @class='s-dropdown__link ']");                     // 'Архив'
-    //
+    private SelenideElement documentFlowOrdersMenu       = $x("//a[@href = '/ru/tko/document-flow/orders' and @class = 's-dropdown__link ']");                               // 'Приказы'
+    private SelenideElement documentFlowLettersMenu      = $x("//a[@href = '/ru/tko/document-flow/letters' and @class = 's-dropdown__link ']");                              // 'Письма'
+    private SelenideElement documentFlowStatementsMenu   = $x("//a[@href = '/ru/tko/document-flow/statements' and @class = 's-dropdown__link ']");                           // 'Заявки'
+    private SelenideElement archiveStatementsMenu        = $x("//a[@href = '/ru/tko/document-flow/archive/statements' and @class = 's-dropdown__link ']");                   // 'Архив'
 
+    private SelenideElement organizationPostsMenu        = $x("//a[@href = '/ru/tko/organization-posts' and @class = 's-dropdown__link ']");                                 // 'Блог'
+    private SelenideElement libraryMenu                  = $x("//a[@href = '/ru/tko/library' and @class = 's-dropdown__link ']");                                            // 'Библиотека'
 
+    private SelenideElement examsMenu                    = $x("//span[text() = 'Экзамены']/parent::div");                                                                    // 'Экзамены'
+    // вложенные селекты в 'Экзамены'
+    private SelenideElement controlExamsMenu             = $x("//a[@href = '/ru/tko/control/exams' and @class = 's-dropdown__link ']");                                      // 'Экзамены'
+    private SelenideElement examQuestionsMenu            = $x("//a[@href = '/ru/tko/exam-questions' and @class = 's-dropdown__link ']");                                     // 'Экзаменационные вопросы'
+    private SelenideElement examTicketGroupsMenu         = $x("//a[@href = '/ru/tko/control/exam-ticket-groups' and @class = 's-dropdown__link ']");                         // 'Экзаменационные билеты'
 
+    private SelenideElement controlAnnualArchiveMenu     = $x("//a[@href = '/ru/tko/control/annual-archive' and @class = 's-dropdown__link ']");                             // 'Архив'
+    private SelenideElement accountChildrenMenu          = $x("//a[@href = '/ru/tko/account/children' and @class = 's-dropdown__link ']");                                   // 'Мои дети'
+    private SelenideElement profileNotificationsMenu     = $x("//a[@href = '/ru/tko/profile/notifications' and @class = 's-dropdown__link ']");                              // 'Уведомления'
+    private SelenideElement selectOrganizationMenu       = $x("//a[@href = '/ru/tko/select-organization/college' and @class = 's-dropdown__link ']");                        // 'Сменить организацию'
+    private SelenideElement selectRoleMenu               = $x("//a[@href = '/ru/tko/select-role' and @class = 's-dropdown__link ']");                                        // 'Сменить роль'
 
 
 
@@ -109,7 +121,6 @@ public class MainPage {
         return this;
     }
 
-
     public MainPage clickSelectRegion() {
         modalRegionSelecting.shouldBe(Condition.visible).click();
         return this;
@@ -121,8 +132,14 @@ public class MainPage {
     }
 
     public MainPage checkTitleToPage() {
-        titleToPage.shouldHave(text("Единый портал государственных услуг"));
+        titleToPage.
+                shouldBe(visible).
+                shouldHave(text("Единый портал государственных услуг"));
         return this;
     }
 
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

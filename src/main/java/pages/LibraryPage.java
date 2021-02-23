@@ -1,14 +1,15 @@
 package pages;// Библиотека
 // /ru/tko/library
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-class LibraryPage {
-
+public class LibraryPage {
 
     // Тайтл
     private SelenideElement titleToPage                        = $x("//h1[contains(text(),'Библиотека')]");
@@ -81,5 +82,18 @@ class LibraryPage {
     private SelenideElement thirdPaginateBtn                   = $x("//div[text() = '3']/ancestor::button[@type='button']");
     private SelenideElement nextPaginateBtn                    = $x("//i[@class='s-ico--thm-angle-double-right s-ico']/ancestor::button[@type = 'button' and contains(@class, 'sn-pagination__directions')]");
 
+    private SelenideElement mainPageLink                       = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public LibraryPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Библиотека"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

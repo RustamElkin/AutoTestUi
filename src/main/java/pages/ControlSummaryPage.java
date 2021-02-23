@@ -1,7 +1,9 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 // Итоги
@@ -41,4 +43,15 @@ public class ControlSummaryPage {
     private SelenideElement secondPaginateBtn =$x("//a[contains(text(),'2')]");
     private SelenideElement nextPaginateBtn =$x("//a[contains(text(),'›')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public ControlSummaryPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Итоги"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

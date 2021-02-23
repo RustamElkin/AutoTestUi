@@ -1,8 +1,10 @@
 package pages;// Мои дети
 //  /ru/tko/account/children/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ChildrenCreatePage {
@@ -24,5 +26,17 @@ public class ChildrenCreatePage {
 
     private SelenideElement applyApplicationBtn = $x("//button[contains(text(),'Подать заявку')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
 
+
+
+    public ChildrenCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Добавить ребенка"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

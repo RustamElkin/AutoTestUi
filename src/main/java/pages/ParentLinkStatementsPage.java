@@ -1,4 +1,5 @@
-package pages;// Заявки на подключение детей
+package pages;
+// Заявки на подключение детей
 //  /ru/tko/control/parent-link-statements
 
 import com.codeborne.selenide.Condition;
