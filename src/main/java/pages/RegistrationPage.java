@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.$x;
 public class RegistrationPage {
 
     // Тайтл
-    private SelenideElement titleToPage       = $x("//h1[text()='Регистрация']");
+    private SelenideElement titleToPage       = $x("//h1[contains(text(),'Регистрация')]");
 
     // Input
-    private SelenideElement phoneNumberInput  = $x("//div[@class=\"sn-field__label\"][contains(text(),'Номер сотового')]/following-sibling::div//input ");   // "Номер сотового телефона"
+    private SelenideElement phoneNumberInput  = $x("//div[@class='sn-field__label'][contains(text(),'Номер сотового')]/following-sibling::div//input ");   // "Номер сотового телефона"
 
     // Checkbox
     private SelenideElement acceptCheckbox    = $x("//div[contains(text(),'Я ознакомлен')]/preceding-sibling::div//input");

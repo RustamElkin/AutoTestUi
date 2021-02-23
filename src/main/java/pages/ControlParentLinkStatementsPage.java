@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class ControlParentLinkStatementsPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[contains(text(),'Журнал')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Просмотр заявки')]");
 
     // Кнопки "Подтвердить" и "Отказать"
     private SelenideElement confirmBtn = $x("//div[@class='s-group']/a[contains(text(),'Подтвердить')]");
@@ -26,7 +26,7 @@ public class ControlParentLinkStatementsPage {
 
 
     public ControlParentLinkStatementsPage checkTitleToPage() {
-        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Просмотр заявки"));
         return this;
     }
 
