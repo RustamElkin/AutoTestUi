@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class ContingentArchivePage {
 
-        private SelenideElement titleToPage = $x("//h1[@class='s-title-head'][contains(text(),'Результаты работы конкурсной комиссии')]");
+        private SelenideElement titleToPage = $x("//h1[contains(text(),'Контингент')]");
 
         private SelenideElement fullListTab = $x("//span[contains(text(),'Полный список')]/..");                                                // 'Табы на странице "Полный список"'
         private SelenideElement groupsTab = $x("//span[contains(text(),'Группы')]/..");                                                         // 'Группы'
@@ -29,7 +29,7 @@ public class ContingentArchivePage {
 
 
         public ContingentArchivePage checkTitleToPage() {
-                titleToPage.shouldBe(Condition.visible).shouldHave(text("Результаты работы конкурсной комиссии"));
+                titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
                 return this;
         }
 

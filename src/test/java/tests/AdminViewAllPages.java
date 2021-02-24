@@ -719,9 +719,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(69)
     // Редактирование группы
-    //  /ru/tko/control/group/1456/edit
+    //  /ru/tko/control/group/115/edit
     public void groupEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/group/1456/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/group/115/edit");
         GroupEditPage  groupEditPage = new GroupEditPage();
         groupEditPage.checkTitleToPage().mainPageLink();
     }
@@ -739,9 +739,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(71)
     // Управление группой
-    //  /ru/tko/control/group/1456/management
+    //  /ru/tko/control/group/115/management
     public void groupManagementPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/group/1456/management");
+        open("https://college.dev-snation.kz/ru/tko/control/group/115/management");
         GroupManagementPage  groupManagementPage = new GroupManagementPage();
         groupManagementPage.checkTitleToPage().mainPageLink();
     }
@@ -789,9 +789,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(76)
     // Редактирование подгруппы
-    //  /ru/tko/control/subgroup/19/edit
+    //  /ru/tko/control/subgroup/813/edit
     public void subgroupEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/subgroup/19/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup/813/edit");
         SubgroupEditPage  subgroupEditPage = new SubgroupEditPage();
         subgroupEditPage.checkTitleToPage().mainPageLink();
     }
@@ -849,9 +849,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(82)
     // Архив_Сведения о выпускной группе
-    // /ru/tko/control/group/1070/show
+    // /ru/tko/control/group/12705/show
     public void archiveGraduatedGroupShowPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/group/1070/show");
+        open("https://college.dev-snation.kz/ru/tko/control/group/12705/show");
         ArchiveGraduatedGroupShowPage  archiveGraduatedGroupShowPage = new ArchiveGraduatedGroupShowPage();
         archiveGraduatedGroupShowPage.checkTitleToPage().mainPageLink();
     }
@@ -871,7 +871,7 @@ public class AdminViewAllPages extends AppConfig {
     // Просмотр учебного плана
     // /ru/tko/control/curriculum/2670/show
     public void curriculumShowPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/curriculum/220/show");
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum/2670/show");
         CurriculumShowPage  curriculumShowPage = new CurriculumShowPage();
         curriculumShowPage.checkTitleToPage().mainPageLink();
     }
@@ -881,7 +881,7 @@ public class AdminViewAllPages extends AppConfig {
     // Редактирование учебного плана
     // /ru/tko/control/curriculum/2670/edit
     public void curriculumEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/curriculum/70/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum/2670/edit");
         CurriculumEditPage  curriculumEditPage = new CurriculumEditPage();
         curriculumEditPage.checkTitleToPage().mainPageLink();
     }

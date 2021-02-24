@@ -1,5 +1,5 @@
 package pages;// Редактирование подгруппы
-//  /ru/tko/control/subgroup/813/edit
+//  /ru/tko/control/subgroup/1092/edit
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;

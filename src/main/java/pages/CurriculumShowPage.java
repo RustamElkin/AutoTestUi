@@ -1,5 +1,5 @@
 package pages;// Просмотр учебного плана
-//  /ru/tko/control/curriculum/220/show
+//  /ru/tko/control/curriculum/2670/show
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;

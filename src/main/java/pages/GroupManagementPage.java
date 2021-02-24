@@ -1,5 +1,5 @@
 package pages;// Управление группой
-//  /ru/tko/control/group/183/management
+//  /ru/tko/control/group/115/management
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

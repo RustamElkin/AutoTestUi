@@ -1,5 +1,5 @@
 package pages;// Архив_Сведения о выпускной группе
-//  /ru/tko/control/group/1070/show
+//  /ru/tko/control/group/12705/show
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
