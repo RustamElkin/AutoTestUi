@@ -1,14 +1,15 @@
 package pages;// Редактирование дипломной работы
-//  /ru/tko/control/diploma-contingent/4/edit
+//  /ru/tko/control/diploma-contingent/375/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class DiplomaContingentEditPage {
-
 
     // Тайтл
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Дипломные работы')]");
@@ -41,6 +42,18 @@ public class DiplomaContingentEditPage {
     // Кнопка "Сохранить"
     private SelenideElement saveBtn = $x("//div[contains(text(),'Сохранить')]/../..");                                              // 'Сохранить'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public DiplomaContingentEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Дипломные работы"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 

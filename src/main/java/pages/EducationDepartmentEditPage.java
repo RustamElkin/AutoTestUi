@@ -1,23 +1,25 @@
 package pages;// Сведения и редактирование кафедры
 //  /ru/tko/control/education-department/28/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class EducationDepartmentEditPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[@class=\"s-title-head\"][contains(text(),'Контингент')]");
+    private SelenideElement titleToPage = $x("//h1[@class = 's-title-head'][contains(text(),'Контингент')]");
 
     // Табы на странице
     private SelenideElement fullListTab = $x("//span[contains(text(),'Полный список')]/..");                                                // 'Полный список'
     private SelenideElement groupsTab = $x("//span[contains(text(),'Группы')]/..");                                                         // 'Группы'
     private SelenideElement subgroupsTab = $x("//span[contains(text(),'Подгруппы')]/..");                                                   // 'Подгруппы'
     private SelenideElement cathedraTab = $x("//span[contains(text(),'Кафедры')]/..");                                                      // 'Кафедры' (Текущий таб не кликабельный)
-    private SelenideElement archiveTab = $x("//div[@class=\"container-content-head__tabs-wrapper\"]//span[contains(text(),'Архив')]/..");   // 'Архив'
+    private SelenideElement archiveTab = $x("//div[@class='container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");     // 'Архив'
 
     // Инпуты
     private SelenideElement nameInput = $x("//input[@name='education_department[name]']");                                                  // 'Название'
@@ -44,5 +46,16 @@ public class EducationDepartmentEditPage {
     private SelenideElement emptyNameErrorMessage = $x("//input[@name='education_department[name]']//following-sibling::div[contains(text(),'Поле \"Название\" обязательно для заполнения')]");
     private SelenideElement emptySpecializationErrorMessage = $x("//select[@name=\"specialities[]\"]/..//div[contains(text(),'Поле \"Название\" обязательно для заполнения')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+    public EducationDepartmentEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

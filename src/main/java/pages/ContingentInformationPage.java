@@ -1,14 +1,16 @@
 package pages;// Сведения о контингенте
 //  /ru/tko/control/contingent/8072
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ContingentInformationPage {
 
     // Тайтл
-    private SelenideElement titleToPage                                     = $x("//h1[@class=\"s-title-head\"][contains(text(),'Контингент')]");
+    private SelenideElement titleToPage                                     = $x("//h1[@class='s-title-head'][contains(text(),'Контингент')]");
 
     // Табы на странице
     private SelenideElement fullListTab                                     = $x("//span[contains(text(),'Полный список')]/..");                      // 'Полный список'
@@ -16,7 +18,6 @@ public class ContingentInformationPage {
     private SelenideElement subgroupsTab                                    = $x("//span[contains(text(),'Подгруппы')]/..");                          // 'Подгруппы'
     private SelenideElement cathedraTab                                     = $x("//span[contains(text(),'Кафедры')]/..");                            // 'Кафедры'
     private SelenideElement archiveTab                                      = $x("//div[@class='container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");   //'Архив'
-
 
     // Title on table / Тайтлы в таблицах
     private SelenideElement contingentInformationTitleInTheTable            = $x("//span[contains(text(),'Сведения о контингенте')]");
@@ -31,5 +32,16 @@ public class ContingentInformationPage {
     private SelenideElement additionalInformationBtn                        = $x("//span[contains(text(),'Дополнительная информация')]/..");          // кнопка "Дополнительная информация"
     private SelenideElement editBtn                                         = $x("//span[contains(text(),'Редактировать')]/..");                      // кнопка "Редактировать"
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public ContingentInformationPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

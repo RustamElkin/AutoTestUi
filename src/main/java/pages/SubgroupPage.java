@@ -1,9 +1,11 @@
 package pages;// Подгруппы
 //  /ru/tko/control/subgroup
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -17,7 +19,7 @@ public class SubgroupPage {
     private SelenideElement groupsTab          = $x("//span[contains(text(),'Группы')]/..");                                                      // 'Группы'
     private SelenideElement subgroupsTab       = $x("//span[contains(text(),'Подгруппы')]/..");                                                   // 'Подгруппы'
     private SelenideElement cathedraTab        = $x("//span[contains(text(),'Кафедры')]/..");                                                     // 'Кафедры'
-    private SelenideElement archiveTab         = $x("//div[@class='container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");   // 'Архив'
+    private SelenideElement archiveTab         = $x("//div[@class = 'container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/.."); // 'Архив'
 
     // Кнопки
     private SelenideElement filteringListBtn   = $x("//span[contains(text(),'Фильтрация списка')]/..");                                           // 'Фильтрация списка'
@@ -47,10 +49,10 @@ public class SubgroupPage {
     private SelenideElement operationsTable       = $x("//th[contains(text(),'Операции')]");                                                      // 'Операции'
 
     // Кнопки в таблице, колонка "Операции"
-    private ElementsCollection viewBtn            = $$x("//a[@title='Посмотреть']");                                                              // Кнопки "Посмотреть'
-    private ElementsCollection editBtn            = $$x("//a[@title='Редактировать']");                                                           // Кнопки 'Редактировать'
-    private ElementsCollection deleteBtn          = $$x("//a[@title='Удалить']");                                                                 // Кнопки 'Удалить'
-    private ElementsCollection changePasswordBtn  = $$x("//a[@title='Сменить пароль']");                                                          // Кнопки 'Сменить пароль'
+    private ElementsCollection viewBtn            = $$x("//a[@title = 'Посмотреть']");                                                              // Кнопки "Посмотреть'
+    private ElementsCollection editBtn            = $$x("//a[@title = 'Редактировать']");                                                           // Кнопки 'Редактировать'
+    private ElementsCollection deleteBtn          = $$x("//a[@title = 'Удалить']");                                                                 // Кнопки 'Удалить'
+    private ElementsCollection changePasswordBtn  = $$x("//a[@title = 'Сменить пароль']");                                                          // Кнопки 'Сменить пароль'
 
     // Кнопки пагинации
     private SelenideElement backPaginateBtn       = $x("//a[contains(text(),'‹')]");                        // не работает на первой (текущей) странице, кнопка не активна
@@ -62,4 +64,15 @@ public class SubgroupPage {
     private ElementsCollection selectPaginateBtn  = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn       = $x("//a[contains(text(),'›')]");
 
+    private SelenideElement mainPageLink          = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+    public SubgroupPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

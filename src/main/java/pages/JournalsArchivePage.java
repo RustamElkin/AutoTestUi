@@ -1,9 +1,11 @@
 package pages;// Архив журналов
 //  /ru/tko/control/journals/archive
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -57,5 +59,16 @@ public class JournalsArchivePage {
     private ElementsCollection viewBtns = $$x("//a[@title='Посмотреть']");
     private ElementsCollection restoreBtns = $$x("//a[@title='Восстановить']");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public JournalsArchivePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

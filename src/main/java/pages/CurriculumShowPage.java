@@ -1,8 +1,10 @@
 package pages;// Просмотр учебного плана
 //  /ru/tko/control/curriculum/220/show
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CurriculumShowPage {
@@ -20,5 +22,16 @@ public class CurriculumShowPage {
     // Кнопка "Экспортировать"
     private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]");                      // 'Экспортировать'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public CurriculumShowPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Учебный план"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

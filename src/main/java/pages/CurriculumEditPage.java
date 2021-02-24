@@ -1,8 +1,10 @@
 package pages;// Редактирование учебного плана
-//  /ru/tko/control/curriculum/70/edit
+//  /ru/tko/control/curriculum/2670/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CurriculumEditPage {
@@ -48,5 +50,17 @@ public class CurriculumEditPage {
     // Кнопка "Добавить" -  условные обозначения"
     private SelenideElement addLegendBtn = $x("//a[@href=\"javascript: void(0)\"]/div[contains(text(),'Добавить')]/..");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public CurriculumEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Учебный план"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

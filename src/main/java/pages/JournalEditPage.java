@@ -1,9 +1,11 @@
 package pages;// Редактирование журнала
 //  /ru/tko/control/journal/64599/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -48,8 +50,19 @@ public class JournalEditPage {
     private ElementsCollection dropDownList = $$x("//div[@class=\"q-virtual-scroll__content\"]//div[@class='sn-item__label']");
 
     // Кнопка "Сохранить"
-    private SelenideElement saveBtn = $x("//button[@type='button']");
+    private SelenideElement saveBtn         = $x("//button[@type='button']");
+
+    private SelenideElement mainPageLink    = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
 
+    public JournalEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

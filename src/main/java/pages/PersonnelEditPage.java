@@ -1,8 +1,10 @@
 package pages;// Персонал_редактирование
 //  /ru/tko/control/personnel/2812/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PersonnelEditPage {
@@ -59,4 +61,16 @@ public class PersonnelEditPage {
     private SelenideElement emptyEmpContractTermInput       = $x("//div[contains(text(),'Поле \"Срок трудового') and @class='s-form__error-message']");         // 'Срок трудового договора'
     private SelenideElement emptyEmployeeTypeInput          = $x("//div[contains(text(),'Поле \"Сотрудник') and @class='s-form__error-message']");              // 'Сотрудник'
 
+    private SelenideElement mainPageLink                    = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public PersonnelEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

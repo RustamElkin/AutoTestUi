@@ -1,9 +1,11 @@
 package pages;// Создание журнала
 //  /ru/tko/control/journal/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -47,10 +49,22 @@ public class JournalCreatePage {
     private SelenideElement additionalTeachersDropdown = $x("//div[contains(text(),'Доп. Преподаватели')]/following-sibling::div/div[@class='sn-field__inner']");    // 'Доп. Преподаватели'
 
     // List | списки генерятся одинаково для всех дропдаунов. Получив список, фильтруем по имени или по индексу
-    private ElementsCollection dropDownList = $$x("//div[@class=\"q-virtual-scroll__content\"]//div[@class='sn-item__label']");
+    private ElementsCollection dropDownList = $$x("//div[@class = 'q-virtual-scroll__content']//div[@class = 'sn-item__label']");
 
     // Кнопка "Сохранить"
-    private SelenideElement saveBtn = $x("//button[@type='button']");
+    private SelenideElement saveBtn = $x("//button[@type = 'button']");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public JournalCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

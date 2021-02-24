@@ -1,8 +1,10 @@
 package pages;// Создание подгрупп
 //  /ru/tko/control/subgroup/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class SubgroupCreatePage {
@@ -15,11 +17,11 @@ public class SubgroupCreatePage {
     private SelenideElement groupsTab             = $x("//span[contains(text(),'Группы')]/..");                                                      // 'Группы'
     private SelenideElement subgroupsTab          = $x("//span[contains(text(),'Подгруппы')]/..");                                                   // 'Подгруппы'
     private SelenideElement cathedraTab           = $x("//span[contains(text(),'Кафедры')]/..");                                                     // 'Кафедры'
-    private SelenideElement archiveTab            = $x("//div[@class='container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");   // 'Архив'
+    private SelenideElement archiveTab            = $x("//div[@class = 'container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");   // 'Архив'
 
     // Кнопки
-    private SelenideElement cancelBtn             = $x("//div[@class=\"row-sort-between-btn\"]/a[contains(text(),'Отмена')]");                       // Кнопка 'Отмена'
-    private SelenideElement addBtn                = $x("//div[@class=\"row-sort-between-btn\"]/button[contains(text(),'Сохранить')]");               // Кнопка 'Сохранить'
+    private SelenideElement cancelBtn             = $x("//div[@class='row-sort-between-btn']/a[contains(text(),'Отмена')]");                       // Кнопка 'Отмена'
+    private SelenideElement addBtn                = $x("//div[@class='row-sort-between-btn']/button[contains(text(),'Сохранить')]");               // Кнопка 'Сохранить'
 
     // Инпуты
     private SelenideElement nameInput             = $x("//label[contains(text(),'Название')]/following-sibling::input");                             // 'Название'
@@ -30,7 +32,23 @@ public class SubgroupCreatePage {
 
     // validation error-message
     //Если не заполнить поля сработает валидация, можно это проверить в тесте.
-    private SelenideElement emptyNameErrorMessage = $x("//div[contains(text(),'Поле \"Название') and @class='s-form__error-message']");              // Поле "Название" обязательно для заполнения
-    private SelenideElement emptyQualificationErrorMessage = $x("//div[contains(text(),'Поле \"Квалификация') and @class='s-form__error-message']"); // Поле "Квалификация" обязательно для заполнения
-    private SelenideElement emtyAllAreaGrowlMessage =$x("//div[@class='growl-message']");                                                            // 'Ошибка и тд.'
+    private SelenideElement emptyNameErrorMessage = $x("//div[contains(text(),'Поле \"Название') and @class = 's-form__error-message']");              // Поле "Название" обязательно для заполнения
+    private SelenideElement emptyQualificationErrorMessage = $x("//div[contains(text(),'Поле \"Квалификация') and @class = 's-form__error-message']"); // Поле "Квалификация" обязательно для заполнения
+    private SelenideElement emtyAllAreaGrowlMessage =$x("//div[@class = 'growl-message']");                                                            // 'Ошибка и тд.'
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+
+    public SubgroupCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
+
+
 }

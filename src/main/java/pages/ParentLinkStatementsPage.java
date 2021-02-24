@@ -23,8 +23,7 @@ public class ParentLinkStatementsPage {
     // Кнопки в таблице, колонка "Операции"
     private SelenideElement viewBtn = $x("//tr[1]//td//a");                                                     // Кнопка "Посмотреть"
 
-    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
-
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
 
     public ParentLinkStatementsPage checkTitleToPage() {

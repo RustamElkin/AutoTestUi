@@ -1,9 +1,11 @@
 package pages;// Управление группой
 //  /ru/tko/control/group/183/management
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -51,4 +53,17 @@ public class GroupManagementPage {
     private SelenideElement qualificationInput = $x("//label[contains(text(),'Выберите квалификацию')]/following-sibling::div//input");     //'Выберите квалификацию'
     private SelenideElement groupInput         = $x("//label[contains(text(),'Выберите группу')]/following-sibling::div//input");                   //'Выберите группу'
 
+    private SelenideElement mainPageLink       = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+
+
+    public GroupManagementPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

@@ -1,9 +1,11 @@
 package pages;// Выбытие выпускников
 //  /ru/tko/control/group/183/graduate-contingent
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -17,7 +19,7 @@ public class GroupGraduateContingentPage {
     private SelenideElement groupsTab = $x("//span[contains(text(),'Группы')]/..");                                                         // 'Группы'
     private SelenideElement subgroupsTab = $x("//span[contains(text(),'Подгруппы')]/..");                                                   // 'Подгруппы'
     private SelenideElement cathedraTab = $x("//span[contains(text(),'Кафедры')]/..");                                                      // 'Кафедры'
-    private SelenideElement archiveTab = $x("//div[@class=\"container-content-head__tabs-wrapper\"]//span[contains(text(),'Архив')]/..");   // 'Архив'
+    private SelenideElement archiveTab = $x("//div[@class='container-content-head__tabs-wrapper']//span[contains(text(),'Архив')]/..");     // 'Архив'
 
     // Таблица
     private SelenideElement fullNameTable = $x("//th[contains(text(),'ФИО')]");                                              //'ФИО'
@@ -49,6 +51,17 @@ public class GroupGraduateContingentPage {
     private SelenideElement cancelBtn = $x("(//a[contains(text(),'Отмена')])[1]");                                           // 'Отмена'
     private SelenideElement confirmBtn = $x("//button[contains(text(),'Подтвердить')]");                                     // 'Подтвердить'
 
+    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
+
+    public GroupGraduateContingentPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Контингент"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }
 

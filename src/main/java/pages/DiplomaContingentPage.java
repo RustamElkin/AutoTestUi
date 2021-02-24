@@ -1,16 +1,18 @@
 package pages;// Просмотр дипломной работы
 //  /ru/tko/control/diploma-contingent/4
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class DiplomaContingentPage {
 
     // Тайтл
-    private SelenideElement titleToPage           = $x("//h1[contains(text(),'Дипломные работы')]");
+    private SelenideElement titleToPage           = $x("//h1[contains(text(),'Дипломная работа - Архив')]");
 
     // Табы на странице
     private SelenideElement backTab               = $x("//span[contains(text(),'Назад')]/..");                        // 'Назад'
@@ -27,5 +29,17 @@ public class DiplomaContingentPage {
     private SelenideElement protectionDate        = $x("//td[@class='s-table__col--to-right' and text()= 'Дата защиты :']/following-sibling::td");           // 'Дата защиты'
     private SelenideElement point                 = $x("//td[@class='s-table__col--to-right' and text()= 'Оценка:']/following-sibling::td");                 // 'Оценка'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public DiplomaContingentPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Дипломная работа - Архив"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

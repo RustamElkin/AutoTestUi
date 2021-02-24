@@ -19,11 +19,22 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(1)
+    //  Регистрация
+    //  /ru/tko/registrations
+    public void registrationPageView() {
+        mainPage.viewModal().clickSelectRegion();
+        open("https://college.dev-snation.kz/ru/tko/registrations");
+        RegistrationPage  registrationPage  = new RegistrationPage();
+        registrationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(2)
     // mainPage
     // https://college.dev-snation.kz/ru/tko
 
     public void mainPageView() {
-        mainPage.viewModal().clickSelectRegion();
+//        mainPage.viewModal().clickSelectRegion();
 //        mainPage.clickRegionSelectBtn().clickSelectRegion();
         LoginPage loginPage = mainPage.clickSignInBtn().headingText().clickLoginFormTab()
                 .typeLoginInput("shym.coll.as.1").typePasswordInput("123456");
@@ -43,7 +54,7 @@ public class AdminViewAllPages extends AppConfig {
     }
 
     @Test
-    @Order(2)
+    @Order(3)
     // Профиль
     // /account/profile
     public void accountProfilePageView() {
@@ -52,16 +63,6 @@ public class AdminViewAllPages extends AppConfig {
                 .clickProfileMenu()
                 .checkTitleToPage();
         mainPage = accountProfilePage.mainPageLink();
-    }
-
-    @Test
-    @Order(3)
-    // Заявки на подключение детей
-    //  /ru/tko/control/parent-link-statements
-    public void parentLinkStatementsView() {
-        open("https://college.dev-snation.kz/ru/tko/control/parent-link-statements");
-        ParentLinkStatementsPage parentLinkStatementsPage= new ParentLinkStatementsPage();
-        parentLinkStatementsPage.checkTitleToPage().mainPageLink();
     }
 
     @Test
@@ -486,13 +487,14 @@ public class AdminViewAllPages extends AppConfig {
 
     @Test
     @Order(46)
-    //  Регистрация
-    //  /ru/tko/registrations
-    public void registrationPageView() {
-        open("https://college.dev-snation.kz/ru/tko/registrations");
-        RegistrationPage  registrationPage  = new RegistrationPage();
-        registrationPage.checkTitleToPage().mainPageLink();
+    // Заявки на подключение детей
+    //  /ru/tko/control/parent-link-statements
+    public void parentLinkStatementsView() {
+        open("https://college.dev-snation.kz/ru/tko/control/parent-link-statements");
+        ParentLinkStatementsPage parentLinkStatementsPage= new ParentLinkStatementsPage();
+        parentLinkStatementsPage.checkTitleToPage().mainPageLink();
     }
+
 
     @Test
     @Order(47)
@@ -662,6 +664,376 @@ public class AdminViewAllPages extends AppConfig {
         open("https://college.dev-snation.kz/ru/tko/control/contingent/create");
         ContingentCreatePage  contingentCreatePage = new ContingentCreatePage();
         contingentCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(64)
+    // Контингент_редактирование
+    //  /ru/tko/control/contingent/edit/8072
+    public void contingentEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/edit/8072");
+        ContingentEditPage  contingentEditPage = new ContingentEditPage();
+        contingentEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(65)
+    // Сведения о контингенте
+    //  /ru/tko/control/contingent/8072
+    public void contingentInformationPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/8072");
+        ContingentInformationPage  contingentInformationPage = new ContingentInformationPage();
+        contingentInformationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(66)
+    // Группы
+    //  /ru/tko/control/group
+    public void controlGroupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group");
+        ContingentInformationPage  contingentInformationPage = new ContingentInformationPage();
+        contingentInformationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(67)
+    // Создание групп
+    //  /ru/tko/control/group/create
+    public void groupCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/create");
+        ContingentInformationPage  contingentInformationPage = new ContingentInformationPage();
+        contingentInformationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(68)
+    // Сведения о группе
+    //  /ru/tko/control/group/183/show
+    public void groupShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/183/show");
+        ContingentInformationPage  contingentInformationPage = new ContingentInformationPage();
+        contingentInformationPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(69)
+    // Редактирование группы
+    //  /ru/tko/control/group/1456/edit
+    public void groupEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/1456/edit");
+        GroupEditPage  groupEditPage = new GroupEditPage();
+        groupEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(70)
+    // Выбытие выпускников
+    //  /ru/tko/control/group/1456/graduate-contingent
+    public void groupGraduateContingentPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/1456/graduate-contingent");
+        GroupGraduateContingentPage  groupGraduateContingentPage = new GroupGraduateContingentPage();
+        groupGraduateContingentPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(71)
+    // Управление группой
+    //  /ru/tko/control/group/1456/management
+    public void groupManagementPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/1456/management");
+        GroupManagementPage  groupManagementPage = new GroupManagementPage();
+        groupManagementPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(72)
+    // Подгруппы
+    //  /ru/tko/control/subgroup
+    public void subgroupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup");
+        SubgroupPage  subgroupPage = new SubgroupPage();
+        subgroupPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(73)
+    // Создание подгрупп
+    //  /ru/tko/control/subgroup/create
+    public void subgroupCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup/create");
+        SubgroupCreatePage  subgroupCreatePage = new SubgroupCreatePage();
+        subgroupCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(74)
+    // Управление подгруппой
+    //  /ru/tko/control/subgroup/813/management
+    public void subgroupManagementPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup/813/management");
+        SubgroupManagementPage  subgroupManagementPage = new SubgroupManagementPage();
+        subgroupManagementPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(75)
+    // Сведения о подгруппе
+    //  /ru/tko/control/subgroup/813/show
+    public void subgroupShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup/813/show");
+        SubgroupShowPage  subgroupShowPage = new SubgroupShowPage();
+        subgroupShowPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(76)
+    // Редактирование подгруппы
+    //  /ru/tko/control/subgroup/19/edit
+    public void subgroupEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/subgroup/19/edit");
+        SubgroupEditPage  subgroupEditPage = new SubgroupEditPage();
+        subgroupEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(77)
+    // Контингент_Кафедры
+    //  /ru/tko/control/education-department
+    public void educationDepartmentPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/education-department");
+        EducationDepartmentPage  educationDepartmentPage = new EducationDepartmentPage();
+        educationDepartmentPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(78)
+    // Создание кафедры
+    //  /ru/tko/control/education-department/create
+    public void educationDepartmentCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/education-department/create");
+        EducationDepartmentCreatePage  educationDepartmentCreatePage = new EducationDepartmentCreatePage();
+        educationDepartmentCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(79)
+    // Сведения и редактирование кафедры
+    //  /ru/tko/control/education-department/28/edit
+    public void educationDepartmentEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/education-department/28/edit");
+        EducationDepartmentEditPage  educationDepartmentEditPage = new EducationDepartmentEditPage();
+        educationDepartmentEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(80)
+    // Контингент_Архив
+    // /ru/tko/control/contingent/archive
+    public void contingentArchivePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/archive");
+        ContingentArchivePage  contingentArchivePage = new ContingentArchivePage();
+        contingentArchivePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(81)
+    // Архив_Выпускные группы
+    // /ru/tko/control/contingent/archive/graduated-groups
+    public void archiveGraduatedGroupsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/archive/graduated-groups");
+        ArchiveGraduatedGroupsPage  archiveGraduatedGroupsPage = new ArchiveGraduatedGroupsPage();
+        archiveGraduatedGroupsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(82)
+    // Архив_Сведения о выпускной группе
+    // /ru/tko/control/group/1070/show
+    public void archiveGraduatedGroupShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/group/1070/show");
+        ArchiveGraduatedGroupShowPage  archiveGraduatedGroupShowPage = new ArchiveGraduatedGroupShowPage();
+        archiveGraduatedGroupShowPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(83)
+    // Архив_Выбывшие
+    // /ru/tko/control/contingent/archive/expelled-students
+    public void contingentArchiveExpelledStudentsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/contingent/archive/expelled-students");
+        ContingentArchiveExpelledStudentsPage  contingentArchiveExpelledStudentsPage = new ContingentArchiveExpelledStudentsPage();
+        contingentArchiveExpelledStudentsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(84)
+    // Просмотр учебного плана
+    // /ru/tko/control/curriculum/2670/show
+    public void curriculumShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum/220/show");
+        CurriculumShowPage  curriculumShowPage = new CurriculumShowPage();
+        curriculumShowPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(85)
+    // Редактирование учебного плана
+    // /ru/tko/control/curriculum/2670/edit
+    public void curriculumEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum/70/edit");
+        CurriculumEditPage  curriculumEditPage = new CurriculumEditPage();
+        curriculumEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(86)
+    // График учебного процесса
+    // /ru/tko/control/curriculum-schedule
+    public void curriculumScheduleGupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum-schedule");
+        CurriculumScheduleGupPage  curriculumScheduleGupPage = new CurriculumScheduleGupPage();
+        curriculumScheduleGupPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(87)
+    // Просмотр графика учебного процесса
+    // /ru/tko/control/curriculum-schedule-year?year=2020
+    public void curriculumScheduleYearView() {
+        open("https://college.dev-snation.kz/ru/tko/control/curriculum-schedule-year?year=2020");
+        CurriculumScheduleYear  curriculumScheduleYear = new CurriculumScheduleYear();
+        curriculumScheduleYear.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(88)
+    // График занятий
+    // /ru/tko/control/org-education-time-group
+    public void orgEducationTimeGroupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/org-education-time-group");
+        OrgEducationTimeGroupPage  orgEducationTimeGroupPage = new OrgEducationTimeGroupPage();
+        orgEducationTimeGroupPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(89)
+    // Добавление графика занятий
+    // /ru/tko/control/org-education-time-group/create
+    public void orgEducationTimeGroupCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/org-education-time-group/create");
+        OrgEducationTimeGroupCreatePage  orgEducationTimeGroupCreatePage = new OrgEducationTimeGroupCreatePage();
+        orgEducationTimeGroupCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(90)
+    // Просмотр графика занятий
+    // /ru/tko/control/org-education-time-group/1056
+    public void orgEducationTimeGroupShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/org-education-time-group/1056");
+        OrgEducationTimeGroupShowPage  orgEducationTimeGroupShowPage = new OrgEducationTimeGroupShowPage();
+        orgEducationTimeGroupShowPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(91)
+    // Редактирование графика занятий
+    // /ru/tko/control/org-education-time-group/1056/edit
+    public void orgEducationTimeGroupEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/org-education-time-group/1056/edit");
+        OrgEducationTimeGroupEditPage  orgEducationTimeGroupEditPage = new OrgEducationTimeGroupEditPage();
+        orgEducationTimeGroupEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(92)
+    // Создание расписания
+    // /ru/tko/control/training-schedule/create
+    public void trainingScheduleCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/training-schedule/create");
+        TrainingScheduleCreatePage  trainingScheduleCreatePage = new TrainingScheduleCreatePage();
+        trainingScheduleCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(93)
+    // Создание журнала
+    // /ru/tko/control/journal/create
+    public void journalCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/journal/create");
+        JournalCreatePage  journalCreatePage = new JournalCreatePage();
+        journalCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(94)
+    // Журнал
+    // /ru/tko/control/journal/208701/show
+    public void journalShowPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/journal/208701/show");
+        JournalShowPage  journalShowPage = new JournalShowPage();
+        journalShowPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(95)
+    // Редактирование журнала
+    // /ru/tko/control/journal/208701/edit
+    public void journalEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/journal/208701/edit");
+        JournalEditPage  journalEditPage = new JournalEditPage();
+        journalEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(96)
+    // Архив журналов
+    // /ru/tko/control/journals/archive
+    public void journalsArchivePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/journals/archive");
+        JournalsArchivePage  journalsArchivePage = new JournalsArchivePage();
+        journalsArchivePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(97)
+    // Персонал_редактирование
+    // /ru/tko/control/personnel/2812/edit
+    public void personnelEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/personnel/2812/edit");
+        PersonnelEditPage  personnelEditPage = new PersonnelEditPage();
+        personnelEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(98)
+    // Добавление дипломных работ
+    // /ru/tko/control/diploma/create
+    public void diplomaCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/diploma/create");
+        DiplomaCreatePage  diplomaCreatePage = new DiplomaCreatePage();
+        diplomaCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(99)
+    // Просмотр дипломной работы
+    // /ru/tko/control/diploma-contingent/375
+    public void diplomaContingentPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375");
+        DiplomaContingentPage  diplomaContingentPage = new DiplomaContingentPage();
+        diplomaContingentPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(100)
+    // Редактирование дипломной работы
+    // /ru/tko/control/diploma-contingent/375/edit
+    public void diplomaContingentEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375/edit");
+        DiplomaContingentEditPage  diplomaContingentEditPage = new DiplomaContingentEditPage();
+        diplomaContingentEditPage.checkTitleToPage().mainPageLink();
     }
 
 
