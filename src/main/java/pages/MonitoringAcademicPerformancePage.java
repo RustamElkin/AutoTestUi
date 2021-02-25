@@ -1,9 +1,11 @@
 package pages;// Мониторинг_Успеваемость
 //  /ru/tko/control/monitoring/academic_performance
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -41,7 +43,18 @@ public class MonitoringAcademicPerformancePage {
     private ElementsCollection deSelectColumnsList = $$x("//div[@class='sn-item__label']");
     private SelenideElement  deSelectFirstColumnsElement = $x("//div[contains(text(),'ФИО')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public MonitoringAcademicPerformancePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Успеваемость"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 

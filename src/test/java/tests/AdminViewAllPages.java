@@ -1029,11 +1029,91 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(100)
     // Редактирование дипломной работы
-    // /ru/tko/control/diploma-contingent/375/edit
+    // /ru/tko/control/summary/115
     public void diplomaContingentEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/summary/115");
         DiplomaContingentEditPage  diplomaContingentEditPage = new DiplomaContingentEditPage();
         diplomaContingentEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(101)
+    // Итоги группы
+    // /ru/tko/control/diploma-contingent/375/edit
+    public void controlSummaryGroupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375/edit");
+        ControlSummaryGroupPage  controlSummaryGroupPage = new ControlSummaryGroupPage();
+        controlSummaryGroupPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(102)
+    // Создание модуля
+    // /ru/tko/control/education-module/create
+    public void educationModuleCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/education-module/create");
+        EducationModuleCreatePage  educationModuleCreatePage = new EducationModuleCreatePage();
+        educationModuleCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(103)
+    // Редактирование модуля
+    // /ru/tko/control/education-module/28/edit
+    public void educationModuleEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/education-module/28/edit");
+        EducationModuleCreatePage  educationModuleCreatePage = new EducationModuleCreatePage();
+        educationModuleCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(104)
+    // Активность организаций
+    // /ru/tko/control/monitoring/activity
+    public void monitoringActivityPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/activity");
+        MonitoringActivityPage  monitoringActivityPage = new MonitoringActivityPage();
+        monitoringActivityPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(105)
+    // Активность организации_контингент
+    // /ru/tko/control/monitoring/activity/19195/contingent
+    public void monitoringActivityCollegeContingentPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/activity/19195/contingent");
+        MonitoringActivityCollegeContingentPage  monitoringActivityCollegeContingentPage = new MonitoringActivityCollegeContingentPage();
+        monitoringActivityCollegeContingentPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(106)
+    // Активность организации_персонал
+    // /ru/tko/control/monitoring/activity/19195/personnel
+    public void monitoringActivityCollegePersonnelPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/activity/19195/personnel");
+        MonitoringActivityCollegePersonnelPage  monitoringActivityCollegePersonnelPage = new MonitoringActivityCollegePersonnelPage();
+        monitoringActivityCollegePersonnelPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(107)
+    // Мониторинг_Успеваемость
+    // /ru/tko/control/monitoring/academic_performance
+    public void monitoringAcademicPerformancePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/academic_performance");
+        MonitoringAcademicPerformancePage  monitoringAcademicPerformancePage = new MonitoringAcademicPerformancePage();
+        monitoringAcademicPerformancePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(108)
+    // Мониторинг_Посещаемость
+    // /ru/tko/control/monitoring/attendance
+    public void monitoringAttendancePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/attendance");
+        MonitoringAttendancePage  monitoringAttendancePage = new MonitoringAttendancePage();
+        monitoringAttendancePage.checkTitleToPage().mainPageLink();
     }
 
 

@@ -42,8 +42,7 @@ public class ControlEducationModulePage {
     // Кнопки в таблице, колонка "Операции"
     private SelenideElement editBtn = $x("//tr[1]/td[6]//a[@title='Редактировать']");                                      // Кнопка "Редактировать"
     private SelenideElement deleteBtn = $x("//tr[1]/td[6]//a[@title='Удалить']");                                          // Кнопка "Удалить"
-    private SelenideElement mainPageLink = $x("//div[@class='s-main-header__left-panel']/a[@href='/ru/tko']");
-
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
 
     public ControlEducationModulePage checkTitleToPage() {

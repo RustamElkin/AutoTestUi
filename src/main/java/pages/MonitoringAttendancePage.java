@@ -1,8 +1,10 @@
 package pages;// Мониторинг_Посещаемость
 //  /ru/tko/control/monitoring/attendance
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class MonitoringAttendancePage {
@@ -36,5 +38,17 @@ public class MonitoringAttendancePage {
     private SelenideElement groupDropdown = $x("//div[contains(@class,'sn-item--clickable')]//div[@class=\"sn-item__label\"]");                                              // 'Группа'
     private SelenideElement studentsDropdown = $x("//div[contains(text(),'Студенты')]/following-sibling::div/div[@class=\"sn-field__inner\"]");                             // 'Студенты'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public MonitoringAttendancePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Посещаемость"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

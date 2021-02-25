@@ -1,9 +1,11 @@
 package pages;// Активность организации_персонал
 //  /ru/tko/control/monitoring/activity/19195/personnel
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -79,4 +81,16 @@ public class MonitoringActivityCollegePersonnelPage {
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public MonitoringActivityCollegePersonnelPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Активность организаций"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

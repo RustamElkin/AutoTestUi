@@ -1,9 +1,11 @@
 package pages;// Редактирование модуля
 //  /ru/tko/control/education-module/28/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -30,14 +32,14 @@ public class EducationModuleEditPage {
     private SelenideElement subjectsDropdown = $x("//label[contains(text(),'Предметы')]//following-sibling::div//input");                              // 'Предметы'
 
     // List subjectsDropdown
-    private ElementsCollection headDepartmentList = $$x("//ul[@class=\"multiselect__content\"]/li[@class=\"multiselect__element\"]");                  // 'список Предметов'
+    private ElementsCollection headDepartmentList = $$x("//ul[@class='multiselect__content']/li[@class='multiselect__element']");                  // 'список Предметов'
 
     // можно фильтровать по имени и выбрать нужный.
-    private SelenideElement selectHeadDepartment = $x("//ul[@class=\"multiselect__content\"]/li//span[contains(text(),'Казахский язык')]");            // выбор по имени предмета
+    private SelenideElement selectHeadDepartment = $x("//ul[@class='multiselect__content']/li//span[contains(text(),'Казахский язык')]");            // выбор по имени предмета
 
     // Если в поле "Предмет" есть лишний элемент, его можно удалить по номеру в span[...] или по названию предмета
     // Для примера удалю по названию
-    private SelenideElement removeSpecializationInput = $x("//span[@class=\"multiselect__tag\"]/span[contains(text(),'Казахская литература')]/../i");  // 'Удаление Казахская литература'
+    private SelenideElement removeSpecializationInput = $x("//span[@class='multiselect__tag']/span[contains(text(),'Казахская литература')]/../i");  // 'Удаление Казахская литература'
     //span[@class="multiselect__tag"][2]/i Вариант по по номеру в span[...]
 
     // Кнопка "Сохранить"
@@ -46,5 +48,16 @@ public class EducationModuleEditPage {
     // Кнопка "Отмена"  работает как кнопка "Назад"
     private SelenideElement cancelBtn = $x("//a[contains(text(),'Отмена')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public EducationModuleEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Модули"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }
