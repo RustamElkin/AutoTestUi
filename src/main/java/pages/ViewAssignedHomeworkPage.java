@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Назначенное задание
-//  /ru/tko/control/assigned-homeworks/13
+//  /ru/tko/control/assigned-homeworks/471
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -52,7 +54,19 @@ public class ViewAssignedHomeworkPage {
     private SelenideElement operationsTable                    = $x("//th[contains(text(),'Операции')]");                 // 'Операции
 
     // Кнопки просмотра в столбце операции
-    private ElementsCollection viewBtns                        = $$x("//a[@class='s-btn-table s-btn--ico']");
+    private ElementsCollection viewBtns                        = $$x("//a[@class = 's-btn-table s-btn--ico']");
 
+    private SelenideElement mainPageLink                       = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public ViewAssignedHomeworkPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Назначенные задания"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

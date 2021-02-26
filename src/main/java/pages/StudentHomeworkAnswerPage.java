@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Ответ на задание
 //  /ru/tko/control/assigned-homework/467/assigned-homework-contingent/3377
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -37,7 +39,7 @@ public class StudentHomeworkAnswerPage {
     // Модалка отправив на доработку
 
     // Кнопки
-    private SelenideElement closeBtn             = $x("//div[@class='s-modal__close' and @data-target='#modal-confirm-revision-homework']");
+    private SelenideElement closeBtn             = $x("//div[@class = 's-modal__close' and @data-target='#modal-confirm-revision-homework']");
     private SelenideElement addBtn               = $x("//div[contains(text(),'Добавить')]");
     private SelenideElement deleteBtn            = $x("//div[contains(@class,'button_type_file remove_uploaded_file')]");
     private SelenideElement cancelBtn            = $x("//a[ contains(text(), 'Отмена') and contains(@class, 's-btn--thm-blue s-btn--w-200')]");
@@ -47,7 +49,18 @@ public class StudentHomeworkAnswerPage {
 
     private SelenideElement descriptionArea      = $x("//label[contains(text(), 'Описание')]/following-sibling::div//div[@role = 'textbox']");
 
+    private SelenideElement mainPageLink         = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public StudentHomeworkAnswerPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Ответ на задание"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 

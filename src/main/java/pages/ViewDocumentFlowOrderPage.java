@@ -1,9 +1,11 @@
 package pages;// Документооборот_Просмотр приказа
 //  /ru/tko/document-flow/orders/4
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -25,7 +27,7 @@ public class ViewDocumentFlowOrderPage {
     private ElementsCollection viewBtns             = $$x("//button[contains(@class,'s-btn-table')]");                           // Кнопки "Посмотреть"
 
     // Кнопка 'Подтвердить'
-    private SelenideElement sendLetterBtn           = $x("//a[contains(text(),'Подтвердить') and @data-action='confirm']");      // 'Подтвердить'
+    private SelenideElement sendLetterBtn           = $x("//a[contains(text(),'Подтвердить') and @data-action = 'confirm']");      // 'Подтвердить'
 
     // image-viewer
     private SelenideElement viewerZoomIn            = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-zoom-in']");
@@ -37,13 +39,24 @@ public class ViewDocumentFlowOrderPage {
     private SelenideElement viewerRotateRight       = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-rotate-right']");
     private SelenideElement viewerFlipHorizontal    = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-flip-horizontal']");
     private SelenideElement viewerFlipVertical      = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//li[@class = 'viewer-flip-vertical']");
-    private SelenideElement viewerClose             = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//div[contains(@class,'viewer-close') and @role='button']");
+    private SelenideElement viewerClose             = $x("//div[contains(@class,'viewer-fade') and @id = 'viewer0']//div[contains(@class,'viewer-close') and @role = 'button']");
 
     // Модалка - Подтвердить
     // Кнопки
-    private SelenideElement closeBtn                = $x("//div[@class='s-modal__head']/div[contains(text(), 'Вы уверены')]/following-sibling::div[@data-target='#modal-control-confirm-js']");
+    private SelenideElement closeBtn                = $x("//div[@class = 's-modal__head']/div[contains(text(), 'Вы уверены')]/following-sibling::div[@data-target = '#modal-control-confirm-js']");
     private SelenideElement cancelBtn               = $x("//a[text() = 'Отмена' and @data-target = '#modal-control-confirm-js']");
     private SelenideElement sendBtn                 = $x("//a[@data-target = '#modal-control-confirm-js']/following-sibling::a[text() = 'Подтвердить' and @data-action = 'send_user_confirm']");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public ViewDocumentFlowOrderPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Приказы"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

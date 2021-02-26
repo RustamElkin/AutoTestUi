@@ -1436,6 +1436,110 @@ public class AdminViewAllPages extends AppConfig {
         viewOnlineLectureTemplatePage.checkTitleToPage().mainPageLink();
     }
 
+    @Test
+    @Order(141)
+    // Дистанционное обучение_Редактирование онлайн лекции
+    // /ru/tko/control/online-lectures/25956/edit
+    public void editOnlineLecturesTemplatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/online-lectures/25956/edit");
+        EditOnlineLecturesTemplatePage  editOnlineLecturesTemplatePage = new EditOnlineLecturesTemplatePage();
+        editOnlineLecturesTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(142)
+    // Дистанционное обучение_Создание онлайн лекции
+    // /ru/tko/control/online-lectures/create
+    public void createOnlineLecturesTemplatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/online-lectures/create");
+        CreateOnlineLecturesTemplatePage  createOnlineLecturesTemplatePage = new CreateOnlineLecturesTemplatePage();
+        createOnlineLecturesTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+
+    @Test
+    @Order(143)
+    // Дистанционное обучение_Назначенное задание
+    // /ru/tko/control/assigned-homeworks/471
+    public void viewAssignedHomeworkPage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/471");
+        ViewAssignedHomeworkPage  viewAssignedHomeworkPage = new ViewAssignedHomeworkPage();
+        viewAssignedHomeworkPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(144)
+    // Дистанционное обучение_Создание задания
+    // /ru/tko/control/assigned-homeworks/create
+    public void assignedHomeworkCreatePage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/create");
+        AssignedHomeworkCreatePage  assignedHomeworkCreatePage = new AssignedHomeworkCreatePage();
+        assignedHomeworkCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(145)
+    // Дистанционное обучение_Редактирование задания
+    // /ru/tko/control/assigned-homeworks/494001/edit
+    public void assignedHomeworksEditPage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/494001/edit");
+        AssignedHomeworksEditPage  assignedHomeworksEditPage = new AssignedHomeworksEditPage();
+        assignedHomeworksEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(146)
+    // Дистанционное обучение_Закрытые назначенные задания
+    // /ru/tko/control/assigned-homeworks?closed=1
+    public void closedAssignedHomeworksPage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/494001/edit");
+        ClosedAssignedHomeworksPage  closedAssignedHomeworksPage = new ClosedAssignedHomeworksPage();
+        closedAssignedHomeworksPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(147)
+    // Дистанционное обучение_Удаленные назначенные задания
+    // /ru/tko/control/assigned-homeworks?trashed=1
+    public void trashedAssignedHomeworksPage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks?trashed=1");
+        TrashedAssignedHomeworksPage  trashedAssignedHomeworksPage = new TrashedAssignedHomeworksPage();
+        trashedAssignedHomeworksPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(148)
+    // Дистанционное обучение_Ответ на задание
+    // /ru/tko/control/assigned-homework/467/assigned-homework-contingent/3377
+    public void studentHomeworkAnswerPage() {
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homework/3377");
+        StudentHomeworkAnswerPage  studentHomeworkAnswerPage = new StudentHomeworkAnswerPage();
+        studentHomeworkAnswerPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(149)
+    // Документооборот_Просмотр приказа
+    // /ru/tko/document-flow/orders/4
+    public void viewDocumentFlowOrderPage() {
+        open("https://college.dev-snation.kz/ru/tko/document-flow/orders/4");
+        ViewDocumentFlowOrderPage  viewDocumentFlowOrderPage = new ViewDocumentFlowOrderPage();
+        viewDocumentFlowOrderPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(150)
+    // Документооборот_Входящие письма
+    // /ru/tko/document-flow/letters
+    public void documentsFlowLettersPage() {
+        open("https://college.dev-snation.kz/ru/tko/document-flow/letters");
+        DocumentsFlowLettersPage  documentsFlowLettersPage = new DocumentsFlowLettersPage();
+        documentsFlowLettersPage.checkTitleToPage().mainPageLink();
+    }
+
+
+
+
 
 
 }

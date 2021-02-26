@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Редактирование онлайн лекции
 //  /ru/tko/control/online-lectures/25952/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -14,7 +16,7 @@ public class EditOnlineLecturesTemplatePage {
 
     // Input-ы при редактировании нужно очищать.
     private SelenideElement nameInput                     = $x("//label[contains(text(),'Название')]/following-sibling::input");                                 // Инпут 'Название'
-    private SelenideElement descriptionInput              = $x("//label[contains(text(),'Описание')]/following-sibling::div//div[@role='textbox']");             // Инпут 'Описание'
+    private SelenideElement descriptionInput              = $x("//label[contains(text(),'Описание')]/following-sibling::div//div[@role = 'textbox']");             // Инпут 'Описание'
 
     //Dropdown multiselect
     private SelenideElement subjectDropdown               = $x("//label[contains(text(),'Предмет')]//following-sibling::div");                                   // мультиселект 'Предмет'
@@ -35,10 +37,21 @@ public class EditOnlineLecturesTemplatePage {
     private ElementsCollection deleteBtns                 = $$x("//div[contains(@class,'remove_uploaded_file')]");
 
     // Кнопка 'Сохранить'
-    private SelenideElement submitBtn                     = $x("//span[contains(text(),'Сохранить')]/parent::button[@type='submit']");
+    private SelenideElement submitBtn                     = $x("//span[contains(text(),'Сохранить')]/parent::button[@type = 'submit']");
 
     // Кнопка 'Отмена' переносит обратно в Лекции. Работает как кнопка "Назад"
-    private SelenideElement cancelBtn                     = $x("//div[@class='row-sort-between-btn']/a[contains(text(),'Отмена')]");
+    private SelenideElement cancelBtn                     = $x("//div[@class = 'row-sort-between-btn']/a[contains(text(),'Отмена')]");
+
+    private SelenideElement mainPageLink                  = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
 
+    public EditOnlineLecturesTemplatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Лекции"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

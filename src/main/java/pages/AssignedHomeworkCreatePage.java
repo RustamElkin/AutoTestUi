@@ -1,13 +1,15 @@
 package pages;// Дистанционное обучение_Создание задания
 //  /ru/tko/control/assigned-homeworks/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class AssignedHomeworkCreatePage<cancelBtn> {
+public class AssignedHomeworkCreatePage {
 
     // Тайтл
     private SelenideElement titleToPage               = $x("//h1[contains(text(),'Назначенные задания')]");
@@ -32,7 +34,7 @@ public class AssignedHomeworkCreatePage<cancelBtn> {
     private ElementsCollection datePointList          = $$x("//label[text() = 'Дата оценки: ']/following-sibling::div//li[@class = 'multiselect__element']");
 
     // чекбокс
-    private SelenideElement selectCheckbox            = $x("//input[@id='field-input-select_all_students']");
+    private SelenideElement selectCheckbox            = $x("//input[@id = 'field-input-select_all_students']");
 
     // Кнопки
     private SelenideElement cancelBtn                 = $x("//a[contains(text(),'Отмена')]");
@@ -47,4 +49,16 @@ public class AssignedHomeworkCreatePage<cancelBtn> {
     private SelenideElement emptyTimeErrorMessage     = $x("//div[contains(text(),'Поле \"Время')]");
     private SelenideElement emptyDatePointErrorMessage= $x("//div[contains(text(),'Поле \"Дата оценки')]");
 
+    private SelenideElement mainPageLink              = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public AssignedHomeworkCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Назначенные задания"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

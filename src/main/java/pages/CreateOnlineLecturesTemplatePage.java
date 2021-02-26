@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Создание онлайн лекции
 //  /ru/tko/control/online-lectures/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -40,4 +42,16 @@ public class CreateOnlineLecturesTemplatePage {
     // Кнопка 'Отмена' переносит обратно в Лекции. Работает как кнопка "Назад"
     private SelenideElement cancelBtn                     = $x("//div[@class='row-sort-between-btn']/a[contains(text(),'Отмена')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public CreateOnlineLecturesTemplatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Лекции"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

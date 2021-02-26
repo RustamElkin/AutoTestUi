@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Удаленные назначенные задания
 // /ru/tko/control/assigned-homeworks?trashed=1
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -26,8 +28,8 @@ public class TrashedAssignedHomeworksPage {
 
     // Инпуты Фильтра
     private SelenideElement nameInput               = $x("//label[contains(text(),'Название')]/following-sibling::input");
-    private SelenideElement dateAndTimeEndFromInput = $x("//label[contains(text(),'Дата и время завершения приёма')]/following-sibling::div//input[@name='filters[date_and_time_end][from]']");
-    private SelenideElement dateAndTimeEndToInput   = $x("//label[contains(text(),'Дата и время завершения приёма')]/following-sibling::div//input[@name='filters[date_and_time_end][to]']");
+    private SelenideElement dateAndTimeEndFromInput = $x("//label[contains(text(),'Дата и время завершения приёма')]/following-sibling::div//input[@name = 'filters[date_and_time_end][from]']");
+    private SelenideElement dateAndTimeEndToInput   = $x("//label[contains(text(),'Дата и время завершения приёма')]/following-sibling::div//input[@name = 'filters[date_and_time_end][to]']");
 
     // multiselect input, мультиселект инпуты фильтр
     private SelenideElement groupInput              = $x("//label[contains(text(),'Группа')]/following-sibling::div//input");
@@ -63,5 +65,18 @@ public class TrashedAssignedHomeworksPage {
     private SelenideElement fourthPaginateBtn       = $x("//a[contains(text(),'4')]");
     private ElementsCollection selectPaginateBtn    = $$x("//ul[@role = 'navigation']//a");
     private SelenideElement nextPaginateBtn         = $x("//a[contains(text(),'›')]");
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public TrashedAssignedHomeworksPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Назначенные задания"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

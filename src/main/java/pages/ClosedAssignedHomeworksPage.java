@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Закрытые назначенные задания
 //  /ru/tko/control/assigned-homeworks?closed=1
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -43,6 +45,7 @@ public class ClosedAssignedHomeworksPage {
     private SelenideElement firstRowViewBtn         = $x("(//a[@title='Посмотреть'])[1]");
     private SelenideElement firstRowEditBtns        = $x("(//a[@title='Редактировать'])[1]");
     private SelenideElement firstRowDeleteBtn       = $x("(//a[@title='Удалить'])[1]");
+
     // Таблица
     private SelenideElement numberOnTable           = $x("//th[contains(text(),'№')]");
     private SelenideElement nameOnTable             = $x("//th[contains(text(),'Название')]");
@@ -62,5 +65,18 @@ public class ClosedAssignedHomeworksPage {
     private SelenideElement fourthPaginateBtn       = $x("//a[contains(text(),'4')]");
     private ElementsCollection selectPaginateBtn    = $$x("//ul[@role = 'navigation']//a");
     private SelenideElement nextPaginateBtn         = $x("//a[contains(text(),'›')]");
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public ClosedAssignedHomeworksPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Назначенные задания"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }
