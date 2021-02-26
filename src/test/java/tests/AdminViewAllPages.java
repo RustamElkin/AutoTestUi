@@ -1146,5 +1146,296 @@ public class AdminViewAllPages extends AppConfig {
         monitoringStudentsDetailsPage.checkTitleToPage().mainPageLink();
     }
 
+    @Test
+    @Order(112)
+    // Мониторинг_Онлайн занятия_Список персонала
+    // /ru/tko/control/monitoring/people/personnel/19195
+    public void monitoringPeoplePersonnelListPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/people/personnel/19195");
+        MonitoringPeoplePersonnelListPage  monitoringPeoplePersonnelListPage = new MonitoringPeoplePersonnelListPage();
+        monitoringPeoplePersonnelListPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(113)
+    // Мониторинг_Онлайн занятия_Журнал событий педагога
+    // /ru/tko/control/monitoring/people/details/28615531
+    public void monitoringStaffDetailsAdminPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/people/details/28615531");
+        MonitoringStaffDetailsAdminPage  monitoringStaffDetailsAdminPage = new MonitoringStaffDetailsAdminPage();
+        monitoringStaffDetailsAdminPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(114)
+    // Мониторинг_Дистанционное обучение
+    // /ru/tko/control/monitoring/homework/list/19195
+    public void monitoringHomeworkListCollegePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/homework/list/19195");
+        MonitoringHomeworkListCollegePage  monitoringHomeworkListCollegePage = new MonitoringHomeworkListCollegePage();
+        monitoringHomeworkListCollegePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(115)
+    // Мониторинг_Дистанционное обучение_Назначенное задание
+    // /ru/tko/control/monitoring/homework/494000
+    public void monitoringHomeworkGroupPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/homework/494000");
+        MonitoringHomeworkGroupPage  monitoringHomeworkGroupPage = new MonitoringHomeworkGroupPage();
+        monitoringHomeworkGroupPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(116)
+    // Мониторинг_Дистанционное обучение_Ответ студента
+    // /ru/tko/control/monitoring/homework/answer/9765934
+    public void monitoringStudentHomeworkAnswerPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/homework/answer/9765934");
+        MonitoringStudentHomeworkAnswerPage  monitoringStudentHomeworkAnswerPage = new MonitoringStudentHomeworkAnswerPage();
+        monitoringStudentHomeworkAnswerPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(117)
+    // Мониторинг заявлений по приемным комиссиям
+    // /ru/tko/control/monitoring/statements-admissions
+    public void monitoringStatementsAdmissionsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/statements-admissions");
+        MonitoringStatementsAdmissionsPage  monitoringStatementsAdmissionsPage = new MonitoringStatementsAdmissionsPage();
+        monitoringStatementsAdmissionsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(118)
+    // Мониторинг заявлений по приемным комиссиям организации
+    // /ru/tko/control/monitoring/statements-admissions/19195
+    public void monitoringCollegeStatementsAdmissionsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/statements-admissions/19195");
+        MonitoringCollegeStatementsAdmissionsPage  monitoringCollegeStatementsAdmissionsPage = new MonitoringCollegeStatementsAdmissionsPage();
+        monitoringCollegeStatementsAdmissionsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(119)
+    // Гос. услуги_Обработанные заявки
+    // /ru/tko/control/gov-service-statement?type=processed
+    public void govServiceStatementProcessedPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-service-statement?type=processed");
+        GovServiceStatementProcessedPage  govServiceStatementProcessedPage = new GovServiceStatementProcessedPage();
+        govServiceStatementProcessedPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(120)
+    // Гос. услуги_Заявление студента
+    // /ru/tko/control/gov-service-statement/4974
+    public void govServiceStudentStatementPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-service-statement/4974");
+        GovServiceStudentStatementPage  govServiceStudentStatementPage = new GovServiceStudentStatementPage();
+        govServiceStudentStatementPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(121)
+    // Гос. услуги_Заявки_Архив
+    // /ru/tko/control/gov-service-statement?type=archive
+    public void govServiceStatementArchivePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-service-statement?type=archive");
+        GovServiceStatementArchivePage  govServiceStatementArchivePage = new GovServiceStatementArchivePage();
+        govServiceStatementArchivePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(122)
+    // Заявки с внешних сервисов_Сведения
+    // /ru/tko/control/external-statement-services/311
+    public void studentExternalStatementServicesPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/external-statement-services/311");
+        StudentExternalStatementServicesPage  studentExternalStatementServicesPage = new StudentExternalStatementServicesPage();
+        studentExternalStatementServicesPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(123)
+    // Обработанные заявки на гос.услуги с внешних сервисов
+    // /ru/tko/control/external-statement-services-processed
+    public void processedApplicationsListFromExternalServicesPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/external-statement-services-processed");
+        ProcessedApplicationsListFromExternalServicesPage  processedApplicationsListFromExternalServicesPage = new ProcessedApplicationsListFromExternalServicesPage();
+        processedApplicationsListFromExternalServicesPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(124)
+    // Гос. заказ_Заявка
+    // /ru/tko/control/gov-order-statement/4977
+    public void govOrderStatementPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-order-statement/4977");
+        GovOrderStatementPage  govOrderStatementPage = new GovOrderStatementPage();
+        govOrderStatementPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(125)
+    // Гос. заказ_Обработанные заявки
+    // /ru/tko/control/gov-order-statement?type=processed
+    public void govOrderStatementsProcessedPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-order-statement?type=processed");
+        GovOrderStatementsProcessedPage  govOrderStatementsProcessedPage = new GovOrderStatementsProcessedPage();
+        govOrderStatementsProcessedPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(126)
+    // Гос. заказ_Архив заявок
+    // /ru/tko/control/gov-order-statement?type=archive
+    public void govOrderStatementsArchivePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/gov-order-statement?type=archive");
+        GovOrderStatementsArchivePage  govOrderStatementsArchivePage = new GovOrderStatementsArchivePage();
+        govOrderStatementsArchivePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(127)
+    // Просмотр приемной комиссии
+    // /ru/tko/control/statements-admissions/934
+    public void ReviewStatementAdmissionPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/statements-admissions/934");
+        ReviewStatementAdmissionPage  reviewStatementAdmissionPage = new ReviewStatementAdmissionPage();
+        reviewStatementAdmissionPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(128)
+    // Редактирование приемной комиссии
+    // /ru/tko/control/statements-admissions/934/edit
+    public void statementAdmissionEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/statements-admissions/934/edit");
+        StatementAdmissionEditPage  statementAdmissionEditPage = new StatementAdmissionEditPage();
+        statementAdmissionEditPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(129)
+    // Закрытые приемные комиссии
+    // /ru/tko/control/statements-admissions-closed
+    public void statementsAdmissionsListClosedPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/statements-admissions-closed");
+        StatementsAdmissionsListClosedPage  statementsAdmissionsListClosedPage = new StatementsAdmissionsListClosedPage();
+        statementsAdmissionsListClosedPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(130)
+    // Гос. услуги_Заявки с внешних сервисов_Обработанные
+    // /ru/tko/control/external-statements-processed
+    public void externalStatementsProcessedPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/external-statements-processed");
+        ExternalStatementsProcessedPage  externalStatementsProcessedPage = new ExternalStatementsProcessedPage();
+        externalStatementsProcessedPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(131)
+    // Просмотр заявки с внешних сервисов
+    // /ru/tko/control/external-statements/3072
+    public void reviewExternalStatementPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/external-statements/3072");
+        ReviewExternalStatementPage  reviewExternalStatementPage = new ReviewExternalStatementPage();
+        reviewExternalStatementPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(132)
+    // Вступительные экзамены в архиве
+    // /ru/tko/control/entrance-exam-archive
+    public void entranceExamListInArchivePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/entrance-exam-archive");
+        EntranceExamListInArchivePage  entranceExamListInArchivePage = new EntranceExamListInArchivePage();
+        entranceExamListInArchivePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(133)
+    // Вступительный экзамен
+    // /ru/tko/control/entrance-exam/339
+    public void entranceExamPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/entrance-exam/339");
+        EntranceExamPage  entranceExamPage = new EntranceExamPage();
+        entranceExamPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(134)
+    // Создание вступительного экзамена
+    // /ru/tko/control/entrance-exam/create
+    public void entranceExamCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/entrance-exam/create");
+        EntranceExamCreatePage  entranceExamCreatePage = new EntranceExamCreatePage();
+        entranceExamCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(135)
+    // Приемная комиссия_Распределение по группам
+    // /ru/tko/control/distribution-contingent/164
+    public void groupDistributionContingentPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/distribution-contingent/164");
+        GroupDistributionContingentPage  groupDistributionContingentPage = new GroupDistributionContingentPage();
+        groupDistributionContingentPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(136)
+    // Дистанционное обучение_Создание шаблона задания
+    // /ru/tko/control/homeworks/create
+    public void homeworkTemplateCreatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/homeworks/create");
+        HomeworkTemplateCreatePage  homeworkTemplateCreatePage = new HomeworkTemplateCreatePage();
+        homeworkTemplateCreatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(137)
+    // Дистанционное обучение_Просмотр шаблона задания
+    // /ru/tko/control/homeworks/1369871
+    public void homeworkTemplatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369871");
+        ViewHomeworkTemplatePage  viewHomeworkTemplatePage = new ViewHomeworkTemplatePage();
+        viewHomeworkTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(138)
+    // Дистанционное обучение_Редактирование шаблона задания
+    // /ru/tko/control/homeworks/1369873/edit
+    public void homeworkTemplateEditPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369873/edit");
+        ViewHomeworkTemplatePage  viewHomeworkTemplatePage = new ViewHomeworkTemplatePage();
+        viewHomeworkTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(139)
+    // Дистанционное обучение_Онлайн лекции
+    // /ru/tko/control/online-lectures
+    public void onlineLecturesTemplatePageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/online-lectures");
+        OnlineLecturesTemplatePage  onlineLecturesTemplatePage = new OnlineLecturesTemplatePage();
+        onlineLecturesTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(140)
+    // Дистанционное обучение_Просмотр онлайн лекции
+    // /ru/tko/control/online-lectures/25956
+    public void viewOnlineLectureTemplatePage() {
+        open("https://college.dev-snation.kz/ru/tko/control/online-lectures/25956");
+        ViewOnlineLectureTemplatePage  viewOnlineLectureTemplatePage = new ViewOnlineLectureTemplatePage();
+        viewOnlineLectureTemplatePage.checkTitleToPage().mainPageLink();
+    }
+
+
 
 }

@@ -1,8 +1,10 @@
 package pages;// Создание вступительного экзамена
 //  /ru/tko/control/entrance-exam/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class EntranceExamCreatePage {
@@ -25,4 +27,17 @@ public class EntranceExamCreatePage {
     private SelenideElement levelOfEducationTable = $x("//th[contains(text(),'Уровень образования')]");         // 'Уровень образования'
     private SelenideElement typeOfTable = $x("//th[contains(text(),'Вид')]");                                   // 'Вид'
     private SelenideElement operationsOnTable = $x("//th[contains(text(),'Операции')]");                        // 'Операции'
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public EntranceExamCreatePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Вступительные экзамены"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

@@ -1,9 +1,11 @@
 package pages;// Обработанные заявки на гос.услуги с внешних сервисов
 //   /ru/tko/control/external-statement-services-processed
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -23,6 +25,18 @@ public class ProcessedApplicationsListFromExternalServicesPage {
     private SelenideElement operationsTable  = $x("//th[text() = 'Операции']");                                               //'Операции'
 
     // Таблица операции
-    private ElementsCollection viewBtn       = $$x("//a[@class='s-btn-table' and contains(text(),'Посмотреть')]");            // Кнопка просмотра
+    private ElementsCollection viewBtn       = $$x("//a[@class = 's-btn-table' and contains(text(),'Посмотреть')]");            // Кнопка просмотра
 
+    private SelenideElement mainPageLink     = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public ProcessedApplicationsListFromExternalServicesPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Заявки на гос.услуги с внешних сервисов"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

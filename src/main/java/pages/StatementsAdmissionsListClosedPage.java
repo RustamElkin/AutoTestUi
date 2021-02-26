@@ -1,9 +1,11 @@
 package pages;// Закрытые приемные комиссии
 //  /ru/tko/control/statements-admissions-closed
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -29,6 +31,18 @@ public class StatementsAdmissionsListClosedPage {
 
     // Таблица операции
     private ElementsCollection viewBtn             = $$x("//span[contains(@class,'s-ico--thm-eye')]/..");                           // Кнопка просмотра
-    private ElementsCollection deleteBtn           = $$x("//a[@class='s-btn-table' and contains(text(),'Посмотреть')]");            // Кнопка 'Удалить'
+    private ElementsCollection deleteBtn           = $$x("//a[@class = 's-btn-table' and contains(text(),'Посмотреть')]");            // Кнопка 'Удалить'
 
+    private SelenideElement mainPageLink           = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public StatementsAdmissionsListClosedPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Приемная комиссия"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

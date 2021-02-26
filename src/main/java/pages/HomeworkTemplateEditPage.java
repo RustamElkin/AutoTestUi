@@ -1,9 +1,11 @@
 package pages;// Дистанционное обучение_Редактирование шаблона задания
-//  /ru/tko/control/homeworks/233/edit
+//  /ru/tko/control/homeworks/1369873/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -53,4 +55,16 @@ public class HomeworkTemplateEditPage {
     private SelenideElement emptyTypeInput            = $x("//div[contains(text(),'Тип\" обязательно для заполнения')]");
     private SelenideElement emptyDescriptionInput     = $x("//div[contains(text(),'Описание\" обязательно для заполнения')]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public HomeworkTemplateEditPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Шаблоны заданий"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

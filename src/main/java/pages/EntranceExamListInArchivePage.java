@@ -1,9 +1,11 @@
 package pages;// Вступительные экзамены в архиве
 //  /ru/tko/control/entrance-exam-archive
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -38,6 +40,19 @@ public class EntranceExamListInArchivePage {
     private SelenideElement thirdPaginateBtn = $x("//a[contains(text(),'3')]");
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public EntranceExamListInArchivePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Вступительные экзамены"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 }

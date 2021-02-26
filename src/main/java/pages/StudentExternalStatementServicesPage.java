@@ -1,8 +1,10 @@
 package pages;// Заявки с внешних сервисов_Сведения
 //  /ru/tko/control/external-statement-services/311
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class StudentExternalStatementServicesPage {
@@ -24,17 +26,28 @@ public class StudentExternalStatementServicesPage {
 
     // Модалка - Подтвердить
     // Кнопки
-    private SelenideElement closeBtn         = $x("//label[contains(text(),'Кабинет услугодателя')]/ancestor::div[@class='s-modal__container']//div[@class = 's-modal__close']");
+    private SelenideElement closeBtn         = $x("//label[contains(text(),'Кабинет услугодателя')]/ancestor::div[@class = 's-modal__container']//div[@class = 's-modal__close']");
     private SelenideElement sendBtn          = $x("//div[@class='s-group']/div[contains(@class,'s-btn--thm-green') and text() = 'Отправить']");
     private SelenideElement cancelBtn        = $x("//div[@class='s-group']/div[contains(@class,'s-btn--thm-grey') and text() = 'Отмена']");
 
     // Инпут
-    private SelenideElement cabinetNumInput  = $x("//input[@name='cabinet_num']");                         // 'Кабинет услугодателя'
+    private SelenideElement cabinetNumInput  = $x("//input[@name = 'cabinet_num']");                         // 'Кабинет услугодателя'
 
     // Модалка - Отклонить
-    private SelenideElement  rejectionReason = $x("//select[@id='code']");                                 // 'Причина отказа'
+    private SelenideElement  rejectionReason = $x("//select[@id = 'code']");                                 // 'Причина отказа'
     private SelenideElement  textarea        = $x("//textarea[contains(@class,'s-form__textarea mb-10')]");
 
+    private SelenideElement mainPageLink     = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public StudentExternalStatementServicesPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Заявки на гос.услуги с внешних сервисов"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

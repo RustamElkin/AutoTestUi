@@ -1,9 +1,11 @@
 package pages;// Мониторинг_Дистанционное обучение
 //  /ru/tko/control/monitoring/homework/list/19195
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -27,8 +29,8 @@ public class MonitoringHomeworkListCollegePage {
     private SelenideElement applicationsTypeFilter = $x("//label[contains(text(),'Ответственный')]/following-sibling::div//input");                 // 'Ответственный'
 
     // Фильтры с диапазоном
-    private SelenideElement dateFromInput = $x("//label[contains(text(),'Дата оценки')]/following-sibling::div//input[@name='filters[date][from]']");       // 'Дата от'
-    private SelenideElement dateToInput = $x("//label[contains(text(),'Дата оценки')]/following-sibling::div//input[@name='filters[date][to]']");           // 'Дата до'
+    private SelenideElement dateFromInput = $x("//label[contains(text(),'Дата оценки')]/following-sibling::div//input[@name = 'filters[date][from]']");       // 'Дата от'
+    private SelenideElement dateToInput = $x("//label[contains(text(),'Дата оценки')]/following-sibling::div//input[@name = 'filters[date][to]']");           // 'Дата до'
 
     // Таблица
     private SelenideElement numberOnTable = $x("//th[contains(text(),'№')]");                                                     // '№ в таблице'
@@ -42,10 +44,22 @@ public class MonitoringHomeworkListCollegePage {
     private SelenideElement assessmentDateTable = $x("//th[contains(text(),'Дата оценки')]");                                     // 'Дата оценки'
     private SelenideElement operationsTable = $x("//th[contains(text(),'Операции')]");                                            // 'Операции'
 
-    private ElementsCollection selectByFullName = $$x("//td[@data-table-head='Ответственный']");
+    private ElementsCollection selectByFullName = $$x("//td[@data-table-head = 'Ответственный']");
 
     // Кнопки просмотра в таблицах
-    private ElementsCollection viewBtns = $$x("//tbody/tr//span[@class='s-ico s-ico--thm-eye']");                                 // Кнопки 'Посмотреть'
+    private ElementsCollection viewBtns = $$x("//tbody/tr//span[@class = 's-ico s-ico--thm-eye']");                                 // Кнопки 'Посмотреть'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public MonitoringHomeworkListCollegePage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Назначенные задания организации"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

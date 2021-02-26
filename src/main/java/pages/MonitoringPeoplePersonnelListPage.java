@@ -1,9 +1,11 @@
 package pages;// Мониторинг_Онлайн занятия_Список персонала
 //  /ru/tko/control/monitoring/people/personnel/19195
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -22,9 +24,9 @@ public class MonitoringPeoplePersonnelListPage {
     private SelenideElement exportBtn = $x("//a[contains(text(),'Экспортировать')]/..");
 
     // Фильтры
-    private SelenideElement fullNameInput = $x("//input[@type='search'][@aria-label='Filter \"ФИО\" column by...']");                                   // 'ФИО'
-    private SelenideElement timeOfLastActivityInput = $x("//input[@type='search'][@aria-label='Filter \"Время последней активности\" column by...']");  // 'Время последней активности'
-    private SelenideElement numberOfAuthorizationsInput = $x("//input[@type='search'][@aria-label='Filter \"Количество авторизаций\" column by...']");  // 'Количество авторизаций'
+    private SelenideElement fullNameInput = $x("//input[@type = 'search'][@aria-label = 'Filter \"ФИО\" column by...']");                                   // 'ФИО'
+    private SelenideElement timeOfLastActivityInput = $x("//input[@type = 'search'][@aria-label = 'Filter \"Время последней активности\" column by...']");  // 'Время последней активности'
+    private SelenideElement numberOfAuthorizationsInput = $x("//input[@type = 'search'][@aria-label =' Filter \"Количество авторизаций\" column by...']");  // 'Количество авторизаций'
 
     // DropDown
     private ElementsCollection categoryDropDownList = $$x("//select[@name = 'type']/option");                                            // список 'тип сотрудников'
@@ -38,8 +40,8 @@ public class MonitoringPeoplePersonnelListPage {
     private SelenideElement detailsOnTable = $x("//div[contains(text(),'Подробнее')]");                                                  // 'Подробнее'
 
     //Таблица операции
-    private SelenideElement firstViewBtn = $x("//tr[1]/td[@data-table-head='Подробнее']//a[@title='Посмотреть']"); // Кнопка просмотра, первой строки в таблице
-    private ElementsCollection viewBtns = $$x("//td[@data-table-head='Подробнее']");
+    private SelenideElement firstViewBtn = $x("//tr[1]/td[@data-table-head = 'Подробнее']//a[@title = 'Посмотреть']"); // Кнопка просмотра, первой строки в таблице
+    private ElementsCollection viewBtns = $$x("//td[@data-table-head = 'Подробнее']");
 
 
     // Кнопки пагинации на странице (на деве 11 стр )
@@ -50,5 +52,18 @@ public class MonitoringPeoplePersonnelListPage {
     private SelenideElement fourthPaginateBtn = $x("//ul[@role='navigation']//a[contains(text(),'4')]");
     private ElementsCollection selectPaginateBtn = $$x("//ul[@role='navigation']//a");
     private SelenideElement nextPaginateBtn = $x("//a[contains(text(),'›')]");
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public MonitoringPeoplePersonnelListPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Список персонала"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

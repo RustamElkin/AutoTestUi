@@ -1,9 +1,11 @@
 package pages;// Просмотр приемной комиссии
 //  /ru/tko/control/statements-admissions/934
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -24,11 +26,23 @@ public class ReviewStatementAdmissionPage {
     // Если нет поданных заявлений таблиц нет№
 
     // Таблицы
-    private  SelenideElement basedOnNineClasses   = $x("//div[@class='profile-content__block']/div[contains(text(), 'На базе 9')]");                                // 'На базе 9 классов'
-    private  SelenideElement basedOnElevenClasses = $x("//div[@class='profile-content__block']/div[contains(text(), 'На базе 11')]");                               // 'На базе 9 классов'
+    private  SelenideElement basedOnNineClasses   = $x("//div[@class = 'profile-content__block']/div[contains(text(), 'На базе 9')]");                                // 'На базе 9 классов'
+    private  SelenideElement basedOnElevenClasses = $x("//div[@class = 'profile-content__block']/div[contains(text(), 'На базе 11')]");                               // 'На базе 9 классов'
 
     // Кнопки просмотра
-    private ElementsCollection viewBtn            = $$x("//div[@class='profile-content__block']//a[@title = 'Просмотреть']");                                       // 'Просмотреть'
-    private ElementsCollection PointsBtn          = $$x("//div[@class='profile-content__block']//span[text() = 'Баллы']");                                          // 'Баллы'
+    private ElementsCollection viewBtn            = $$x("//div[@class = 'profile-content__block']//a[@title = 'Просмотреть']");                                       // 'Просмотреть'
+    private ElementsCollection PointsBtn          = $$x("//div[@class = 'profile-content__block']//span[text() = 'Баллы']");                                          // 'Баллы'
 
+    private SelenideElement mainPageLink          = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public ReviewStatementAdmissionPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Просмотр приемной комиссии"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }
