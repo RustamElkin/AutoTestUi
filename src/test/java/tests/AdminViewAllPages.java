@@ -1116,5 +1116,35 @@ public class AdminViewAllPages extends AppConfig {
         monitoringAttendancePage.checkTitleToPage().mainPageLink();
     }
 
+    @Test
+    @Order(109)
+    // Мониторинг_Онлайн занятия
+    // /ru/tko/control/monitoring/people/groups/19195
+    public void monitoringPeopleGroupsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/people/groups/19195");
+        MonitoringPeopleGroupsPage  monitoringPeopleGroupsPage = new MonitoringPeopleGroupsPage();
+        monitoringPeopleGroupsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(110)
+    // Мониторинг_Онлайн занятия_Список студентов_в группе
+    // /ru/tko/control/monitoring/people/students/115
+    public void monitoringPeopleStudentsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/people/students/115");
+        MonitoringPeopleStudentsPage  monitoringPeopleStudentsPage = new MonitoringPeopleStudentsPage();
+        monitoringPeopleStudentsPage.checkTitleToPage().mainPageLink();
+    }
+
+    @Test
+    @Order(111)
+    // Мониторинг_Онлайн занятия_Журнал событий студента
+    // /ru/tko/control/monitoring/people/details/28716996
+    public void monitoringStudentsDetailsPageView() {
+        open("https://college.dev-snation.kz/ru/tko/control/monitoring/people/details/28716996");
+        MonitoringStudentsDetailsPage  monitoringStudentsDetailsPage = new MonitoringStudentsDetailsPage();
+        monitoringStudentsDetailsPage.checkTitleToPage().mainPageLink();
+    }
+
 
 }

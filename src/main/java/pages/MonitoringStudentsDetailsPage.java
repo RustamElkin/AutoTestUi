@@ -1,9 +1,11 @@
 package pages;// Мониторинг_Онлайн занятия_Журнал событий студента
 //  /ru/tko/control/monitoring/people/details/28716996
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -30,5 +32,17 @@ public class MonitoringStudentsDetailsPage {
     // Список логов
     private ElementsCollection logList = $$x("//tbody//td[@data-table-head='№']");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public MonitoringStudentsDetailsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал событий"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

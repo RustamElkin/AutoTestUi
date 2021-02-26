@@ -1,9 +1,11 @@
 package pages;// Мониторинг_Онлайн занятия_Список студентов_в группе
 //  /ru/tko/control/monitoring/people/students/115
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -29,9 +31,20 @@ public class MonitoringPeopleStudentsPage {
     private SelenideElement detailsOnTable = $x("//th[contains(text(),'Подробнее')]");                               // 'Подробнее'
 
     //Таблица операции
-    private SelenideElement firstViewBtn = $x("//tr[1]/td[@data-table-head='Подробнее']//a[@title='Посмотреть']");   // Кнопка просмотра, первой строки в таблице
-    private ElementsCollection selectFullName = $$x("//td[@data-table-head='ФИО']");
-    private ElementsCollection viewBtns = $$x("//td[@data-table-head='Подробнее']");
+    private SelenideElement firstViewBtn = $x("//tr[1]/td[@data-table-head = 'Подробнее']//a[@title = 'Посмотреть']");   // Кнопка просмотра, первой строки в таблице
+    private ElementsCollection selectFullName = $$x("//td[@data-table-head = 'ФИО']");
+    private ElementsCollection viewBtns = $$x("//td[@data-table-head = 'Подробнее']");
+
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
 
+    public MonitoringPeopleStudentsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Список студентов"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }
