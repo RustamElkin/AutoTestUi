@@ -1,9 +1,11 @@
 package pages;// Документооборот_Создать и отправить письмо
 //  /ru/tko/document-flow/letters/create
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -25,7 +27,7 @@ public class DocumentFlowLetterCreateAndSubmitPage {
     private ElementsCollection listOfColleges = $$x("//div[contains(text(),'Выберите колледж')]/..//div[@class='s-doc-flow-form__organizations-list']/div");
 
     // Чекбокс
-    private SelenideElement selectAllCheckBox = $x("//input[@type=\"checkbox\"]/../..");                        // чекбокс  'Выбрать все'
+    private SelenideElement selectAllCheckBox = $x("//input[@type='checkbox']/../..");                        // чекбокс  'Выбрать все'
 
     // Кнопки
     private SelenideElement cancelBtn = $x("//span[contains (text(), 'Отменить')]/..");                         // кнопка 'Отменить'
@@ -42,13 +44,25 @@ public class DocumentFlowLetterCreateAndSubmitPage {
     // Указать элементу путь до файла (на диске).sendKeys("file:\\C:\\Users\\Elka\\Desktop\\College\\Screenshot_2.png");
 
     // Кнопка "Сохранить" в модалке
-    private SelenideElement submitInModalBtn = $x("//div[contains(text(),'Сохранить')]/../../../.. //div[@class=\"col-12 col-sm-auto\"]");     // кнопка 'Сохранить'
+    private SelenideElement submitInModalBtn = $x("//div[contains(text(),'Сохранить')]/../../../.. //div[@class='col-12 col-sm-auto']");     // кнопка 'Сохранить'
 
     // Кнопка "Закрыть" в модалке
     private SelenideElement modalCloseBtn = $x("//div[@class='s-modal__head']/div[@class='s-modal__close'][1]");
 
     // После того как выбрали файл, можно его удалить, нажав на белую кнопку
-    private SelenideElement deleteFileBtn = $x("//button[@type=\"button\"]//i[@class=\"s-ico--thm-close s-ico s-pos-on-left\"]/../..");        // кнопка 'Удалить файл'
+    private SelenideElement deleteFileBtn = $x("//button[@type='button']//i[@class='s-ico--thm-close s-ico s-pos-on-left']/../..");        // кнопка 'Удалить файл'
 
+    private SelenideElement mainPageLink  = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public DocumentFlowLetterCreateAndSubmitPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Отправить письмо"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }
 

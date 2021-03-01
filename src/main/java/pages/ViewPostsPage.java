@@ -1,9 +1,11 @@
 package pages;// Просмотр поста
 //  /ru/tko/organization-posts/90
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -28,7 +30,18 @@ public class ViewPostsPage {
     // Добавления комментария
     private SelenideElement addComment = $x("//textarea[@placeholder='Добавить комментарий...' or @class='s-form__textarea mb-20']");    // 'Добавить комментарий'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public ViewPostsPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Блог"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 
 }

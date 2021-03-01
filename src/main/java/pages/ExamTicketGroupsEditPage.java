@@ -1,9 +1,11 @@
 package pages;// Редактирование информаций по экзаменационным билетам
-//  /ru/tko/control/exam-ticket-groups/42/edit
+//  /ru/tko/control/exam-ticket-groups/5545/edit
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -66,5 +68,18 @@ public class ExamTicketGroupsEditPage {
     private SelenideElement cancelBtn= $x("//div[@class='col-12 col-sm-auto mb-20']/a[contains(text(),'Отмена')]");
     private SelenideElement saveBtn= $x("//span[contains(text(),'Сохранить')]/..");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public ExamTicketGroupsEditPage checkElementsToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование экзаменационных билетов"));
+        cancelBtn.shouldBe(Condition.visible);
+        saveBtn.shouldBe(Condition.visible);
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

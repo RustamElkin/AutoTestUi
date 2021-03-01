@@ -1,9 +1,11 @@
 package pages;// Архив_Журналы
-//  /ru/tko/control/annual-archive/modules/4/journals
+//  /ru/tko/control/annual-archive/modules/1764/journals
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AnnualArchiveModulesJournalsPage {
@@ -27,4 +29,21 @@ public class AnnualArchiveModulesJournalsPage {
     private SelenideElement fourthPaginateBtn       = $x("//a[contains(text(),'4')]");
     private ElementsCollection selectPaginateBtn    = $$x("//ul[@role = 'navigation']//a");
     private SelenideElement nextPaginateBtn         = $x("//a[contains(text(),'›')]");
+
+    private SelenideElement mainPageLink            = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public AnnualArchiveModulesJournalsPage checkElementsToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        backBtn.shouldBe(Condition.visible);
+        filteringListBtn.shouldBe(Condition.visible);
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
+
+
 }

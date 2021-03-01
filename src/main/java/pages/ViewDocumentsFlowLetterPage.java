@@ -1,9 +1,11 @@
 package pages;// Документооборот_Просмотр входящего письма
-//  /ru/tko/document-flow/letters/7
+//  /ru/tko/document-flow/letters/8
 //   логин: 810718400891 - user_id: 28712431
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ViewDocumentsFlowLetterPage {
@@ -44,6 +46,16 @@ public class ViewDocumentsFlowLetterPage {
     private SelenideElement cancelBtn               = $x("//a[text() = 'Отмена' and @data-target = '#modal-control-confirm-js']");
     private SelenideElement sendBtn                 = $x("//a[@data-target = '#modal-control-confirm-js']/following-sibling::a[text() = 'Подтвердить' and @data-action = 'send_user_confirm']");
 
+    private SelenideElement mainPageLink            = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+    public ViewDocumentsFlowLetterPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Письма"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

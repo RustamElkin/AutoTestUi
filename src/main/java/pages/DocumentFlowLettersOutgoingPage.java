@@ -1,8 +1,10 @@
 package pages;// Документооборот_Исходящие письма
 //  /ru/tko/document-flow/letters-outgoing
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class DocumentFlowLettersOutgoingPage {
@@ -31,5 +33,16 @@ public class DocumentFlowLettersOutgoingPage {
     private SelenideElement editBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Редактировать']");     // Кнопка "Редактировать"
     private SelenideElement deleteBtn = $x("//tr[1]/td[@data-table-head='Операции']//a[@title='Удалить']");         // Кнопка "Удалить"
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+
+    public DocumentFlowLettersOutgoingPage checkTitleToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Письма"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }

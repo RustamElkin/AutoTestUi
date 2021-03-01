@@ -1,13 +1,15 @@
 package pages;// Архив_Модули за учебный год
 //  /ru/tko/control/annual-archive/modules/4
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class AnnualArchiveModulesPage {
 
-    private SelenideElement titleToPage = $x("//h1[contains(text(),'2020 - 2020 учебный год')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'2019 - 2020 учебный год')]");
     private SelenideElement backBtn = $x("//span[contains(text(),'Назад')]");
     // private SelenideElement backBtn = $("//div.container-content-head a"); //Если xpath будет гнать
 
@@ -27,6 +29,24 @@ public class AnnualArchiveModulesPage {
     private SelenideElement viewGraduateWorkBtn = $x("//tr[5]/td[2]/a[1]/button[1]");
     private SelenideElement viewOutcomeBtn = $x("//tr[6]/td[2]/a[1]/button[1]");
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
 
+    public AnnualArchiveModulesPage checkElementsToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("2019 - 2020 учебный год"));
+        backBtn.shouldBe(Condition.visible).shouldHave(text("Назад"));
+        titleJournal.shouldBe(Condition.visible).shouldHave(text("Журнал"));
+        titleScheduledTasks.shouldBe(Condition.visible).shouldHave(text("Назначенные задания"));
+        titleExams.shouldBe(Condition.visible).shouldHave(text("Экзамены"));
+        titleSchedule.shouldBe(Condition.visible).shouldHave(text("Расписание"));
+        titleGraduateWork.shouldBe(Condition.visible).shouldHave(text("Дипломные работы"));
+        titleOutcome.shouldBe(Condition.visible).shouldHave(text("Итоги"));
+
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 
 }

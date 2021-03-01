@@ -1,8 +1,10 @@
 package pages;// Просмотр и редактирование экзаменационных билетов
-//  /ru/tko/control/exam-ticket-groups/43
+//  /ru/tko/control/exam-ticket-groups/5545
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ExamTicketsEditPage {
@@ -40,4 +42,16 @@ public class ExamTicketsEditPage {
     // TextAreaInput Задание. При создании и редактировании один инпут
     private SelenideElement taskAreaInput = $x("//div[@role='textbox']");                                                             // 'Задание'
 
+    private SelenideElement mainPageLink = $x("//div[@class = 's-main-header__left-panel']/a[@href = '/ru/tko']");
+
+
+    public ExamTicketsEditPage checkElementsToPage() {
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование экзаменационных билетов"));
+        return this;
+    }
+
+    public MainPage mainPageLink() {
+        mainPageLink.shouldBe(Condition.visible).click();
+        return new MainPage();
+    }
 }
