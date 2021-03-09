@@ -1,5 +1,5 @@
 package pages;// Редактирование информаций по экзаменационным вопросам
-//  /ru/tko/exam-questions/111/edit
+//  /ru/tko/exam-questions/5882/edit
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class ExamQuestionsInfoEditPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[contains(text(),'Создание группы экзаменационных вопросов')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Редактирование информаций по экзаменационным вопро')]");
 
     // Инпуты. При редактировании очистить, после вбить свое или сделать клик чтоб выбрать из списка
     private SelenideElement nameInput = $x("//label[contains(text(),'Название')]/following-sibling::input");                                // 'Название'
@@ -59,7 +59,7 @@ public class ExamQuestionsInfoEditPage {
 
 
     public ExamQuestionsInfoEditPage checkElementsToPage() {
-        titleToPage.shouldBe(Condition.visible).shouldHave(text("Создание группы экзаменационных вопросов"));
+        titleToPage.shouldBe(Condition.visible).shouldHave(text("Редактирование информаций по экзаменационным вопросам"));
         cancelBtn.shouldBe(Condition.visible);
         saveBtn.shouldBe(Condition.visible);
         return this;

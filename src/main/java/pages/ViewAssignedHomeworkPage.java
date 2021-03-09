@@ -1,5 +1,5 @@
 package pages;// Дистанционное обучение_Назначенное задание
-//  /ru/tko/control/assigned-homeworks/471
+//  /ru/tko/control/assigned-homeworks/494010
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

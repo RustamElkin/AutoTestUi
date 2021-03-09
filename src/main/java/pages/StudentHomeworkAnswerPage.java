@@ -1,5 +1,5 @@
 package pages;// Дистанционное обучение_Ответ на задание
-//  /ru/tko/control/assigned-homework/467/assigned-homework-contingent/3377
+//  /ru/tko/control/assigned-homework/494005/assigned-homework-contingent/9766029
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

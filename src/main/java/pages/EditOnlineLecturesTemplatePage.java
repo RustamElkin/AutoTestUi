@@ -1,5 +1,5 @@
 package pages;// Дистанционное обучение_Редактирование онлайн лекции
-//  /ru/tko/control/online-lectures/25952/edit
+//  /ru/tko/control/online-lectures/25950/edit
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

@@ -1029,9 +1029,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(100)
     // Редактирование дипломной работы
-    // /ru/tko/control/summary/115
+    // /ru/tko/control/diploma-contingent/375/edit
     public void diplomaContingentEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/summary/115");
+        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375/edit");
         DiplomaContingentEditPage  diplomaContingentEditPage = new DiplomaContingentEditPage();
         diplomaContingentEditPage.checkTitleToPage().mainPageLink();
     }
@@ -1039,9 +1039,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(101)
     // Итоги группы
-    // /ru/tko/control/diploma-contingent/375/edit
+    // /ru/tko/control/summary/115
     public void controlSummaryGroupPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/diploma-contingent/375/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/summary/115");
         ControlSummaryGroupPage  controlSummaryGroupPage = new ControlSummaryGroupPage();
         controlSummaryGroupPage.checkTitleToPage().mainPageLink();
     }
@@ -1399,9 +1399,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(137)
     // Дистанционное обучение_Просмотр шаблона задания
-    // /ru/tko/control/homeworks/1369871
+    // /ru/tko/control/homeworks/1369874
     public void homeworkTemplatePageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369871");
+        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369874");
         ViewHomeworkTemplatePage  viewHomeworkTemplatePage = new ViewHomeworkTemplatePage();
         viewHomeworkTemplatePage.checkTitleToPage().mainPageLink();
     }
@@ -1409,9 +1409,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(138)
     // Дистанционное обучение_Редактирование шаблона задания
-    // /ru/tko/control/homeworks/1369873/edit
+    // /ru/tko/control/homeworks/1369874/edit
     public void homeworkTemplateEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369873/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/homeworks/1369874/edit");
         ViewHomeworkTemplatePage  viewHomeworkTemplatePage = new ViewHomeworkTemplatePage();
         viewHomeworkTemplatePage.checkTitleToPage().mainPageLink();
     }
@@ -1439,9 +1439,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(141)
     // Дистанционное обучение_Редактирование онлайн лекции
-    // /ru/tko/control/online-lectures/25956/edit
+    // /ru/tko/control/online-lectures/25950/edit
     public void editOnlineLecturesTemplatePageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/online-lectures/25956/edit");
+        open("https://college.dev-snation.kz/ru/tko/control/online-lectures/25950/edit");
         EditOnlineLecturesTemplatePage  editOnlineLecturesTemplatePage = new EditOnlineLecturesTemplatePage();
         editOnlineLecturesTemplatePage.checkTitleToPage().mainPageLink();
     }
@@ -1460,9 +1460,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(143)
     // Дистанционное обучение_Назначенное задание
-    // /ru/tko/control/assigned-homeworks/471
+    // /ru/tko/control/assigned-homeworks/494010
     public void viewAssignedHomeworkPage() {
-        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/471");
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homeworks/494010");
         ViewAssignedHomeworkPage  viewAssignedHomeworkPage = new ViewAssignedHomeworkPage();
         viewAssignedHomeworkPage.checkTitleToPage().mainPageLink();
     }
@@ -1510,9 +1510,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(148)
     // Дистанционное обучение_Ответ на задание
-    // /ru/tko/control/assigned-homework/467/assigned-homework-contingent/3377
+    // /ru/tko/control/assigned-homework/494005/assigned-homework-contingent/9766029
     public void studentHomeworkAnswerPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/assigned-homework/3377");
+        open("https://college.dev-snation.kz/ru/tko/control/assigned-homework/494005/assigned-homework-contingent/9766029");
         StudentHomeworkAnswerPage  studentHomeworkAnswerPage = new StudentHomeworkAnswerPage();
         studentHomeworkAnswerPage.checkTitleToPage().mainPageLink();
     }
@@ -1544,8 +1544,8 @@ public class AdminViewAllPages extends AppConfig {
     // /ru/tko/document-flow/letters/create
     public void documentFlowLetterCreateAndSubmitPageView() {
         open("https://college.dev-snation.kz/ru/tko/document-flow/letters/create");
-        ViewDocumentsFlowLetterPage  viewDocumentsFlowLetterPage = new ViewDocumentsFlowLetterPage();
-        viewDocumentsFlowLetterPage.checkTitleToPage().mainPageLink();
+        DocumentFlowLetterCreateAndSubmitPage  documentFlowLetterCreateAndSubmitPage = new DocumentFlowLetterCreateAndSubmitPage();
+        documentFlowLetterCreateAndSubmitPage.checkTitleToPage().mainPageLink();
     }
 
     @Test
@@ -1681,9 +1681,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(165)
     // Экзамен
-    // /ru/tko/control/exams/36175
+    // /ru/tko/control/exams/36223
     public void examCheckPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/exams/36175");
+        open("https://college.dev-snation.kz/ru/tko/control/exams/36223");
         ExamCheckPage  examCheckPage = new ExamCheckPage();
         examCheckPage.checkTitlesToPage().mainPageLink();
     }
@@ -1711,9 +1711,9 @@ public class AdminViewAllPages extends AppConfig {
     @Test
     @Order(168)
     // Редактирование информаций по экзаменационным вопросам
-    // /ru/tko/exam-questions/111/edit
+    // /ru/tko/exam-questions/5882/edit
     public void examQuestionsInfoEditPageView() {
-        open("https://college.dev-snation.kz/ru/tko/exam-questions/6528/edit");
+        open("https://college.dev-snation.kz/ru/tko/exam-questions/5882/edit");
         ExamQuestionsInfoEditPage  examQuestionsInfoEditPage = new ExamQuestionsInfoEditPage();
         examQuestionsInfoEditPage.checkElementsToPage().mainPageLink();
     }
@@ -1747,55 +1747,66 @@ public class AdminViewAllPages extends AppConfig {
         ExamTicketGroupsEditPage  examTicketGroupsEditPage = new ExamTicketGroupsEditPage();
         examTicketGroupsEditPage.checkElementsToPage().mainPageLink();
     }
+//
+//    @Test
+//    @Order(172)
+//    // Архив_Модули за учебный год
+//    // /ru/tko/control/annual-archive/modules/1796
+//    public void annualArchiveModulesPageView() {
+//        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796");
+//        AnnualArchiveModulesPage  annualArchiveModulesPage = new AnnualArchiveModulesPage();
+//        annualArchiveModulesPage.checkElementsToPage().mainPageLink();
+//    }
+//
+//    @Test
+//    @Order(173)
+//    // Архив_Журналы
+//    // /ru/tko/control/annual-archive/modules/1796/journals
+//    public void annualArchiveModulesJournalsPageView() {
+//        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796/journals");
+//        AnnualArchiveModulesJournalsPage  annualArchiveModulesJournalsPage = new AnnualArchiveModulesJournalsPage();
+//        annualArchiveModulesJournalsPage.checkElementsToPage().mainPageLink();
+//    }
+//
+//    @Test
+//    @Order(174)
+//    // Архив_Журнал
+//    // /ru/tko/control/annual-archive/modules/1796/journals/132906/show
+//    public void viewAnnualArchiveJournalPage() {
+//        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796/journals/132906/show");
+//        ViewAnnualArchiveJournalPage  viewAnnualArchiveJournalPage = new ViewAnnualArchiveJournalPage();
+//        viewAnnualArchiveJournalPage.checkElementsToPage().mainPageLink();
+//    }
+//
+//    @Test
+//    @Order(175)
+//    // Архив_Назначенные задания
+//    // /ru/tko/control/annual-archive/modules/1796/assigned-homeworks
+//    public void annualArchiveModulesAssignedHomeworksPageView() {
+//        open("https://college.dev-snation.kz/ru/tko/control/ru/tko/control/annual-archive/modules/1796/assigned-homeworks");
+//        AnnualArchiveModulesAssignedHomeworksPage  annualArchiveModulesAssignedHomeworksPage = new AnnualArchiveModulesAssignedHomeworksPage();
+//        annualArchiveModulesAssignedHomeworksPage.checkElementsToPage().mainPageLink();
+//    }
+//
+//    @Test
+//    @Order(176)
+//    // Архив_Назначенного задания
+//    // /ru/tko/control/annual-archive/modules/1796/assigned-homeworks/494007
+//    public void annualArchiveModulesAssignedHomeworkPageView() {
+//        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796/assigned-homeworks/494007");
+//        AnnualArchiveModulesAssignedHomeworkPage  annualArchiveModulesAssignedHomeworkPage = new AnnualArchiveModulesAssignedHomeworkPage();
+//        annualArchiveModulesAssignedHomeworkPage.checkElementsToPage().mainPageLink();
+//    }
+//
+//    @Test
+//    @Order(177)
+//    // Архив_Просмотр ответа сутдента на назначенное задание
+//    // /ru/tko/control/annual-archive/modules/4/assigned-homeworks/494009/9766100
+//    public void viewAnnualArchiveStudentAnswerToHomeworkPage() {
+//        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796/assigned-homeworks/494007");
+//        ViewAnnualArchiveStudentAnswerToHomeworkPage  viewAnnualArchiveStudentAnswerToHomeworkPage = new ViewAnnualArchiveStudentAnswerToHomeworkPage();
+//        viewAnnualArchiveStudentAnswerToHomeworkPage.checkElementsToPage().mainPageLink();
+//    }
 
-    @Test
-    @Order(172)
-    // Архив_Модули за учебный год
-    // /ru/tko/control/annual-archive/modules/1764
-    public void annualArchiveModulesPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1764");
-        AnnualArchiveModulesPage  annualArchiveModulesPage = new AnnualArchiveModulesPage();
-        annualArchiveModulesPage.checkElementsToPage().mainPageLink();
-    }
-
-    @Test
-    @Order(173)
-    // Архив_Журналы
-    // /ru/tko/control/annual-archive/modules/1764/journals
-    public void annualArchiveModulesJournalsPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1764/journals");
-        AnnualArchiveModulesJournalsPage  annualArchiveModulesJournalsPage = new AnnualArchiveModulesJournalsPage();
-        annualArchiveModulesJournalsPage.checkElementsToPage().mainPageLink();
-    }
-
-    @Test
-    @Order(174)
-    // Архив_Журнал
-    // /ru/tko/control/annual-archive/modules/1764/journals/132906/show
-    public void viewAnnualArchiveJournalPage() {
-        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1764/journals/132906/show");
-        ViewAnnualArchiveJournalPage  viewAnnualArchiveJournalPage = new ViewAnnualArchiveJournalPage();
-        viewAnnualArchiveJournalPage.checkElementsToPage().mainPageLink();
-    }
-
-    @Test
-    @Order(175)
-    // Архив_Назначенные задания
-    // /ru/tko/control/annual-archive/modules/1796/assigned-homeworks
-    public void annualArchiveModulesAssignedHomeworksPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/ru/tko/control/annual-archive/modules/1796/assigned-homeworks");
-        AnnualArchiveModulesAssignedHomeworksPage  annualArchiveModulesAssignedHomeworksPage = new AnnualArchiveModulesAssignedHomeworksPage();
-        annualArchiveModulesAssignedHomeworksPage.checkElementsToPage().mainPageLink();
-    }
-
-    @Test
-    @Order(176)
-    // Архив_Назначенного задания
-    // /ru/tko/control/annual-archive/modules/1796/assigned-homeworks/494007
-    public void AnnualArchiveModulesAssignedHomeworkPageView() {
-        open("https://college.dev-snation.kz/ru/tko/control/annual-archive/modules/1796/assigned-homeworks/494007");
-        AnnualArchiveModulesAssignedHomeworkPage  annualArchiveModulesAssignedHomeworkPage = new AnnualArchiveModulesAssignedHomeworkPage();
-        annualArchiveModulesAssignedHomeworkPage.checkElementsToPage().mainPageLink();
-    }
 
 }
