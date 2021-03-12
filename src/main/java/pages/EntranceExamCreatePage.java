@@ -13,9 +13,9 @@ public class EntranceExamCreatePage {
     private SelenideElement titleToPage = $x("//h1[contains(text(),'Вступительные экзамены')]");
 
     // Табы на странице
-    private SelenideElement activeTab = $x("//span[contains(text(),'Активные')]/..");                                                       // 'Активные' (Текущий таб не кликабельный)
-    private SelenideElement archiveTab = $x("//a[@class=\"container-content-head__tab-item \"]/span[contains(text(),'Архив')]/..");         // 'Архив'
-    private SelenideElement addTab = $x("//span[contains(text(),'Добавить')]/..");                                                          // 'Добавить'
+    private SelenideElement activeTab = $x("//span[contains(text(),'Активные')]/..");                                                      // 'Активные' (Текущий таб не кликабельный)
+    private SelenideElement archiveTab = $x("//a[@class = 'container-content-head__tab-item']/span[contains(text(),'Архив')]/..");         // 'Архив'
+    private SelenideElement addTab = $x("//span[contains(text(),'Добавить')]/..");                                                         // 'Добавить'
 
     // Таблица
     private SelenideElement nameTable = $x("//th[contains(text(),'№')]");                                       // '№'

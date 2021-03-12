@@ -409,7 +409,7 @@ public class AdminViewAllPages extends AppConfig {
     @Order(38)
     //  Сменить роль
     //  /ru/tko/select-role
-    public void SelectRolePageView() {
+    public void selectRolePageView() {
         open("https://college.dev-snation.kz/ru/tko/select-role");
         SelectRolePage  selectRolePage  = new SelectRolePage ();
         selectRolePage.checkTitleToPage().mainPageLink();
@@ -1300,7 +1300,7 @@ public class AdminViewAllPages extends AppConfig {
     @Order(127)
     // Просмотр приемной комиссии
     // /ru/tko/control/statements-admissions/934
-    public void ReviewStatementAdmissionPageView() {
+    public void reviewStatementAdmissionPageView() {
         open("https://college.dev-snation.kz/ru/tko/control/statements-admissions/934");
         ReviewStatementAdmissionPage  reviewStatementAdmissionPage = new ReviewStatementAdmissionPage();
         reviewStatementAdmissionPage.checkTitleToPage().mainPageLink();

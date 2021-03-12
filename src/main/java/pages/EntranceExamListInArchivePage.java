@@ -16,7 +16,7 @@ public class EntranceExamListInArchivePage {
 
     // Табы на странице
     private SelenideElement activeTab = $x("//span[contains(text(),'Активные')]/..");                                                       // 'Активные'
-    private SelenideElement archiveTab = $x("//a[@class=\"container-content-head__tab-item \"]/span[contains(text(),'Архив')]/..");         // 'Архив' (Текущий таб не кликабельный)
+    private SelenideElement archiveTab = $x("//a[@class = 'container-content-head__tab-item']/span[contains(text(),'Архив')]/..");            // 'Архив' (Текущий таб не кликабельный)
     private SelenideElement addTab = $x("//span[contains(text(),'Добавить')]/..");                                                          // 'Добавить'
 
     // Таблица

@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class EntranceExamPage {
 
     // Тайтл
-    private SelenideElement titleToPage = $x("//h1[contains(text(),'Вступительный экзамен')]");
+    private SelenideElement titleToPage = $x("//h1[contains(text(),'Вступительный экзамен ')]");
 
     // Табы на странице
     private SelenideElement backTab = $x("//span[contains(text(),'Назад')]/..");                                         // 'Назад'
